@@ -1,2 +1,2 @@
 # ND-iTC.github.io
-GitHub page for the ND iTC
+GitHub hosted website the ND iTC uses to share additional information and training, https://ND-iTC.github.io.
