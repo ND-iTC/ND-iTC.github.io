@@ -1,1 +1,50 @@
+= Network Device iTC (ND iTC)
+:showtitle:
+:toc:
+:imagesdir: images
+:revnumber: 1.0
+:revdate: 2022-07-11
 
+== Introduction
+From the CCDB established Working Group, the Network Device International Technical Community (ND iTC) was formed. The ND iTC consists of members of Certification Bodies, labs, and vendors working together to create requirements for network device security testing.
+
+https://www.commoncriteriaportal.org/communities/fw-nd.cfm/[ND iTC Common Criteria Portal Page]
+
+https://github.com/ND-iTC/[ND iTC GitHub organization]
+
+To join the ND iTC, please send a message to NetworkDeviceitc@gmail.com.
+
+
+== Current Status
+The ND iTC's current version of the collaborative Protection Profile (cPP) and Supporting Document (SD) can be found on the https://commoncriteriaportal.org/pps/?cpp=1[Common Criteria Portal].
+
+The https://github.com/ND-iTC/Documents[Documents repository] hosts the working versions of the collaborative Protection Profile (cPP) and Supporting Document (SD). It is used to facilitate collaboration and development on future versions of these documents. The https://github.com/ND-iTC/Documents/issues/new/[issues tracker] can be used to provide any comments.
+
+For an explanation on how to use the issue tracker please refer to the following link:
+https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue
+
+
+== Current Published Documents
+
+*_Version 2.2e_*
+
+Publication Date:: March 23, 2020
+
+
+.Public Release v2.2e Documents
+[[v2.2eDocTable]]
+[cols="5,1,1",options="header"]
+|===
+|Title 
+^.^|Version 
+^.^|Links
+
+.^|collaborative Protection Profile for Network Devices Version 2.2e [cpp_nd_v2.2e]
+^.^|2.2e
+^.^|image:pdf.png[link=https://www.commoncriteriaportal.org/files/ppfiles/CPP_ND_V2.2E.pdf]
+
+.^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [NDSD]
+^.^|2.2
+^.^|image:pdf.png[link=https://www.commoncriteriaportal.org/files/ppfiles/CPP_ND_V2.2E_supporting_doc.pdf]
+
+|===
