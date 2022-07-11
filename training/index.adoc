@@ -16,6 +16,10 @@ https://github.com/ND-iTC/Documents/issues/new/choose
 For an explanation on how to use the GitHub issue tracker please refer to the following link:
 https://help.github.com/en/articles/creating-an-issue
 
+== Teams
+GitHub Teams have been setup by working group with permissions added to allow which branches can be edited.
+https://github.com/orgs/ND-iTC/teams
+
 == Repositories
 * Documents +
 Current NDcPP and NDSD docs converted to ASCiiDoc
@@ -31,9 +35,6 @@ Branches allow working groups to safely edit a document in a contained area of t
 
 image:branches.png[]
 
-== Teams
-GitHub Teams have been setup by working group with permissions added to allow which branches can be edited.
-https://github.com/orgs/ND-iTC/teams
 
 = GitHub Guidance for Subgroups
 
@@ -53,9 +54,9 @@ Initial setup steps:
 
 . Download GitHub Desktop – https://desktop.github.com/
 
-. Setup an editor:
-Atom- https://atom.io/
-or
+. Setup an editor: +
+Atom- https://atom.io/ +
+or +
 VS Code - https://code.visualstudio.com/
 
 . Install an a Package or Extension to view AsciiDoc in the editor:
