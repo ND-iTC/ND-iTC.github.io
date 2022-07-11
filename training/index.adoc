@@ -29,7 +29,6 @@ Repository for a GitHub hosted website that allows the ND iTC to providing addit
 Branches allow working groups to safely edit a document in a contained area of the repository. The diagram below shows the ND iTC branch structure.
 
 image:branches.png[]
-
 == Teams
 GitHub Teams have been setup by working group with permissions added to allow which branches can be edited.
 https://github.com/orgs/ND-iTC/teams
