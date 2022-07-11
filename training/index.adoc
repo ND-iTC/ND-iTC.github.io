@@ -5,6 +5,7 @@
 :revnumber: 1.0
 :revdate: 2022-07-11
 
+= GitHub Overview
 == Introduction
 In 2022, the ND iTC migrated away from MS Word to ASCiiDoc in GitHub for version control and collaboration. The ND iTC GitHub Organization can be found here: https://github.com/ND-iTC
 
@@ -34,6 +35,15 @@ image:branches.png[]
 GitHub Teams have been setup by working group with permissions added to allow which branches can be edited.
 https://github.com/orgs/ND-iTC/teams
 
+= GitHub Guidance for Subgroups
+
+== GitHub Demo
+Note that branches are specific to each working group (see branches diagram above). In the demo, the TLSWG branch is referred to, but the branch you will be working in depends on your working group. +
+
+Webex meeting recording: TLS Working Group GitHub Demo 20210826 +
+Password: AiRAJbx5 +
+Recording link: https://cisco.webex.com/cisco/ldr.php?RCID=d365b42d0bbaa2f491e7391f79da3887
+
 == GitHub Setup
 There are numerous ways to interact with GitHub repositories (GitHub Desktop, Atom, VS Code, within your browser). The GitHub Demo provided below includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed.
 
@@ -56,13 +66,6 @@ VS Code AsciiDoc Extension
 https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode
 
 . You must be added to a GitHub team to have editing privileges. Contact an administrator to be added.
-
-== GitHub Demo
-Note that branches are specific to each working group (see branches diagram above). In the demo, the TLSWG branch is referred to, but the branch you will be working in depends on your working group.
-
-Webex meeting recording: TLS Working Group GitHub Demo 20210826
-Password: AiRAJbx5
-Recording link: https://cisco.webex.com/cisco/ldr.php?RCID=d365b42d0bbaa2f491e7391f79da3887
 
 == Steps to edit documents
 
