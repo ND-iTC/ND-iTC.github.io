@@ -41,10 +41,10 @@ Publication Date:: March 23, 2020
 
 .^|collaborative Protection Profile for Network Devices Version 2.2e [cpp_nd_v2.2e]
 ^.^|2.2e
-^.^|image:pdf.png[link=https://www.commoncriteriaportal.org/files/ppfiles/CPP_ND_V2.2E.pdf]
+^.^|image:pdf.png[link=https://www.commoncriteriaportal.org/files/ppfiles/CPP_ND_V2.2E.pdf,40]
 
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [NDSD]
 ^.^|2.2
-^.^|image:pdf.png[link=https://www.commoncriteriaportal.org/files/ppfiles/CPP_ND_V2.2E_supporting_doc.pdf]
+^.^|image:pdf.png[link=https://www.commoncriteriaportal.org/files/ppfiles/CPP_ND_V2.2E_supporting_doc.pdf,40]
 
 |===
