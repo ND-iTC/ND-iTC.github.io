@@ -1,6 +1,6 @@
 = ND iTC GitHub Overview and Guidance
 :showtitle:
-:toc:
+:toc: left
 :imagesdir: images
 :revnumber: 1.0
 :revdate: 2022-07-11

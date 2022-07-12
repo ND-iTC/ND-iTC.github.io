@@ -1,6 +1,6 @@
 = Network Device iTC (ND iTC)
 :showtitle:
-:toc:
+:toc: left
 :imagesdir: images
 :revnumber: 1.0
 :revdate: 2022-07-11
