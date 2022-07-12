@@ -5,22 +5,22 @@
 :revnumber: 1.0
 :revdate: 2022-07-11
 
-= GitHub Overview
-== Introduction
+== GitHub Overview
+=== Introduction
 In 2022, the ND iTC migrated away from MS Word to ASCiiDoc in GitHub for version control and collaboration. The ND iTC GitHub Organization can be found here: https://github.com/ND-iTC
 
-== Issues
+=== Issues
 Issue templates have been created to help gather the required information from contributors that have comments on the NDiTC such as typos, corrections, or enhancements. Comments may be provided via the GitHub issue tracker:
 https://github.com/ND-iTC/Documents/issues/new/choose
 
 For an explanation on how to use the GitHub issue tracker please refer to the following link:
 https://help.github.com/en/articles/creating-an-issue
 
-== Teams
+=== Teams
 GitHub Teams have been setup by working group with permissions added to allow which branches can be edited.
 https://github.com/orgs/ND-iTC/teams
 
-== Repositories
+=== Repositories
 * Documents +
 Current NDcPP and NDSD docs converted to ASCiiDoc
 
@@ -30,22 +30,22 @@ Repository for the Core protections working group, docs converted to ASCiiDoc
 * ND-iTC.github.io +
 Repository for a GitHub hosted website that allows the ND iTC to providing additional information and training. This page can be accessed at ND-iTC.github.io. 
 
-== Branches
+=== Branches
 Branches allow working groups to safely edit a document in a contained area of the repository. The diagram below shows the ND iTC branch structure.
 
 image:branches.png[]
 
 
-= GitHub Guidance for Subgroups
+== GitHub Guidance for Subgroups
 
-== GitHub Demo
+=== GitHub Demo
 Note that branches are specific to each working group (see branches diagram above). In the demo, the TLSWG branch is referred to, but the branch you will be working in depends on your working group. +
 
 Webex meeting recording: TLS Working Group GitHub Demo 20210826 +
 Password: AiRAJbx5 +
 Recording link: https://cisco.webex.com/cisco/ldr.php?RCID=d365b42d0bbaa2f491e7391f79da3887
 
-== GitHub Setup
+=== GitHub Setup
 There are numerous ways to interact with GitHub repositories (GitHub Desktop, Atom, VS Code, within your browser). The GitHub Demo provided below includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed.
 
 Initial setup steps:
@@ -68,7 +68,7 @@ https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vsco
 
 . You must be added to a GitHub team to have editing privileges. Contact an administrator to be added.
 
-== Steps to edit documents
+=== Steps to edit documents
 
 . Clone the repository: +
 Open GitHub Desktop + 
@@ -105,11 +105,11 @@ _*Note: It’s important that you are requesting to merge your temp branch to th
 Commit summary and description will populate in the PR +
 Click on the “Create Pull Request” button to finish opening your PR
 
-== GitHub Review process
+=== GitHub Review process
 All PRs will require two reviews with approval before they can be merged into a working group branch. The following GitHub article describes the review process:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request.
 
-== Additional resources
+=== Additional resources
 * AsciiDoc Syntax Quick Reference - https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
 * GitHub Desktop Documentation - https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
