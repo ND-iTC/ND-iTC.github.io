@@ -3,11 +3,11 @@
 :toc: left
 :imagesdir: images
 :revnumber: 1.0
-:revdate: 2022-07-11
+:revdate: 2022-07-13
 
 == GitHub Overview
 === Introduction
-In 2022, the ND iTC migrated away from MS Word to ASCiiDoc in GitHub for version control and collaboration. The ND iTC GitHub Organization can be found here: https://github.com/ND-iTC
+The ND iTC has migrated away from MS Word to ASCiiDoc in GitHub for version control and collaboration. The ND iTC GitHub Organization can be found here: https://github.com/ND-iTC
 
 === Issues
 Issue templates have been created to help gather the required information from contributors that have comments on the NDiTC such as typos, corrections, or enhancements. Comments may be provided via the GitHub issue tracker:
@@ -71,39 +71,39 @@ https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vsco
 === Steps to edit documents
 
 . Clone the repository: +
-Open GitHub Desktop + 
-Select “Clone a repository from the internet” +
-Enter the URL for ND-iTC/Documents repository, https://github.com/ND-iTC/Documents.git
+.. Open GitHub Desktop + 
+.. Select “Clone a repository from the internet” +
+.. Enter the URL for ND-iTC/Documents repository, https://github.com/ND-iTC/Documents.git
 
 . Fetch current files: +
-In GitHub Desktop on the top, select the “Documents” repository and the appropriate working group branch (i.e., Maintenance, TLSWG) +
-Then click on “Fetch origin”
+.. In GitHub Desktop on the top bar, select the “Documents” repository and the appropriate working group branch (i.e., Maintenance, TLSWG) +
+.. Then click on “Fetch origin”
 
 . Create a new branch: +
-Select Current Branch drop down to create a new temporary branch +
-In the “Filter” window, name your branch with “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK) +
-For Branch based on, select correct working group branch +
+.. Select Current Branch drop down to create a new temporary branch +
+.. In the “Filter” window, name your branch with “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK) +
+.. For Branch based on, select correct working group branch +
 _*Note: It’s important that you select the appropriate branch to base your temp branch on._ +
-Click “Create New Branch” button
+.. Click “Create New Branch” button
 
 . Edit the documents in your editor: +
-Open the repository in your external editor by clicking the “Open in Atom” or “Open in VS Code” button +
+.. Open the repository in your external editor by clicking the “Open in Atom” or “Open in VS Code” button +
 _*Note: Confirm you are in the temporary branch you created in the status bar at the bottom of the editor._ +
-Make your edits in your editor and use AsciiDoc preview to view changes. +
+.. Make your edits in your editor and use AsciiDoc preview to view changes. +
 _*Note: (Atom ctl+shift+a or cmd+shift+a, VS Code ctl+shift+v or cmd+shift+v)_ +
-Save edits ctrl+S
+.. Save edits ctrl+S
 
 . Commit and publish changes: +
-In GitHub Desktop on the left hand side, you can commit changes with summary title “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK) and a description of your changes. +
-Click the “Commit to…” button +
-Then Click the “Publish branch” button
+.. In GitHub Desktop on the left hand side, you can commit changes with summary title “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK) and a description of your changes. +
+.. Click the “Commit to…” button +
+.. Then Click the “Publish branch” button
 
-. Open a pull request (PR):
-In GitHub Desktop , click on the “Open Pull Request” button +
-This will take you to GitHub in your browser where you will need to confirm the base branch and compare branch. +
+. Open a pull request (PR): +
+.. In GitHub Desktop , click on the “Open Pull Request” button +
+.. This will take you to GitHub in your browser where you will need to confirm the base branch and compare branch. +
 _*Note: It’s important that you are requesting to merge your temp branch to the appropriate working group branch in your PR._ +
-Commit summary and description will populate in the PR +
-Click on the “Create Pull Request” button to finish opening your PR
+.. Commit summary and description will populate in the PR +
+.. Click on the “Create Pull Request” button to finish opening your PR
 
 === GitHub Review process
 All PRs will require two reviews with approval before they can be merged into a working group branch. The following GitHub article describes the review process:

@@ -441,7 +441,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>ND iTC GitHub Overview and Guidance</h1>
 <div class="details">
 <span id="revnumber">version 1.0,</span>
-<span id="revdate">2022-07-11</span>
+<span id="revdate">2022-07-13</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -474,7 +474,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_introduction">Introduction</h3>
 <div class="paragraph">
-<p>In 2022, the ND iTC migrated away from MS Word to ASCiiDoc in GitHub for version control and collaboration. The ND iTC GitHub Organization can be found here: <a href="https://github.com/ND-iTC" class="bare">https://github.com/ND-iTC</a></p>
+<p>The ND iTC has migrated away from MS Word to ASCiiDoc in GitHub for version control and collaboration. The ND iTC GitHub Organization can be found here: <a href="https://github.com/ND-iTC" class="bare">https://github.com/ND-iTC</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -580,45 +580,107 @@ VS Code AsciiDoc Extension
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Clone the repository:<br>
-Open GitHub Desktop<br>
-Select “Clone a repository from the internet”<br>
-Enter the URL for ND-iTC/Documents repository, <a href="https://github.com/ND-iTC/Documents.git" class="bare">https://github.com/ND-iTC/Documents.git</a></p>
+<p>Clone the repository:<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open GitHub Desktop<br></p>
 </li>
 <li>
-<p>Fetch current files:<br>
-In GitHub Desktop on the top, select the “Documents” repository and the appropriate working group branch (i.e., Maintenance, TLSWG)<br>
-Then click on “Fetch origin”</p>
+<p>Select “Clone a repository from the internet”<br></p>
 </li>
 <li>
-<p>Create a new branch:<br>
-Select Current Branch drop down to create a new temporary branch<br>
-In the “Filter” window, name your branch with “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK)<br>
-For Branch based on, select correct working group branch<br>
-<em>*Note: It’s important that you select the appropriate branch to base your temp branch on.</em><br>
-Click “Create New Branch” button</p>
+<p>Enter the URL for ND-iTC/Documents repository, <a href="https://github.com/ND-iTC/Documents.git" class="bare">https://github.com/ND-iTC/Documents.git</a></p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>Edit the documents in your editor:<br>
-Open the repository in your external editor by clicking the “Open in Atom” or “Open in VS Code” button<br>
-<em>*Note: Confirm you are in the temporary branch you created in the status bar at the bottom of the editor.</em><br>
-Make your edits in your editor and use AsciiDoc preview to view changes.<br>
-<em>*Note: (Atom ctl+shift+a or cmd+shift+a, VS Code ctl+shift+v or cmd+shift+v)</em><br>
-Save edits ctrl+S</p>
+<p>Fetch current files:<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In GitHub Desktop on the top bar, select the “Documents” repository and the appropriate working group branch (i.e., Maintenance, TLSWG)<br></p>
 </li>
 <li>
-<p>Commit and publish changes:<br>
-In GitHub Desktop on the left hand side, you can commit changes with summary title “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK) and a description of your changes.<br>
-Click the “Commit to…” button<br>
-Then Click the “Publish branch” button</p>
+<p>Then click on “Fetch origin”</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>Open a pull request (PR):
-In GitHub Desktop , click on the “Open Pull Request” button<br>
-This will take you to GitHub in your browser where you will need to confirm the base branch and compare branch.<br>
-<em>*Note: It’s important that you are requesting to merge your temp branch to the appropriate working group branch in your PR.</em><br>
-Commit summary and description will populate in the PR<br>
-Click on the “Create Pull Request” button to finish opening your PR</p>
+<p>Create a new branch:<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Select Current Branch drop down to create a new temporary branch<br></p>
+</li>
+<li>
+<p>In the “Filter” window, name your branch with “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK)<br></p>
+</li>
+<li>
+<p>For Branch based on, select correct working group branch<br>
+<em>*Note: It’s important that you select the appropriate branch to base your temp branch on.</em><br></p>
+</li>
+<li>
+<p>Click “Create New Branch” button</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit the documents in your editor:<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open the repository in your external editor by clicking the “Open in Atom” or “Open in VS Code” button<br>
+<em>*Note: Confirm you are in the temporary branch you created in the status bar at the bottom of the editor.</em><br></p>
+</li>
+<li>
+<p>Make your edits in your editor and use AsciiDoc preview to view changes.<br>
+<em>*Note: (Atom ctl+shift+a or cmd+shift+a, VS Code ctl+shift+v or cmd+shift+v)</em><br></p>
+</li>
+<li>
+<p>Save edits ctrl+S</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Commit and publish changes:<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In GitHub Desktop on the left hand side, you can commit changes with summary title “working group-summary-date-initials” (i.e., TLSWG-Update_DTLSS-MMDDYY-KK) and a description of your changes.<br></p>
+</li>
+<li>
+<p>Click the “Commit to…” button<br></p>
+</li>
+<li>
+<p>Then Click the “Publish branch” button</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open a pull request (PR):<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>In GitHub Desktop , click on the “Open Pull Request” button<br></p>
+</li>
+<li>
+<p>This will take you to GitHub in your browser where you will need to confirm the base branch and compare branch.<br>
+<em>*Note: It’s important that you are requesting to merge your temp branch to the appropriate working group branch in your PR.</em><br></p>
+</li>
+<li>
+<p>Commit summary and description will populate in the PR<br></p>
+</li>
+<li>
+<p>Click on the “Create Pull Request” button to finish opening your PR</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
@@ -655,7 +717,7 @@ Click on the “Create Pull Request” button to finish opening your PR</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2022-07-11 20:19:47 -0400
+Last updated 2022-07-13 18:41:31 -0400
 </div>
 </div>
 </body>
