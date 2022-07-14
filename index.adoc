@@ -3,7 +3,7 @@
 :toc: left
 :imagesdir: images
 :revnumber: 1.0
-:revdate: 2022-07-13
+:revdate: 2022-07-14
 
 == Introduction
 From the CCDB established Working Group, the Network Device International Technical Community (ND iTC) was formed. The ND iTC consists of members of Certification Bodies, labs, and vendors working together to create requirements for network device security testing.
@@ -41,10 +41,11 @@ Publication Date:: March 23, 2020
 
 .^|collaborative Protection Profile for Network Devices Version 2.2e [cpp_nd_v2.2e]
 ^.^|2.2e
-^.^|image:pdf.png[link:/cPP/CPP_ND_V2.2E.pdf,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/CPP_ND_V2.2E.pdf
+,40]
 
-.^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [NDSD]
+.^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
 ^.^|2.2
-^.^|image:pdf.png[link:/SD/CPP_ND_V2.2E_supporting_doc.pdf,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/SD/CPP_ND_V2.2E_supporting_doc.pdf,40]
 
 |===
