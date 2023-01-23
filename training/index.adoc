@@ -109,4 +109,5 @@ https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 * GitHub Desktop Documentation +
 https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
 
-* VS Code setup overview, https://code.visualstudio.com/docs/setup/setup-overview
+* VS Code setup overview, +
+https://code.visualstudio.com/docs/setup/setup-overview
