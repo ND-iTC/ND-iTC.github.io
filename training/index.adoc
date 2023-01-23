@@ -43,7 +43,7 @@ Password: AiRAJbx5 +
 Recording link: https://cisco.webex.com/cisco/ldr.php?RCID=d365b42d0bbaa2f491e7391f79da3887
 
 === GitHub Setup
-There are numerous ways to interact with GitHub repositories (GitHub Desktop, Atom, VS Code, within your browser). The GitHub Demo provided below includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed.
+There are numerous ways to interact with GitHub repositories (i.e., GitHub Desktop, Atom, VS Code, within your browser). The GitHub Demo provided above includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed.
 
 Initial setup steps:
 
@@ -107,10 +107,14 @@ All PRs will require reviews with an approval before they can be merged into a w
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request.
 
 === Additional Resources
-* AsciiDoc Syntax Quick Reference - https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+* AsciiDoc Syntax Quick Reference +
+https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
-* GitHub Desktop Documentation - https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
+* GitHub Desktop Documentation +
+https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop
 
-* Installing Atom documentation, https://flight-manual.atom.io/getting-started/sections/installing-atom/
+* Installing Atom documentation +
+https://flight-manual.atom.io/getting-started/sections/installing-atom/
 
-* VS Code setup overview, https://code.visualstudio.com/docs/setup/setup-overview
+* VS Code setup overview +
+https://code.visualstudio.com/docs/setup/setup-overview
