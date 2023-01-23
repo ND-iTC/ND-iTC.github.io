@@ -2,8 +2,6 @@
 :showtitle:
 :toc: left
 :imagesdir: images
-:revnumber: 1.0
-:revdate: 2022-07-14
 
 == GitHub Overview
 === Introduction
@@ -46,7 +44,7 @@ Password: AiRAJbx5 +
 Recording link: https://cisco.webex.com/cisco/ldr.php?RCID=d365b42d0bbaa2f491e7391f79da3887
 
 === GitHub Setup
-There are numerous ways to interact with GitHub repositories (GitHub Desktop, an editor such as VS Code, within your browser). The GitHub Demo provided below includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed. Atom is now EOL and no longer recommended.
+There are numerous ways to interact with GitHub repositories (GitHub Desktop, an editor such as VS Code, within your browser). The GitHub Demo provided includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed. Atom is now EOL and no longer recommended.
 
 Initial setup steps:
 
