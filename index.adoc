@@ -21,11 +21,11 @@ For an explanation on how to use the GitHub issue tracker please refer to the Gi
 
 == Current Published Documents
 
-*_Version 3.0_*
+=== *_Version 3.0e_*
 
-Publication Date:: April 6, 2023
+Publication Date:: November 30, 2023
 
-.Public Release 3.0 Documents
+.Public Release 3.0e Documents
 [[v3.0DocTable]]
 [cols="5,1,1",options="header"]
 |===
@@ -33,21 +33,25 @@ Publication Date:: April 6, 2023
 ^.^|Version 
 ^.^|Links
 
-.^|collaborative Protection Profile for Network Devices Version 3.0 [cpp_nd_v3.0]
-^.^|3.0
-^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0.pdf
-,40]
-image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0.html
-,40]
+.^|collaborative Protection Profile for Network Devices Version 3.0e [cpp_nd_v3.0e]
+^.^|3.0e
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.pdf,40]
 
+image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.html,40]
+
+image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/NDcPP_v3_0e.adoc,40]
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
-^.^|3.0
-^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0.pdf,40]
-image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0.html,40]
+^.^|3.0e
+^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.pdf,40]
+
+image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.html,40]
+
+image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_3_0e.adoc,40]
 
 |===
 
-*_Version 2.2e_*
+
+=== *_Version 2.2e_*
 
 Publication Date:: March 23, 2020
 
@@ -70,6 +74,6 @@ Publication Date:: March 23, 2020
 
 |===
 
-== Allowed-with List
+=== *_Allowed-with List_*
 
 The published collaberation Protection Profiles can be used with PP-Modules listed on the https://github.com/ND-iTC/Documents/blob/main/NDcPP_allowed_with_list.adoc[ND iTC allowed-with list for Network Device cPP].
