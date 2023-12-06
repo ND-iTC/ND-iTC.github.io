@@ -23,7 +23,7 @@ For an explanation on how to use the GitHub issue tracker please refer to the Gi
 
 === *_Version 3.0e_*
 
-Publication Date:: November 30, 2023
+Publication Date:: December 06, 2023
 
 .Public Release 3.0e Documents
 [[v3.0DocTable]]
