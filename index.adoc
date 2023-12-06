@@ -6,7 +6,7 @@
 == Introduction
 From the CCDB established Working Group, the Network Device International Technical Community (ND iTC) was formed. The ND iTC consists of members of Certification Bodies, labs, and vendors working together to create requirements for network device security testing.
 
-https://www.commoncriteriaportal.org/communities/fw-nd.cfm/[ND iTC Common Criteria Portal Page]
+https://www.commoncriteriaportal.org/communities/fw-nd.cfm[ND iTC Common Criteria Portal Page]
 
 https://github.com/ND-iTC/[ND iTC GitHub organization]
 
