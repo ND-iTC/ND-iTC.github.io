@@ -19,6 +19,9 @@ GitHub Teams have been setup by working group with permissions added to allow wh
 * *Documents* +
 Current NDcPP and ND SD docs converted to ASCiiDoc
 
+* *NIT (Private)* +
+Private repository for NIT workspace
+
 * *PP-Module-Core-protections* +
 Repository for the Core protections working group, docs converted to ASCiiDoc
 
@@ -44,7 +47,7 @@ Password: AiRAJbx5 +
 Recording link: https://cisco.webex.com/cisco/ldr.php?RCID=d365b42d0bbaa2f491e7391f79da3887
 
 === GitHub Setup
-There are numerous ways to interact with GitHub repositories (GitHub Desktop, an editor such as VS Code, within your browser). The GitHub Demo provided includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed. Atom is now EOL and no longer recommended.
+There are numerous ways to interact with GitHub repositories (GitHub Desktop, an editor such as VS Code, or within your browser). The GitHub Demo provided includes using GitHub Desktop and Atom as an editor with the ASCiiDoc Assistant Package installed. Atom is now EOL and no longer recommended. VS Code works very similarly to Atom and is now part of this guidance.
 
 Initial setup steps:
 
