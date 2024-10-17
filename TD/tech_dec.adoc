@@ -122,7 +122,7 @@ NDSDv3.0e
 
 |RFI#202413
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202413.pdf[Missing section header in NDcPP Appendix B,window=\"_blank\"]
-|FCS_NTP_EXT.1.2, Tests
+|B.6
 |19-Aug-2024
 |NDcPPv3.0e
 |Complete
