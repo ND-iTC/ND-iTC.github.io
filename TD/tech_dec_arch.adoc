@@ -1,0 +1,39 @@
+= Network Device iTC (ND iTC)
+:showtitle:
+:toc: left
+:imagesdir: ../images
+:iTC-longname: Network Device
+:iTC-shortname: ND iTC
+:iTC-email: networkdeviceitc@gmail.com
+:iTC-website: https://nd-itc.github.io/
+:iTC-GitHub: https://github.com/ND-iTC
+
+== {iTC-longname} Archived Technical Decisions
+This page is for historical purposes to maintain a list of Technical Decisions that are no longer current. The most common reason for moving TDs to this list is that the version they apply to is no longer current, but it can also be due to later TDs superseding older decisions.
+
+== Archived Technical Decisions
+
+[%header,cols=".^1,.^2,.^2,.^1,.^2,.^2"]
+|===
+|ID
+|Title
+|Reference
+|Publication Date
+|Impact
+|Status
+
+|TBD
+|link:tbd.html[TBD,window=\"_blank\"]
+|TBD
+|TBD
+|TBD
+|Complete
+
+|TBD
+|link:tbd.html[TBD,window=\"_blank\"]
+|TBD
+|TBD
+|TBD
+|Complete
+
+|===
