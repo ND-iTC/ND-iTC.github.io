@@ -1,0 +1,44 @@
+= Network Device iTC (ND iTC)
+:showtitle:
+:toc: left
+:imagesdir: ../images
+
+:iTC-longname: Network Device
+:iTC-shortname: ND iTC
+:iTC-email: networkdeviceitc@gmail.com
+:iTC-website: https://nd-itc.github.io/
+:iTC-GitHub: https://github.com/ND-iTC
+
+== {iTC-longname} Technical Decisions
+The iTC issues Technical Decisions based on requests for interpretation to clarify and update the cPP and related documents between release cycles. This is the main page for Technical Decisions that have been issued by the iTC. 
+
+=== Technical Decision Links
+* https://github.com/ND-iTC/Documents/issues/new?assignees=&labels=Interpretation&projects=&template=request-for-interpretation.md&title=%5BNIT+Request%5D[New Request for Interpretation]
+* link:tech_dec_arch.html[Archived Technical Decisions]
+
+== Active Technical Decisions
+
+[%header,cols=".^1,.^2,.^2,.^1,.^2,.^2"]
+|===
+|ID
+|Title
+|Reference
+|Publication Date
+|Impact
+|Status
+
+|RFI#202401
+|link:tbd.html[TBD,window=\"_blank\"]
+|TBD
+|TBD
+|NDcPPv3.0e
+|Complete
+
+|RFI#202402
+|link:tbd.html[TBD,window=\"_blank\"]
+|TBD
+|TBD
+|NDcPPv3.0e
+|Complete
+
+|===
