@@ -28,17 +28,145 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 |Status
 
 |RFI#202401
-|link:tbd.html[TBD,window=\"_blank\"]
-|TBD
-|TBD
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202401.pdf[Redundant requirements in FPT_TST_EXT.1,window=\"_blank\"]
+|FPT_TST_EXT.1
+|17-Apr-2024
+|NDcPPv3.0e
+NDSDv3.0e
+|Complete
+
+|RFI#202402a
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202402a.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Client,window=\"_blank\"]
+|FCS_TLSC_EXT.1.9, Test 4
+|05-Aug-2024
+|NDSDv3.0e
+|Complete
+
+|RFI#202402b
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202402b.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Server,window=\"_blank\"]
+|FCS_TLSS_EXT.1.8, Test 4
+|05-Aug-2024
+|NDSDv3.0e
+|Complete
+
+|RFI#202403
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202403.pdf[Behavior for FFW_RUL_EXT.1.10 Test Update,window=\"_blank\"]
+|FFW_RUL_EXT.1.10
+|17-May-2024
+|FWv1.4
+|Complete
+
+|RFI#202404
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202404.pdf[FCS_IPSEC_EXT.1.10 test update,window=\"_blank\"]
+|FCS_IPSEC_EXT.1.10
+|17-May-2024
+|NDcPPv3.0e
+NDSDv3.0e
+|Complete
+
+|RFI#202405
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202405.pdf[Clarification of audit selections in FMT_SMF.1.1,window=\"_blank\"]
+|FMT_SMF.1.1
+|05-Aug-2024
 |NDcPPv3.0e
 |Complete
 
-|RFI#202402
+|RFI#202406
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202406.pdf[Applying TD0800 to NDcPPv3.0,window=\"_blank\"]
+|FCS_IPSEC_EXT.1.7, FCS_IPSEC_EXT.1.8
+|10-Jul-2024
+|NDcPPv3.0e
+|Complete
+
+|RFI#202407
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202407.pdf[Expansion of MOD_FW Scope,window=\"_blank\"]
+|multiple
+|29-Jul-2024
+|FWv1.4
+|Complete
+
+|RFI#202408
 |link:tbd.html[TBD,window=\"_blank\"]
 |TBD
 |TBD
+|TBD
+|In-Progress
+
+|RFI#202409
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202408.pdf[Correction of FCS_TLSS_EXT.1.4, Test 4,window=\"_blank\"]
+|FCS_TLSS_EXT.1.4, Test 4, FCS_DTLSS_EXT.1.7, Test 4
+|09-Sep-2024
+|NDSDv3.0e
+|Complete
+
+|RFI#202410
+|Correction of FCS_TLSC_EXT.1.9
+|FCS_TLSC_EXT.1.9, Test 4
+|NA
+|NDcPPv3.0e
+|Rejected
+
+|RFI#202411
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202411.pdf[Correction of FCS_IPSEC_EXT.1.4, Evaluation Activities/App Note,window=\"_blank\"]
+|FCS_IPSEC_EXT.1.4
+|15-Jul-2024
+|NDSDv3.0e
+|Complete
+
+|RFI#202412
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202412.pdf[Test definition for FCS_NTP_EXT.1.2,window=\"_blank\"]
+|FCS_NTP_EXT.1.2, Tests
+|09-Sep-2024
+|NDSDv3.0e
+|Complete
+
+|RFI#202413
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202413.pdf[Missing section header in NDcPP Appendix B,window=\"_blank\"]
+|FCS_NTP_EXT.1.2, Tests
+|19-Aug-2024
 |NDcPPv3.0e
 |Complete
+
+|RFI#202414
+|link:tbd.html[TBD,window=\"_blank\"]
+|TBD
+|TBD
+|TBD
+|In-Progress
+
+|RFI#202415
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202415.pdf[FCS_COP.1.1/SigGen Needs assignment added,window=\"_blank\"]
+|FCS_COP.1.1/SigGen
+|01-Oct-2024
+|NDcPPv3.0e
+|Complete
+
+|RFI#202416
+|NA
+|NA
+|NA
+|NDcPPv3.0e
+|Covered by https://nd-itc.github.io/TD/2024//NITDecisionRfI202406.pdf[RFI#202406]
+
+|RFI#202417
+|link:tbd.html[TBD,window=\"_blank\"]
+|TBD
+|TBD
+|TBD
+|In-Progress
+
+|RFI#202418
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202418.pdf[FAU_STG_EXT.1, Test 6 unclear requirements,window=\"_blank\"]
+|FAU_STG_EXT.1, Test 6
+|27-Sep-2024
+|NDcPPv3.0e
+|Complete
+
+|RFI#202419
+|NA
+|NA
+|NA
+|NDcPPv3.0e
+|Duplicate to https://nd-itc.github.io/TD/2024//NITDecisionRfI202402b.pdf[RFI#202402b]
 
 |===
