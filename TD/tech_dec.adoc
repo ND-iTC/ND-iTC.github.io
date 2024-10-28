@@ -54,7 +54,7 @@ NDSDv3.0e
 |FFW_RUL_EXT.1.10
 |17-May-2024
 |FWv1.4
-|CPublished
+|Published
 
 |RFI#202404
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202404.pdf[FCS_IPSEC_EXT.1.10 test update,window=\"_blank\"]
