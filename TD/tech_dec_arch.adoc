@@ -22,18 +22,12 @@ This page is for historical purposes to maintain a list of Technical Decisions t
 |Impact
 |Status
 
-|TBD
-|link:tbd.html[TBD,window=\"_blank\"]
-|TBD
-|TBD
-|TBD
-|Archived
 
-|TBD
-|link:tbd.html[TBD,window=\"_blank\"]
-|TBD
-|TBD
-|TBD
-|Archived
+|
+|
+|
+|
+|
+|
 
 |===
