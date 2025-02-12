@@ -23,7 +23,7 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 |ID
 |Title
 |Reference
-|Publication Date
+|Date
 |Impact
 |Status
 
@@ -85,6 +85,13 @@ NDSDv3.0e
 |FWv1.4
 |Published
 
+|RFI#202408
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202408.pdf[FCS_CKM.2 - Key Establishment Assurance Activities,window=\"_blank\"]
+|multiple
+|22-Jul-2024
+|NDSDv3.0e
+|Published
+
 |RFI#202409
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202409.pdf[Correction of FCS_TLSS_EXT.1.4, Test 4,window=\"_blank\"]
 |FCS_TLSS_EXT.1.4, Test 4, FCS_DTLSS_EXT.1.7, Test 4
@@ -140,5 +147,20 @@ NDSDv3.0e
 |NA
 |NDcPPv3.0e
 |Duplicate to https://nd-itc.github.io/TD/2024//NITDecisionRfI202402b.pdf[RFI#202402b]
+
+|RFI#202420
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202420.pdf[Local IP address for Administrative Access,window=\"_blank\"]
+|FIA_AFL.1, FMT_SMF.1
+|13-Jan-2025
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202421
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202421v3.pdf[Other authentication mechanisms in FIA_UIA_EXT.1.3,window=\"_blank\"]
+|FIA_UIA_EXT.1.3
+|02-Dec-2024
+|NDcPPv3.0e
+|Published
 
 |===
