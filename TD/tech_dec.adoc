@@ -134,6 +134,15 @@ NDSDv3.0e
 |NDcPPv3.0e
 |Covered by https://nd-itc.github.io/TD/2024//NITDecisionRfI202406.pdf[RFI#202406]
 
+|RFI#202417a
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202417a.pdf[Addition of FIPS PUB 186-5 for RSA,window=\"_blank\"]
+|FCS_CKM.1,
+FCS_COP.1.1/SigGen
+|25-Oct-2024
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
 |RFI#202418
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202418.pdf[FAU_STG_EXT.1, Test 6 unclear requirements,window=\"_blank\"]
 |FAU_STG_EXT.1, Test 6
@@ -161,6 +170,15 @@ NDSDv3.0e
 |FIA_UIA_EXT.1.3
 |02-Dec-2024
 |NDcPPv3.0e
+|Published
+
+|RFI#202422
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202422.pdf[Clarification for FIA_X509_EXT.1 and FIA_X509_EXT.2,window=\"_blank\"]
+|cPP_ND_v3.0e Section B.4.1,
+cPP_ND_v3.0e-SD Section 4.3.1.3
+|03-Mar-2025
+|NDcPPv3.0e,
+NDSDv3.0e
 |Published
 
 |===
