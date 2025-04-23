@@ -120,6 +120,14 @@ NDSDv3.0e
 |NDcPPv3.0e
 |Published
 
+|RFI#202414
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202414.pdf[Definition of a Known-good Implementation for FCS_CKM.2 Tests,window=\"_blank\"]
+|FFCS_CKM.2
+|10-mar-2025
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
 |RFI#202415
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202415.pdf[FCS_COP.1.1/SigGen Needs assignment added,window=\"_blank\"]
 |FCS_COP.1.1/SigGen
