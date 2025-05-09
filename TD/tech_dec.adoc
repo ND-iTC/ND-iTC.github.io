@@ -45,7 +45,7 @@ NDSDv3.0e
 |RFI#202402b
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202402b.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Server,window=\"_blank\"]
 |FCS_TLSS_EXT.1.8, Test 4
-|05-Aug-2024
+|03-Mar-2025
 |NDSDv3.0e
 |Published
 
@@ -144,6 +144,15 @@ NDSDv3.0e
 
 |RFI#202417a
 |https://nd-itc.github.io/TD/2024//NITDecisionRfI202417a.pdf[Addition of FIPS PUB 186-5 for RSA,window=\"_blank\"]
+|FCS_CKM.1,
+FCS_COP.1.1/SigGen
+|25-Oct-2024
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202417b
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202417b.pdf[Addition of FIPS PUB 186-5 for ECDSA,window=\"_blank\"]
 |FCS_CKM.1,
 FCS_COP.1.1/SigGen
 |25-Oct-2024
