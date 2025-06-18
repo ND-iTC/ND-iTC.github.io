@@ -184,4 +184,21 @@ cPP_ND_v3.0e-SD Section 4.3.1.3
 NDSDv3.0e
 |Published
 
+|RFI#202504
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202504.pdf[FAU_STG_EXT.1 Auditable Events,window=\"_blank\"]
+|FAU_STG_EXT.1,
+NDcPP v3.0e sections 2.1.1.2 and 2.1.1.3
+|2025-06-09
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202505
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202505.pdf[FFW_RUL_EXT.1.2 Expected Rule Granularity Level,window=\"_blank\"]
+|FFW_RUL_EXT.1.2
+|2025-06-16
+|MOD_CPP_FW_v1.4e,
+MOD_FW_v1.4e-SD
+|Published
+
 |===
