@@ -15,9 +15,16 @@ To join the ND iTC, please send a message to NetworkDeviceitc@gmail.com.
 == Current Status
 The ND iTC's current version of the collaborative Protection Profile (cPP) and Supporting Document (SD) can be found on the https://commoncriteriaportal.org/pps/?cpp=1[Common Criteria Portal].
 
-The https://github.com/ND-iTC/Documents[Documents repository] hosts the working versions of the collaborative Protection Profile (cPP) and Supporting Document (SD). It is used to facilitate collaboration and development on future versions of these documents. The https://github.com/ND-iTC/Documents/issues/new/[issues tracker] can be used to provide any comments.
+The ND-iTC has released the draft version 4.0 of the Network Device Collaborative Protection Profile (NDcPP) and its Supporting Documents, aligned with the latest Common Criteria standard, CC:2022.
+We kindly ask that you review the current drafts of each document and submit your comments by *25 July 2025*.
 
-For an explanation on how to use the GitHub issue tracker please refer to the GitHub Docs article at https://help.github.com/en/articles/creating-an-issue.
+Draft Documents: +
+* https://github.com/ND-iTC/Documents/blob/development/NDcPP_v4_0-draft.adoc[NDcPP v4.0 Draft] +
+* https://github.com/ND-iTC/Documents/blob/development/ND_Supporting_Document_4_0-draft.adoc[Supporting Document v4.0 Draft]
+ 
+How to Submit Comments: +
+* Use the https://github.com/ND-iTC/ND-iTC.github.io/blob/main/NDcPPv4.0_draft_comment_matrix.docx[comment matrix] and email it to: networkdeviceiTC@gmail.com +
+* Or submit comments directly via the GitHub issue tracker: https://github.com/ND-iTC/Documents/issues/new/[GitHub Issues – ND-iTC]
 
 == Current Published Documents
 
