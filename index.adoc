@@ -24,7 +24,7 @@ Draft Documents: +
  
 How to Submit Comments: +
 * Use the https://github.com/ND-iTC/ND-iTC.github.io/blob/main/NDcPPv4.0_draft_comment_matrix.docx[comment matrix] and email it to: networkdeviceiTC@gmail.com +
-* Or submit comments directly via the GitHub issue tracker: https://github.com/ND-iTC/Documents/issues/new/[GitHub Issues – ND-iTC]
+* Or submit comments directly via the GitHub issue tracker: https://github.com/ND-iTC/Documents/issues/new/choose[GitHub Issues – ND-iTC]
 
 == Current Published Documents
 
