@@ -201,4 +201,12 @@ NDSDv3.0e
 MOD_FW_v1.4e-SD
 |Published
 
+|RFI#202508
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202508.pdf[Clarification on FIA_AFL.1 Application Note 118 regarding reboot-based lockout recovery,window=\"_blank\"]
+|FIA_AFL.1
+|2025-07-14
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
 |===
