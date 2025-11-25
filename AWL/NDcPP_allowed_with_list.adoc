@@ -1,4 +1,13 @@
 = ND iTC Allowed-with List for Network Device cPP
+:showtitle:
+:toc: left
+:imagesdir: ../images
+
+:iTC-longname: Network Device
+:iTC-shortname: ND iTC
+:iTC-email: networkdeviceitc@gmail.com
+:iTC-website: https://nd-itc.github.io/
+:iTC-GitHub: https://github.com/ND-iTC
 
 [cols="1,2",options=,]
 |===
