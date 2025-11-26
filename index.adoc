@@ -13,20 +13,38 @@ https://github.com/ND-iTC/[ND iTC GitHub organization]
 To join the ND iTC, please send a message to NetworkDeviceitc@gmail.com.
 
 == Current Status
-The ND iTC's current version of the collaborative Protection Profile (cPP) and Supporting Document (SD) can be found on the https://commoncriteriaportal.org/pps/?cpp=1[Common Criteria Portal].
-
-The ND-iTC has released the draft version 4.0 of the Network Device Collaborative Protection Profile (NDcPP) and its Supporting Documents, aligned with the latest Common Criteria standard, CC:2022.
-We kindly ask that you review the current drafts of each document and submit your comments by *25 July 2025*.
-
-Draft Documents: +
-* https://github.com/ND-iTC/Documents/blob/development/NDcPP_v4_0-draft.adoc[NDcPP v4.0 Draft] +
-* https://github.com/ND-iTC/Documents/blob/development/ND_Supporting_Document_4_0-draft.adoc[Supporting Document v4.0 Draft]
- 
-How to Submit Comments: +
-* Use the https://github.com/ND-iTC/ND-iTC.github.io/blob/main/NDcPPv4.0_draft_comment_matrix.docx[comment matrix] and email it to: networkdeviceiTC@gmail.com +
-* Or submit comments directly via the GitHub issue tracker: https://github.com/ND-iTC/Documents/issues/new/choose[GitHub Issues – ND-iTC]
+The ND iTC's current version of the collaborative Protection Profile (cPP) and Supporting Document (SD) can be found on the https://commoncriteriaportal.org/pps/index.cfm[Common Criteria Portal].
 
 == Current Published Documents
+
+=== *_Version 4.0_*
+
+Publication Date:: November 25, 2025
+
+.Public Release 4.0 Documents
+[[v4.0DocTable]]
+[cols="5,1,1",options="header"]
+|===
+|Title 
+^.^|Version 
+^.^|Links
+
+.^|collaborative Protection Profile for Network Devices Version 4.0 [cpp_nd_v4.0]
+^.^|4.0
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v4.0.pdf,40]
+
+image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v4.0.html,40]
+
+image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc,40]
+.^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
+^.^|4.0
+^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4.0.pdf,40]
+
+image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4.0.html,40]
+
+image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc,40]
+
+|===
 
 === *_Version 3.0e_*
 
@@ -46,14 +64,14 @@ Publication Date:: December 06, 2023
 
 image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.html,40]
 
-image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/NDcPP_v3_0e.adoc,40]
+image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/NDcPP_v3_0e.adoc,40]
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
 ^.^|3.0e
 ^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.pdf,40]
 
 image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.html,40]
 
-image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_3_0e.adoc,40]
+image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/ND_Supporting_Document_3_0e.adoc,40]
 
 |===
 
