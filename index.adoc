@@ -31,16 +31,16 @@ Publication Date:: November 25, 2025
 
 .^|collaborative Protection Profile for Network Devices Version 4.0 [cpp_nd_v4.0]
 ^.^|4.0
-^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v4.0.pdf,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v4_0.pdf,40]
 
-image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v4.0.html,40]
+image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v4_0.html,40]
 
 image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc,40]
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
 ^.^|4.0
-^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4.0.pdf,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.pdf,40]
 
-image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4.0.html,40]
+image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.html,40]
 
 image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc,40]
 
