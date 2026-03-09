@@ -36,7 +36,7 @@ MOD_FW_v1.4e-SD
 |Published
 
 |RFI#202601
-|https://nd-itc.github.io/TD/2026//NITDecisionRfI202601.pdf[FIPS PUB 186-4 in NDcPPv4.0,window="_blank"]
+|https://nd-itc.github.io/TD/2026/NITDecisionRfI202601.pdf[FIPS PUB 186-4 in NDcPPv4.0,window="_blank"]
 |FCS_CKM.1/AKG, FCS_COP.1/SigGen, FCS_COP.1/SigVer
 |2026-02-26
 |NDcPPv4.0,
