@@ -10,7 +10,7 @@
 :iTC-GitHub: https://github.com/ND-iTC
 
 == {iTC-longname} Technical Decisions
-The iTC issues Technical Decisions based on requests for interpretation to clarify and update the cPP and related documents between release cycles. This is the main page for Technical Decisions that have been issued by the iTC. 
+The iTC issues Technical Decisions based on requests for interpretation to clarify and update the cPP and related documents between release cycles. This is the main page for Technical Decisions that have been issued by the iTC.
 
 === Technical Decision Links
 * https://github.com/ND-iTC/Documents/issues/new?assignees=&labels=Interpretation&projects=&template=request-for-interpretation.md&title=%5BNIT+Request%5D[New Request for Interpretation]
@@ -18,7 +18,7 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 
 == Active Technical Decisions
 
-[%header,cols=".^1,.^2,.^2,.^1,.^2,.^2"]
+[#td-table%header,cols=".^1,.^2,.^2,.^1,.^2,.^2"]
 |===
 |ID
 |Title
@@ -27,165 +27,62 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 |Impact
 |Status
 
-|RFI#202401
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202401.pdf[Redundant requirements in FPT_TST_EXT.1,window=\"_blank\"]
-|FPT_TST_EXT.1
-|2024-04-17
+|RFI#202604
+|https://nd-itc.github.io/TD/2026//NITDecisionRfI202604.pdf[Update Allowed With List to include MOD_WLAN_AS_V1.0,window="_blank"]
+|N/A
+|2026-03-05
+|MOD_CPP_FW_v1.4e,
+MOD_FW_v1.4e-SD
+|Published
+
+|RFI#202601
+|https://nd-itc.github.io/TD/2026//NITDecisionRfI202601.pdf[FIPS PUB 186-4 in NDcPPv4.0,window="_blank"]
+|FCS_CKM.1/AKG, FCS_COP.1/SigGen, FCS_COP.1/SigVer
+|2026-02-26
+|NDcPPv4.0,
+NDSDv4.0
+|Published
+
+|RFI#202600
+|https://nd-itc.github.io/TD/2026//NITDecisionRfI202600.pdf[NIAP TRRT process,window="_blank"]
+|N/A
+|2026-02-04
+|NDcPPv4.0
+|Published
+
+|RFI#202511
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202511.pdf[CTR_DRBG in FCS_RBG_EXT.1.2,window="_blank"]
+|FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2
+|2026-02-09
 |NDcPPv3.0e,
 NDSDv3.0e
 |Published
 
-|RFI#202402a
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202402a.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Client,window=\"_blank\"]
-|FCS_TLSC_EXT.1.9, Test 4
-|2024-08-05
+|RFI#202509
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202509.pdf[FCS_TLSS_EXT.1.3 Test 2 DHE Ciphersuite Conditionality,window="_blank"]
+|FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2
+|2025-10-13
 |NDSDv3.0e
 |Published
 
-|RFI#202402b
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202402b.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Server,window=\"_blank\"]
-|FCS_TLSS_EXT.1.8, Test 4
-|2024-08-05
-|NDSDv3.0e
-|Published
-
-|RFI#202403
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202403.pdf[Behavior for FFW_RUL_EXT.1.10 Test Update,window=\"_blank\"]
-|FFW_RUL_EXT.1.10
-|2024-05-17
-|FWv1.4
-|Published
-
-|RFI#202404
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202404.pdf[FCS_IPSEC_EXT.1.10 test update,window=\"_blank\"]
-|FCS_IPSEC_EXT.1.10
-|2024-09-24
+|RFI#202508
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202508.pdf[Clarification on FIA_AFL.1 Application Note 118 regarding reboot-based lockout recovery,window="_blank"]
+|FIA_AFL.1
+|2025-07-14
 |NDcPPv3.0e,
 NDSDv3.0e
 |Published
 
-|RFI#202405
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202405.pdf[Clarification of audit selections in FMT_SMF.1.1,window=\"_blank\"]
-|FMT_SMF.1.1
-|2024-08-05
-|NDcPPv3.0e
-|Published
-
-|RFI#202406
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202406.pdf[Applying TD0800 to NDcPPv3.0,window=\"_blank\"]
-|FCS_IPSEC_EXT.1.7, FCS_IPSEC_EXT.1.8
-|2024-07-10
-|NDcPPv3.0e
-|Published
-
-|RFI#202407
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202407.pdf[Expansion of MOD_FW Scope,window=\"_blank\"]
-|multiple
-|2024-07-29
-|FWv1.4
-|Published
-
-|RFI#202408
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202408.pdf[FCS_CKM.2 - Key Establishment Assurance Activities,window=\"_blank\"]
-|multiple
-|2025-02-07
-|NDSDv3.0e
-|Published
-
-|RFI#202409
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202409.pdf[Correction of FCS_TLSS_EXT.1.4, Test 4,window=\"_blank\"]
-|FCS_TLSS_EXT.1.4, Test 4, FCS_DTLSS_EXT.1.7, Test 4
-|2024-09-09
-|NDSDv3.0e
-|Published
-
-|RFI#202411
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202411.pdf[Correction of FCS_IPSEC_EXT.1.4, Evaluation Activities/App Note,window=\"_blank\"]
-|FCS_IPSEC_EXT.1.4
-|2024-07-15
-|NDSDv3.0e
-|Published
-
-|RFI#202412
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202412.pdf[Test definition for FCS_NTP_EXT.1.2,window=\"_blank\"]
-|FCS_NTP_EXT.1.2, Tests
-|2024-09-09
-|NDSDv3.0e
-|Published
-
-|RFI#202413
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202413.pdf[Missing section header in NDcPP Appendix B,window=\"_blank\"]
-|B.6
-|2024-08-19
-|NDcPPv3.0e
-|Published
-
-|RFI#202414
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202414.pdf[Definition of a Known-good Implementation for FCS_CKM.2 Tests,window=\"_blank\"]
-|FFCS_CKM.2
-|2025-03-31
-|NDcPPv3.0e,
-NDSDv3.0e
-|Published
-
-|RFI#202415
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202415.pdf[FCS_COP.1.1/SigGen Needs assignment added,window=\"_blank\"]
-|FCS_COP.1.1/SigGen
-|2024-10-01
-|NDcPPv3.0e
-|Published
-
-|RFI#202417a
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202417a.pdf[Addition of FIPS PUB 186-5 for RSA,window=\"_blank\"]
-|FCS_CKM.1,
-FCS_COP.1.1/SigGen
-|2025-04-21
-|NDcPPv3.0e,
-NDSDv3.0e
-|Published
-
-|RFI#202417b
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202417b.pdf[Addition of FIPS PUB 186-5 for ECDSA,window=\"_blank\"]
-|FCS_CKM.1,
-FCS_COP.1.1/SigGen
-|2025-04-21
-|NDcPPv3.0e,
-NDSDv3.0e
-|Published
-
-|RFI#202418
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202418.pdf[FAU_STG_EXT.1, Test 6 unclear requirements,window=\"_blank\"]
-|FAU_STG_EXT.1, Test 6
-|2024-09-27
-|NDcPPv3.0e
-|Published
-
-|RFI#202420
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202420.pdf[Local IP address for Administrative Access,window=\"_blank\"]
-|FIA_AFL.1, FMT_SMF.1
-|2025-02-07
-|NDcPPv3.0e,
-NDSDv3.0e
-|Published
-
-|RFI#202421
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202421v3.pdf[Other authentication mechanisms in FIA_UIA_EXT.1.3,window=\"_blank\"]
-|FIA_UIA_EXT.1.3
-|2025-02-07
-|NDcPPv3.0e
-|Published
-
-|RFI#202422
-|https://nd-itc.github.io/TD/2024//NITDecisionRfI202422.pdf[Clarification for FIA_X509_EXT.1 and FIA_X509_EXT.2,window=\"_blank\"]
-|cPP_ND_v3.0e Section B.4.1,
-cPP_ND_v3.0e-SD Section 4.3.1.3
-|2025-03-03
-|NDcPPv3.0e,
-NDSDv3.0e
+|RFI#202505
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202505.pdf[FFW_RUL_EXT.1.2 Expected Rule Granularity Level,window="_blank"]
+|FFW_RUL_EXT.1.2
+|2025-06-16
+|MOD_CPP_FW_v1.4e,
+MOD_FW_v1.4e-SD
 |Published
 
 |RFI#202504
-|https://nd-itc.github.io/TD/2025//NITDecisionRfI202504.pdf[FAU_STG_EXT.1 Auditable Events,window=\"_blank\"]
+|https://nd-itc.github.io/TD/2025//NITDecisionRfI202504.pdf[FAU_STG_EXT.1 Auditable Events,window="_blank"]
 |FAU_STG_EXT.1,
 NDcPP v3.0e sections 2.1.1.2 and 2.1.1.3
 |2025-06-09
@@ -193,27 +90,234 @@ NDcPP v3.0e sections 2.1.1.2 and 2.1.1.3
 NDSDv3.0e
 |Published
 
-|RFI#202505
-|https://nd-itc.github.io/TD/2025//NITDecisionRfI202505.pdf[FFW_RUL_EXT.1.2 Expected Rule Granularity Level,window=\"_blank\"]
-|FFW_RUL_EXT.1.2
-|2025-06-16
-|MOD_CPP_FW_v1.4e,
-MOD_FW_v1.4e-SD
-|Published
-
-|RFI#202508
-|https://nd-itc.github.io/TD/2025//NITDecisionRfI202508.pdf[Clarification on FIA_AFL.1 Application Note 118 regarding reboot-based lockout recovery,window=\"_blank\"]
-|FIA_AFL.1
-|2025-07-14
+|RFI#202422
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202422.pdf[Clarification for FIA_X509_EXT.1 and FIA_X509_EXT.2,window="_blank"]
+|cPP_ND_v3.0e Section B.4.1,
+cPP_ND_v3.0e-SD Section 4.3.1.3
+|2025-03-03
 |NDcPPv3.0e,
 NDSDv3.0e
 |Published
 
-|RFI#202509
-|https://nd-itc.github.io/TD/2025//NITDecisionRfI202509.pdf[FCS_TLSS_EXT.1.3 Test 2 DHE Ciphersuite Conditionality,window=\"_blank\"]
-|FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2
-|2025-10-13
+|RFI#202421
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202421v3.pdf[Other authentication mechanisms in FIA_UIA_EXT.1.3,window="_blank"]
+|FIA_UIA_EXT.1.3
+|2025-02-07
+|NDcPPv3.0e
+|Published
+
+|RFI#202420
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202420.pdf[Local IP address for Administrative Access,window="_blank"]
+|FIA_AFL.1, FMT_SMF.1
+|2025-02-07
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202418
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202418.pdf[FAU_STG_EXT.1, Test 6 unclear requirements,window="_blank"]
+|FAU_STG_EXT.1, Test 6
+|2024-09-27
+|NDcPPv3.0e
+|Published
+
+|RFI#202417b
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202417b.pdf[Addition of FIPS PUB 186-5 for ECDSA,window="_blank"]
+|FCS_CKM.1,
+FCS_COP.1.1/SigGen
+|2025-04-21
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202417a
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202417a.pdf[Addition of FIPS PUB 186-5 for RSA,window="_blank"]
+|FCS_CKM.1,
+FCS_COP.1.1/SigGen
+|2025-04-21
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202415
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202415.pdf[FCS_COP.1.1/SigGen Needs assignment added,window="_blank"]
+|FCS_COP.1.1/SigGen
+|2024-10-01
+|NDcPPv3.0e
+|Published
+
+|RFI#202414
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202414.pdf[Definition of a Known-good Implementation for FCS_CKM.2 Tests,window="_blank"]
+|FFCS_CKM.2
+|2025-03-31
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202413
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202413.pdf[Missing section header in NDcPP Appendix B,window="_blank"]
+|B.6
+|2024-08-19
+|NDcPPv3.0e
+|Published
+
+|RFI#202412
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202412.pdf[Test definition for FCS_NTP_EXT.1.2,window="_blank"]
+|FCS_NTP_EXT.1.2, Tests
+|2024-09-09
 |NDSDv3.0e
 |Published
 
+|RFI#202411
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202411.pdf[Correction of FCS_IPSEC_EXT.1.4, Evaluation Activities/App Note,window="_blank"]
+|FCS_IPSEC_EXT.1.4
+|2024-07-15
+|NDSDv3.0e
+|Published
+
+|RFI#202409
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202409.pdf[Correction of FCS_TLSS_EXT.1.4, Test 4,window="_blank"]
+|FCS_TLSS_EXT.1.4, Test 4, FCS_DTLSS_EXT.1.7, Test 4
+|2024-09-09
+|NDSDv3.0e
+|Published
+
+|RFI#202408
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202408.pdf[FCS_CKM.2 - Key Establishment Assurance Activities,window="_blank"]
+|multiple
+|2025-02-07
+|NDSDv3.0e
+|Published
+
+|RFI#202407
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202407.pdf[Expansion of MOD_FW Scope,window="_blank"]
+|multiple
+|2024-07-29
+|FWv1.4
+|Published
+
+|RFI#202406
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202406.pdf[Applying TD0800 to NDcPPv3.0,window="_blank"]
+|FCS_IPSEC_EXT.1.7, FCS_IPSEC_EXT.1.8
+|2024-07-10
+|NDcPPv3.0e
+|Published
+
+|RFI#202405
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202405.pdf[Clarification of audit selections in FMT_SMF.1.1,window="_blank"]
+|FMT_SMF.1.1
+|2024-08-05
+|NDcPPv3.0e
+|Published
+
+|RFI#202404
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202404.pdf[FCS_IPSEC_EXT.1.10 test update,window="_blank"]
+|FCS_IPSEC_EXT.1.10
+|2024-09-24
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
+|RFI#202403
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202403.pdf[Behavior for FFW_RUL_EXT.1.10 Test Update,window="_blank"]
+|FFW_RUL_EXT.1.10
+|2024-05-17
+|FWv1.4
+|Published
+
+|RFI#202402b
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202402b.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Server,window="_blank"]
+|FCS_TLSS_EXT.1.8, Test 4
+|2024-08-05
+|NDSDv3.0e
+|Published
+
+|RFI#202402a
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202402a.pdf[Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Client,window="_blank"]
+|FCS_TLSC_EXT.1.9, Test 4
+|2024-08-05
+|NDSDv3.0e
+|Published
+
+|RFI#202401
+|https://nd-itc.github.io/TD/2024//NITDecisionRfI202401.pdf[Redundant requirements in FPT_TST_EXT.1,window="_blank"]
+|FPT_TST_EXT.1
+|2024-04-17
+|NDcPPv3.0e,
+NDSDv3.0e
+|Published
+
 |===
+
+++++
+<style>
+  #td-search-box {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0.75em;
+    padding: 0.4em 0.6em;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #td-table thead th { cursor: pointer; user-select: none; }
+  #td-table thead th::after { content: ' \⇅'; opacity: 0.4; font-size: 0.85em; }
+  #td-table thead th[data-sort="asc"]::after { content: ' \▲'; opacity: 1; }
+  #td-table thead th[data-sort="desc"]::after { content: ' \▼'; opacity: 1; }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const table = document.getElementById('td-table');
+  if (!table) return;
+
+  // Insert search box before the table
+  const searchInput = document.createElement('input');
+  searchInput.type = 'search';
+  searchInput.id = 'td-search-box';
+  searchInput.placeholder = 'Search table...';
+  table.parentNode.insertBefore(searchInput, table);
+
+  const headers = table.querySelectorAll('thead th');
+  let sortCol = -1;
+  let sortAsc = true;
+
+  function filterRows() {
+    const query = searchInput.value.trim().toLowerCase();
+    const tbody = table.querySelector('tbody');
+    Array.from(tbody.querySelectorAll('tr')).forEach(function (row) {
+      const text = row.textContent.toLowerCase();
+      row.style.display = (!query || text.includes(query)) ? '' : 'none';
+    });
+  }
+
+  searchInput.addEventListener('input', filterRows);
+
+  headers.forEach(function (th, col) {
+    th.addEventListener('click', function () {
+      if (sortCol === col) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = true;
+      }
+
+      headers.forEach(function (h) { h.removeAttribute('data-sort'); });
+      th.setAttribute('data-sort', sortAsc ? 'asc' : 'desc');
+
+      const tbody = table.querySelector('tbody');
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+
+      rows.sort(function (a, b) {
+        const aText = a.cells[col].textContent.trim();
+        const bText = b.cells[col].textContent.trim();
+        return sortAsc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+      });
+
+      rows.forEach(function (row) { tbody.appendChild(row); });
+    });
+  });
+});
+</script>
+++++
