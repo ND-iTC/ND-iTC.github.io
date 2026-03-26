@@ -5,28 +5,55 @@
 
 [cols="1,2",options=,]
 |===
-|*Allowed-with list version*|1.4r12
-|*Date*|02 March 2026
+|*Allowed-with list version*|2.0
+|*Date*|TBD March 2026
 |===
 
 This document contains the lists of allowed packages and PP-Modules to which exact conformance can be claimed in conjunction with the above PP-Module. It is used in conjunction with the 'CC Conformance' section of the PP-Module to provide the complete conformance statement for the PP-Module.
 
-Inclusion of an object on one of these lists does not imply endorsement of the object by the NDFW iTC, nor does it imply that the relevant object has been checked for compliance with the assurance requirements applicable to a PP-Configuration or ST that uses the PP-Module in conjunction with the relevant object.
+Inclusion of an object on one of these lists does not imply endorsement of the object by the ND-iTC, nor does it imply that the relevant object has been checked for compliance with the assurance requirements applicable to a PP-Configuration or ST that uses the PP-Module in conjunction with the relevant object.
 
 Use of the PP-Module for Stateful Traffic Filter Firewalls in conjunction with objects (Protection Profiles, PP-Modules, packages) other than its base PP and the allowed objects below is not allowed.
+
+== FW Module 2.0
+
+[cols="1,2",options=,]
+|===
+
+|PP-Module to which this list applies :|PP-Module for Stateful Traffic Filter Firewalls
+|Latest definitive PP-Module version:|V2.0, TBD-March-2026
+|Supporting Document for PP Module:|Evaluation Activities for Stateful Traffic Filter Firewalls PP Module
+|Latest definitive SD version:|V2.0, TBD-March-2026
+|Base PP:|collaborative Protection Profile for Network Devices
+|Latest definitive base PP version:|V4.0, 25 November 2025
+|Supporting Document for base PP:|Evaluation Activities for Network Device cPP
+|Latest definitive SD version for base PP:|V4.0, 25 November 2025
+
+|===
+
+
+*Allowed Packages:*
+
+No objects of this type are currently allowed with the PP-Module.
+
+*Allowed PP-Modules:*
+
+TBD
 
 == FW Module v1.4e
 
 [cols="1,2",options=,]
 |===
+
 |PP-Module to which this list applies :|PP-Module for Stateful Traffic Filter Firewalls
 |Latest definitive PP-Module version:|V1.4 +Errata 20200625, 25 June 2020
 |Supporting Document for PP Module:|Evaluation Activities for Stateful Traffic Filter Firewalls PP Module
 |Latest definitive SD version:|V1.4 +Errata 20200625, 25 June 2020
 |Base PP:|collaborative Protection Profile for Network Devices
-|Latest definitive base PP version:|V2.2e, 27 March 2020
+|Latest definitive base PP version:|V3.0e, 6 December 2023
 |Supporting Document for base PP:|Evaluation Activities for Network Device cPP
-|Latest definitive SD version for base PP:|V2.2, 4 December 2019
+|Latest definitive SD version for base PP:|V3.0e, 6 December 2023
+
 |===
 
 *Allowed Packages:* No objects of this type are currently allowed with the PP-Module.

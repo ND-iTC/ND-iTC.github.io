@@ -27,7 +27,7 @@ Publication Date:: November 25, 2025
 [[v4.0DocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title ^.^|Version ^.^|image:pdf.png[,20] image:HTML.png[,20] image:GitHub.png[,20]
+|Title ^.^|Version ^.^|Links
 
 .^|collaborative Protection Profile for Network Devices Version 4.0 [cpp_nd_v4.0]
 ^.^|4.0
@@ -46,7 +46,7 @@ Publication Date:: December 06, 2023
 [[v3.0DocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title ^.^|Version ^.^|image:pdf.png[,20] image:HTML.png[,20] image:GitHub.png[,20]
+|Title ^.^|Version ^.^|Links
 
 .^|collaborative Protection Profile for Network Devices Version 3.0e [cpp_nd_v3.0e]
 ^.^|3.0e
@@ -67,7 +67,7 @@ Publication Date:: TBD
 [[FWv2.0DocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title ^.^|Version ^.^|image:pdf.png[,20] image:HTML.png[,20] image:GitHub.png[,20]
+|Title ^.^|Version ^.^|Links
 
 .^|PP-Module for Stateful Traffic Filter Firewalls [MOD_CPP_FW_v2.0]
 ^.^|2.0
@@ -86,7 +86,7 @@ Publication Date:: June 25, 2020
 [[FWv1.4eDocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title ^.^|Version ^.^|image:pdf.png[,20] image:HTML.png[,20] image:GitHub.png[,20]
+|Title ^.^|Version ^.^|Links
 
 .^|PP-Module for Stateful Traffic Filter Firewalls [MOD_CPP_FW_v1.4e]
 ^.^|1.4e
@@ -107,7 +107,7 @@ Publication Date:: March 23, 2020
 [[v2.2eDocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title ^.^|Version ^.^|image:pdf.png[,20] image:HTML.png[,20] image:GitHub.png[,20]
+|Title ^.^|Version ^.^|iLinks
 
 .^|collaborative Protection Profile for Network Devices Version 2.2e [cpp_nd_v2.2e]
 ^.^|2.2e
