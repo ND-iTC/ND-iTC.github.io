@@ -4,6 +4,7 @@
 :imagesdir: images
 
 == Introduction
+
 From the CCDB established Working Group, the Network Device International Technical Community (ND iTC) was formed. The ND iTC consists of members of Certification Bodies, labs, and vendors working together to create requirements for network device security testing.
 
 https://www.commoncriteriaportal.org/communities/fw-nd.cfm[ND iTC Common Criteria Portal Page]
@@ -13,11 +14,12 @@ https://github.com/ND-iTC/[ND iTC GitHub organization]
 To join the ND iTC, please send a message to NetworkDeviceitc@gmail.com.
 
 == Current Status
+
 The ND iTC's current version of the collaborative Protection Profile (cPP) and Supporting Document (SD) can be found on the https://commoncriteriaportal.org/pps/index.cfm[Common Criteria Portal].
 
-== Current Published Documents
+== Current Published cPPs
 
-=== *_Version 4.0_*
+=== *_NDcPP v4.0_*
 
 Publication Date:: November 25, 2025
 
@@ -25,28 +27,18 @@ Publication Date:: November 25, 2025
 [[v4.0DocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title 
-^.^|Version 
-^.^|Links
+|Title ^.^|Version ^.^|Links
 
 .^|collaborative Protection Profile for Network Devices Version 4.0 [cpp_nd_v4.0]
 ^.^|4.0
-^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v4_0.pdf,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v4_0.pdf,40] image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v4_0.html,40] image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc,40]
 
-image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v4_0.html,40]
-
-image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc,40]
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
 ^.^|4.0
-^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.pdf,40]
-
-image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.html,40]
-
-image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc,40]
-
+^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.pdf,40] image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.html,40] image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc,40]
 |===
 
-=== *_Version 3.0e_*
+=== *_NDcPP v3.0e_*
 
 Publication Date:: December 06, 2023
 
@@ -54,29 +46,56 @@ Publication Date:: December 06, 2023
 [[v3.0DocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title 
-^.^|Version 
-^.^|Links
+|Title ^.^|Version ^.^|Links
 
 .^|collaborative Protection Profile for Network Devices Version 3.0e [cpp_nd_v3.0e]
 ^.^|3.0e
-^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.pdf,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.pdf,40] image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.html,40] image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/NDcPP_v3_0e.adoc,40]
 
-image:HTML.png[link=https://nd-itc.github.io/cPP/NDcPP_v3_0e.html,40]
-
-image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/NDcPP_v3_0e.adoc,40]
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
 ^.^|3.0e
-^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.pdf,40]
-
-image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.html,40]
-
-image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/ND_Supporting_Document_3_0e.adoc,40]
-
+^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.pdf,40] image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.html,40] image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/ND_Supporting_Document_3_0e.adoc,40]
 |===
 
+== Current Published PP-Modules
 
-=== *_Version 2.2e_*
+=== *_FW Module v2.0_*
+
+Publication Date:: TBD
+
+.Public Release FW Module v2.0 Documents
+[[FWv2.0DocTable]]
+[cols="5,1,1",options="header"]
+|===
+|Title ^.^|Version ^.^|Links
+
+.^|PP-Module for Stateful Traffic Filter Firewalls [MOD_CPP_FW_v2.0]
+^.^|2.0
+^.^|image:GitHub.png[link=https://github.com/ND-iTC/PP-Module-FW/blob/Development/MOD_CPP_FW_v2.0.adoc,40]
+
+.^|Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module - [FW SD]
+^.^|2.0
+^.^|image:GitHub.png[link=https://github.com/ND-iTC/PP-Module-FW/blob/Development/SD_MOD_FW_v2.0.adoc,40]
+|===
+
+=== *_FW Module v1.4e_*
+
+Publication Date:: June 25, 2020
+
+.Public Release FW Module v1.4e Documents
+[[FWv1.4eDocTable]]
+[cols="5,1,1",options="header"]
+|===
+|Title ^.^|Version ^.^|Links
+
+.^|PP-Module for Stateful Traffic Filter Firewalls [MOD_CPP_FW_v1.4e]
+^.^|1.4 +Errata 20200625
+^.^|image:GitHub.png[link=https://github.com/ND-iTC/PP-Module-FW/tree/main,40]
+|===
+
+== Sunset Documents
+
+=== *_NDcPP v2.2e_*
 
 Publication Date:: March 23, 2020
 
@@ -84,32 +103,23 @@ Publication Date:: March 23, 2020
 [[v2.2eDocTable]]
 [cols="5,1,1",options="header"]
 |===
-|Title 
-^.^|Version 
-^.^|Links
+|Title ^.^|Version ^.^|Links
 
 .^|collaborative Protection Profile for Network Devices Version 2.2e [cpp_nd_v2.2e]
 ^.^|2.2e
-^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/CPP_ND_V2.2E.pdf
-,40]
+^.^|image:pdf.png[link=https://nd-itc.github.io/cPP/CPP_ND_V2.2E.pdf ,40]
 
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]
 ^.^|2.2
 ^.^|image:pdf.png[link=https://nd-itc.github.io/SD/CPP_ND_V2.2E_supporting_doc.pdf,40]
-
 |===
 
-== Allowed-with List
+== Allowed-with Lists
 
-The published collaberation Protection Profiles can be used with PP-Modules listed on the https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html[ND iTC allowed-with list for Network Device cPP].
+The published cPPs and PP-Modules have allowed-with lists that define which PP-Modules and packages may be used in conjunction with them:
 
-== PP-Modules
-
-The ND iTC also maintains the following PP-Modules for use with the ND cPP:
-
-=== PP-Module for Stateful Traffic Filter Firewalls (FW Module)
-
-The https://github.com/ND-iTC/PP-Module-FW[PP-Module for Stateful Traffic Filter Firewalls] is maintained by the NDFW iTC. The allowed-with list for the FW PP-Module can be found on the https://nd-itc.github.io/AWL/FW_allowed_with_list.html[NDFW iTC allowed-with list for Stateful Traffic Filter Firewall PP Module].
+* https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html[ND iTC allowed-with list for Network Device cPP]
+* https://nd-itc.github.io/AWL/FW_allowed_with_list.html[NDFW iTC allowed-with list for Stateful Traffic Filter Firewall PP-Module]
 
 == Technical Decisions
 
