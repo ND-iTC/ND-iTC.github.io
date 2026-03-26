@@ -1,0 +1,59 @@
+name: Generate AWL PDFs
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - Development
+    paths:
+      - 'AWL/*.html'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: Development
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wkhtmltopdf xvfb
+
+      - name: Generate NDcPP AWL PDF
+        run: |
+          mkdir -p AWL
+          xvfb-run --auto-servernum wkhtmltopdf \
+            --enable-local-file-access \
+            --page-size A4 \
+            --margin-top 15mm \
+            --margin-bottom 15mm \
+            --margin-left 15mm \
+            --margin-right 15mm \
+            https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html \
+            AWL/NDcPP_allowed_with_list.pdf
+
+      - name: Generate FW AWL PDF
+        run: |
+          xvfb-run --auto-servernum wkhtmltopdf \
+            --enable-local-file-access \
+            --page-size A4 \
+            --margin-top 15mm \
+            --margin-bottom 15mm \
+            --margin-left 15mm \
+            --margin-right 15mm \
+            https://nd-itc.github.io/AWL/FW_allowed_with_list.html \
+            AWL/FW_allowed_with_list.pdf
+
+      - name: Commit PDFs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add AWL/NDcPP_allowed_with_list.pdf AWL/FW_allowed_with_list.pdf
+          git diff --cached --quiet || git commit -m "Generate AWL PDFs via workflow"
+          git push origin Development
