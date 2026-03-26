@@ -19,7 +19,7 @@ The ND iTC's current version of the collaborative Protection Profile (cPP) and S
 
 == Current Published cPPs
 
-=== *_NDcPP v4.0_*
+=== NDcPP v4.0
 
 Publication Date:: November 25, 2025
 
@@ -38,7 +38,7 @@ Publication Date:: November 25, 2025
 ^.^|image:pdf.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.pdf,40] image:HTML.png[link=https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.html,40] image:GitHub.png[link=https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc,40]
 |===
 
-=== *_NDcPP v3.0e_*
+=== NDcPP v3.0e
 
 Publication Date:: December 06, 2023
 
@@ -59,7 +59,7 @@ Publication Date:: December 06, 2023
 
 == Current Published PP-Modules
 
-=== *_FW Module v2.0_*
+=== FW Module v2.0
 
 Publication Date:: TBD
 
@@ -78,7 +78,7 @@ Publication Date:: TBD
 ^.^|image:GitHub.png[link=https://github.com/ND-iTC/PP-Module-FW/blob/Development/SD_MOD_FW_v2.0.adoc,40]
 |===
 
-=== *_FW Module v1.4e_*
+=== FW Module v1.4e
 
 Publication Date:: June 25, 2020
 
@@ -95,7 +95,7 @@ Publication Date:: June 25, 2020
 
 == Sunset Documents
 
-=== *_NDcPP v2.2e_*
+=== NDcPP v2.2e
 
 Publication Date:: March 23, 2020
 
@@ -119,7 +119,7 @@ Publication Date:: March 23, 2020
 The published cPPs and PP-Modules have allowed-with lists that define which PP-Modules and packages may be used in conjunction with them:
 
 * https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html[ND iTC allowed-with list for Network Device cPP]
-* https://nd-itc.github.io/AWL/FW_allowed_with_list.html[NDFW iTC allowed-with list for Stateful Traffic Filter Firewall PP-Module]
+* https://nd-itc.github.io/AWL/FW_allowed_with_list.html[ND-iTC allowed-with list for Stateful Traffic Filter Firewall PP-Module]
 
 == Technical Decisions
 
