@@ -103,6 +103,14 @@ Publication Date:: March 23, 2020
 
 The published collaberation Protection Profiles can be used with PP-Modules listed on the https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html[ND iTC allowed-with list for Network Device cPP].
 
+== PP-Modules
+
+The ND iTC also maintains the following PP-Modules for use with the ND cPP:
+
+=== PP-Module for Stateful Traffic Filter Firewalls (FW Module)
+
+The https://github.com/ND-iTC/PP-Module-FW[PP-Module for Stateful Traffic Filter Firewalls] is maintained by the NDFW iTC. The allowed-with list for the FW PP-Module can be found on the https://nd-itc.github.io/AWL/FW_allowed_with_list.html[NDFW iTC allowed-with list for Stateful Traffic Filter Firewall PP Module].
+
 == Technical Decisions
 
 Technical Decisions produced by the ND iTC can be found on the https://nd-itc.github.io/TD/tech_dec.html[ND iTC Technical Decisions page].
