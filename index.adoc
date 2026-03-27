@@ -61,7 +61,7 @@ Publication Date:: December 06, 2023
 
 === FW Module v2.0
 
-Publication Date:: TBD
+Publication Date:: March 30, 2026
 
 .Public Release FW Module v2.0 Documents
 [[FWv2.0DocTable]]

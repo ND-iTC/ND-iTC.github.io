@@ -6,7 +6,7 @@
 [cols="1,2",options=,]
 |===
 |*Allowed-with list version*|2.0
-|*Date*|TBD March 2026
+|*Date*|30 March 2026
 |===
 
 This document contains the lists of allowed packages and PP-Modules to which exact conformance can be claimed in conjunction with the above PP-Module. It is used in conjunction with the 'CC Conformance' section of the PP-Module to provide the complete conformance statement for the PP-Module.
@@ -21,9 +21,9 @@ Use of the PP-Module for Stateful Traffic Filter Firewalls in conjunction with o
 |===
 
 |PP-Module to which this list applies :|PP-Module for Stateful Traffic Filter Firewalls
-|Latest definitive PP-Module version:|V2.0, TBD-March-2026
+|Latest definitive PP-Module version:|V2.0, 30-March-2026
 |Supporting Document for PP Module:|Evaluation Activities for Stateful Traffic Filter Firewalls PP Module
-|Latest definitive SD version:|V2.0, TBD-March-2026
+|Latest definitive SD version:|V2.0, 30-March-2026
 |Base PP:|collaborative Protection Profile for Network Devices
 |Latest definitive base PP version:|V4.0, 25 November 2025
 |Supporting Document for base PP:|Evaluation Activities for Network Device cPP
