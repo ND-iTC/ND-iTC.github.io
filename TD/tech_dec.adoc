@@ -1,10 +1,10 @@
-= Network Device iTC (ND iTC)
+= Network Device iTC (ND-iTC)
 :showtitle:
 :toc: left
 :imagesdir: ../images
 
 :iTC-longname: Network Device
-:iTC-shortname: ND iTC
+:iTC-shortname: ND-iTC
 :iTC-email: networkdeviceitc@gmail.com
 :iTC-website: https://nd-itc.github.io/
 :iTC-GitHub: https://github.com/ND-iTC

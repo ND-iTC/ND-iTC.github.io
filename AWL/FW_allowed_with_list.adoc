@@ -1,4 +1,4 @@
-= NDFW iTC allowed-with list for Stateful Traffic Filter Firewall PP Module
+= ND-iTC allowed-with list for Stateful Traffic Filter Firewall PP Module
 :showtitle:
 :toc: left
 :imagesdir: ../images
