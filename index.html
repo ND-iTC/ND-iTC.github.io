@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<title>Network Device iTC (ND iTC)</title>
+<title>Network Device iTC (ND-iTC)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,25 +436,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Network Device iTC (ND iTC)</h1>
+<h1>Network Device iTC (ND-iTC)</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_introduction">Introduction</a></li>
 <li><a href="#_current_status">Current Status</a></li>
-<li><a href="#_current_published_documents">Current Published Documents</a>
+<li><a href="#_current_published_cpps">Current Published cPPs</a>
 <ul class="sectlevel2">
-<li><a href="#_version_4_0"><strong><em>Version 4.0</em></strong></a></li>
-<li><a href="#_version_3_0e"><strong><em>Version 3.0e</em></strong></a></li>
-<li><a href="#_version_2_2e"><strong><em>Version 2.2e</em></strong></a></li>
+<li><a href="#_ndcpp_v4_0">NDcPP v4.0</a></li>
+<li><a href="#_ndcpp_v3_0e">NDcPP v3.0e</a></li>
 </ul>
 </li>
-<li><a href="#_allowed_with_list">Allowed-with List</a></li>
-<li><a href="#_pp_modules">PP-Modules</a>
+<li><a href="#_current_published_pp_mods">Current Published PP-Mods</a>
 <ul class="sectlevel2">
-<li><a href="#_pp_module_for_stateful_traffic_filter_firewalls_fw_module">PP-Module for Stateful Traffic Filter Firewalls (FW Module)</a></li>
+<li><a href="#_fw_module_v2_0">FW Module v2.0</a></li>
+<li><a href="#_fw_module_v1_4e">FW Module v1.4e</a></li>
 </ul>
 </li>
+<li><a href="#_sunset_documents">Sunset Documents</a>
+<ul class="sectlevel2">
+<li><a href="#_ndcpp_v2_2e">NDcPP v2.2e</a></li>
+</ul>
+</li>
+<li><a href="#_allowed_with_lists">Allowed-with Lists</a></li>
 <li><a href="#_technical_decisions">Technical Decisions</a></li>
 </ul>
 </div>
@@ -464,7 +469,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>From the CCDB established Working Group, the Network Device International Technical Community (ND iTC) was formed. The ND iTC consists of members of Certification Bodies, labs, and vendors working together to create requirements for network device security testing.</p>
+<p>From the CCDB established Working Group, the Network Device International Technical Community (ND-iTC) was formed. The ND-iTC consists of members of certification bodies, labs, and vendors working together to create requirements for network device security testing.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://www.commoncriteriaportal.org/communities/fw-nd.cfm">ND iTC Common Criteria Portal Page</a></p>
@@ -481,15 +486,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_current_status">Current Status</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ND iTC&#8217;s current version of the collaborative Protection Profile (cPP) and Supporting Document (SD) can be found on the <a href="https://commoncriteriaportal.org/pps/index.cfm">Common Criteria Portal</a>.</p>
+<p>The ND iTC&#8217;s current versions of the collaborative Protection Profile (cPP), Supporting Document (SD), and PP-Modules can be found on the <a href="https://commoncriteriaportal.org/pps/index.cfm">Common Criteria Portal</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_current_published_documents">Current Published Documents</h2>
+<h2 id="_current_published_cpps">Current Published cPPs</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_version_4_0"><strong><em>Version 4.0</em></strong></h3>
+<h3 id="_ndcpp_v4_0">NDcPP v4.0</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Publication Date</dt>
@@ -516,22 +521,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">collaborative Protection Profile for Network Devices Version 4.0 [cpp_nd_v4.0]</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">4.0</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v4_0.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v4_0.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v4_0.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span> <span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v4_0.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span> <span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">4.0</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span> <span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_4_0.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span> <span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_version_3_0e"><strong><em>Version 3.0e</em></strong></h3>
+<h3 id="_ndcpp_v3_0e">NDcPP v3.0e</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Publication Date</dt>
@@ -558,32 +559,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">collaborative Protection Profile for Network Devices Version 3.0e [cpp_nd_v3.0e]</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">3.0e</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v3_0e.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v3_0e.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/NDcPP_v3_0e.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v3_0e.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span> <span class="image"><a class="image" href="https://nd-itc.github.io/cPP/NDcPP_v3_0e.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span> <span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/NDcPP_v3_0e.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices - [ND SD]</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">3.0e</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span></p>
-<p class="tableblock"><span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/ND_Supporting_Document_3_0e.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span> <span class="image"><a class="image" href="https://nd-itc.github.io/SD/ND_Supporting_Document_3_0e.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span> <span class="image"><a class="image" href="https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/ND_Supporting_Document_3_0e.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_current_published_pp_mods">Current Published PP-Mods</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_version_2_2e"><strong><em>Version 2.2e</em></strong></h3>
+<h3 id="_fw_module_v2_0">FW Module v2.0</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Publication Date</dt>
 <dd>
-<p>March 23, 2020</p>
+<p>March 30, 2026</p>
 </dd>
 </dl>
 </div>
-<table id="v2.2eDocTable" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Public Release v2.2e Documents</caption>
+<table id="FWv2.0DocTable" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Public Release FW Module v2.0 Documents</caption>
 <colgroup>
 <col style="width: 71.4285%;">
 <col style="width: 14.2857%;">
@@ -594,6 +596,89 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <th class="tableblock halign-left valign-top">Title</th>
 <th class="tableblock halign-center valign-middle">Version</th>
 <th class="tableblock halign-center valign-middle">Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">PP-Module for Stateful Traffic Filter Firewalls [MOD_CPP_FW_v2.0]</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">2.0</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/PP-Module-FW/MOD_CPP_FW_v2.0.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span>
+<span class="image"><a class="image" href="https://nd-itc.github.io/PP-Module-FW/MOD_CPP_FW_v2.0.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span> <span class="image"><a class="image" href="https://github.com/ND-iTC/PP-Module-FW/blob/main/MOD_CPP_FW_v2.0.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module - [FW SD]</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">2.0</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://nd-itc.github.io/PP-Module-FW/SD_MOD_FW_v2.0.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span>
+<span class="image"><a class="image" href="https://nd-itc.github.io/PP-Module-FW/SD_MOD_FW_v2.0.html"><img src="images/HTML.png" alt="HTML" width="40"></a></span> <span class="image"><a class="image" href="https://github.com/ND-iTC/PP-Module-FW/blob/main/SD_MOD_FW_v2.0.adoc"><img src="images/GitHub.png" alt="GitHub" width="40"></a></span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_fw_module_v1_4e">FW Module v1.4e</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Publication Date</dt>
+<dd>
+<p>June 25, 2020</p>
+</dd>
+</dl>
+</div>
+<table id="FWv1.4eDocTable" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Public Release FW Module v1.4e Documents</caption>
+<colgroup>
+<col style="width: 71.4285%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title</th>
+<th class="tableblock halign-center valign-middle">Version</th>
+<th class="tableblock halign-center valign-middle">Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">PP-Module for Stateful Traffic Filter Firewalls [MOD_CPP_FW_v1.4e]</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1.4e</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://github.com/ND-iTC/PP-Module-FW/raw/Development/Previous_Versions/MOD_CPP_FW_v1.4e.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module - [FW SD]</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">1.4e</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="image"><a class="image" href="https://github.com/ND-iTC/PP-Module-FW/raw/Development/Previous_Versions/MOD_FW_v1.4e-SD.pdf"><img src="images/pdf.png" alt="pdf" width="40"></a></span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sunset_documents">Sunset Documents</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ndcpp_v2_2e">NDcPP v2.2e</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Publication Date</dt>
+<dd>
+<p>March 23, 2020</p>
+</dd>
+</dl>
+</div>
+<table id="v2.2eDocTable" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Public Release v2.2e Documents</caption>
+<colgroup>
+<col style="width: 71.4285%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Title</th>
+<th class="tableblock halign-center valign-middle">Version</th>
+<th class="tableblock halign-center valign-middle">iLinks</th>
 </tr>
 </thead>
 <tbody>
@@ -613,24 +698,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_allowed_with_list">Allowed-with List</h2>
+<h2 id="_allowed_with_lists">Allowed-with Lists</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The published collaberation Protection Profiles can be used with PP-Modules listed on the <a href="https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html">ND iTC allowed-with list for Network Device cPP</a>.</p>
+<p>The published cPPs and PP-Modules have allowed-with lists that define which PP-Modules and packages may be used in conjunction with them:</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_pp_modules">PP-Modules</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The ND iTC also maintains the following PP-Modules for use with the ND cPP:</p>
-</div>
-<div class="sect2">
-<h3 id="_pp_module_for_stateful_traffic_filter_firewalls_fw_module">PP-Module for Stateful Traffic Filter Firewalls (FW Module)</h3>
-<div class="paragraph">
-<p>The <a href="https://github.com/ND-iTC/PP-Module-FW">PP-Module for Stateful Traffic Filter Firewalls</a> is maintained by the NDFW iTC. The allowed-with list for the FW PP-Module can be found on the <a href="https://nd-itc.github.io/AWL/FW_allowed_with_list.html">NDFW iTC allowed-with list for Stateful Traffic Filter Firewall PP Module</a>.</p>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nd-itc.github.io/AWL/NDcPP_allowed_with_list.html">ND-iTC allowed-with list for Network Device cPP</a></p>
+</li>
+<li>
+<p><a href="https://nd-itc.github.io/AWL/FW_allowed_with_list.html">ND-iTC allowed-with list for Stateful Traffic Filter Firewall PP-Module</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -638,14 +719,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_technical_decisions">Technical Decisions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Technical Decisions produced by the ND iTC can be found on the <a href="https://nd-itc.github.io/TD/tech_dec.html">ND iTC Technical Decisions page</a>.</p>
+<p>Technical Decisions produced by the ND-iTC can be found on the <a href="https://nd-itc.github.io/TD/tech_dec.html">ND-iTC Technical Decisions page</a>.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-11-25 20:29:58 -0500
+Last updated 2026-03-29 16:53:44 -0400
 </div>
 </div>
 </body>
