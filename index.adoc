@@ -102,6 +102,11 @@ Publication Date:: June 25, 2020
 .^|Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module - [FW SD]
 ^.^|1.4e
 ^.^|image:pdf.png[link=https://github.com/ND-iTC/PP-Module-FW/raw/Development/Previous_Versions/MOD_FW_v1.4e-SD.pdf,40]
+
+.^|PP-Configuration for Network Device and Stateful Traffic Filter Firewalls
+^.^|1.4e
+^.^|image:pdf.png[link=https://github.com/ND-iTC/PP-Module-FW/blob/main/Previous_Versions/CFG_NDcPP-FW_v1.4e.pdf,40]
+
 |===
 
 == Sunset Documents
