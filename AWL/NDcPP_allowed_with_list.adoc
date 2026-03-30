@@ -12,8 +12,8 @@
 [cols="1,2",options=,]
 |===
 
-|*Allowed-with list version*|4.0
-|*Date*|25 November 2025
+|*Allowed-with list version*|4.0r1
+|*Date*|30 March 2026
 
 |===
 
