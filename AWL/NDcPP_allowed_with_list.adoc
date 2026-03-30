@@ -38,7 +38,18 @@ Conformance claims from other Protection Profiles (apart from PP-Configurations 
 
 *Allowed PP-Modules:*
 
-TBD
+[cols="0,1,2",options=,]
+|===
+
+.4+|1.|Object ID:|PP-Module for Stateful Traffic Filter Firewalls
+
+|Object version:|2.0 (30 March 2026)
+
+|Owner:|ND-iTC (ndfw-itc@ccdbinfo.org)
+
+|Notes:|None
+
+|===
 
 == NDcPP v3.0e
 
