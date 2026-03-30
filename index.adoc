@@ -74,10 +74,15 @@ Publication Date:: March 30, 2026
 ^.^|image:pdf.png[link=https://nd-itc.github.io/PP-Module-FW/MOD_CPP_FW_v2.0.pdf,40] 
 image:HTML.png[link=https://nd-itc.github.io/PP-Module-FW/MOD_CPP_FW_v2.0.html,40] image:GitHub.png[link=https://github.com/ND-iTC/PP-Module-FW/blob/main/MOD_CPP_FW_v2.0.adoc,40]
 
-.^|Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module - [FW SD]
+.^|Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module [FW SD]
 ^.^|2.0
 ^.^|image:pdf.png[link=https://nd-itc.github.io/PP-Module-FW/SD_MOD_FW_v2.0.pdf,40]
 image:HTML.png[link=https://nd-itc.github.io/PP-Module-FW/SD_MOD_FW_v2.0.html,40] image:GitHub.png[link=https://github.com/ND-iTC/PP-Module-FW/blob/main/SD_MOD_FW_v2.0.adoc,40]
+
+.^|PP-Configuration for Network Device and Stateful Traffic Filter Firewalls
+^.^|2.0
+^.^|image:pdf.png[link=https://nd-itc.github.io/PP-Module-FW/CONF_CPP_FW_v2_0.pdf,40]
+
 |===
 
 === FW Module v1.4e
