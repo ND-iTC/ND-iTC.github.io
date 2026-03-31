@@ -27,6 +27,14 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 |Impact
 |Status
 
+|RFI#202605
+|https://nd-itc.github.io/TD/2026//NITDecisionRfI202605.pdf[FCS_CKM_EXT.7 Application Note,window="_blank"]
+|FCS_CKM_EXT.7 App Note 14
+|2026-03-17
+|NDcPPv4.0,
+NDSDv4.0
+|Published
+
 |RFI#202604
 |https://nd-itc.github.io/TD/2026//NITDecisionRfI202604.pdf[Update Allowed With List to include MOD_WLAN_AS_V1.0,window="_blank"]
 |N/A
