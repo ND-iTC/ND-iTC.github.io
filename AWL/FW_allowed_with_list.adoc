@@ -38,8 +38,18 @@ No objects of this type are currently allowed with the PP-Module.
 
 *Allowed PP-Modules:*
 
-TBD
 
+[cols="0,1,2",options=,]
+|===
+.4+|1.|Object ID:|PP-Module for LiFi Access Systems
+
+|Object version:|1.0 (24 February 2026)
+
+|Owner:|NIAP (niap@niap-ccevs.org)
+
+|Notes:|None
+
+|===
 == FW Module v1.4e
 
 [cols="1,2",options=,]
