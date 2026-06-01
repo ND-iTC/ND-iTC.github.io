@@ -27,6 +27,14 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 |Impact
 |Status
 
+|RFI#202607
+|https://nd-itc.github.io/TD/2026//NITDecisionRfI202607.pdf[Request to add PP Module for LiFi Access Systems v1.0 to NDcPPv4.0 and Firewall Allowed-With Lists,window="_blank"]
+|N/A
+|2026-04-30
+|NDcPPv4.0,
+NDSDv4.0
+|Published
+
 |RFI#202605
 |https://nd-itc.github.io/TD/2026//NITDecisionRfI202605.pdf[FCS_CKM_EXT.7 Application Note,window="_blank"]
 |FCS_CKM_EXT.7 App Note 14
