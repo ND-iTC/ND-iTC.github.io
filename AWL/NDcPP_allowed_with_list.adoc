@@ -49,6 +49,14 @@ Conformance claims from other Protection Profiles (apart from PP-Configurations 
 
 |Notes:|None
 
+.4+|2.|Object ID:|PP-Module for LiFi Access Systems
+
+|Object version:|1.0 (24 February 2026)
+
+|Owner:|NIAP (niap@niap-ccevs.org)
+
+|Notes:|None
+
 |===
 
 == NDcPP v3.0e
