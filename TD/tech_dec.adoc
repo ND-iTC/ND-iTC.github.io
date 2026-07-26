@@ -27,6 +27,14 @@ The iTC issues Technical Decisions based on requests for interpretation to clari
 |Impact
 |Status
 
+|RFI#202609
+|https://nd-itc.github.io/TD/2026/NITDecisionRfi202609.pdf[Separation of Test Definitions for DTLSv1.2 and v1.3 (renegotiation),window="_blank"]
+|FCS_DTLSC_EXT.1.9, Test 4,
+FCS_DTLSS_EXT.1.11, Test 4
+|2026-07-09
+|NDSDv3.0e
+|Published
+
 |RFI#202607
 |https://nd-itc.github.io/TD/2026//NITDecisionRfI202607.pdf[Request to add PP Module for LiFi Access Systems v1.0 to NDcPPv4.0 and Firewall Allowed-With Lists,window="_blank"]
 |N/A
