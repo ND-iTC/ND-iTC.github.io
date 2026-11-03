@@ -219,7 +219,7 @@ def head(title, desc, path, depth, extra=''):
 <link rel="icon" href="%(pre)simages/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" title="ND-iTC Technical Decisions" href="%(pre)sfeed.xml">
 <link rel="stylesheet" href="%(pre)ssite.css">
-<script>try{var t=localStorage.getItem('nd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>try{var t=null;try{t=localStorage.getItem('nd-theme')}catch(e){}if(!t){var m=/(?:^|;)nd-theme=(light|dark)/.exec(window.name);t=m&&m[1]}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 %(extra)s</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
