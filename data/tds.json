@@ -1,0 +1,369 @@
+[
+ {
+  "id": "RFI#202609",
+  "title": "Separation of Test Definitions for DTLSv1.2 and v1.3 (renegotiation)",
+  "reference": "FCS_DTLSC_EXT.1.9, Test 4, FCS_DTLSS_EXT.1.11, Test 4",
+  "date": "2026-07-09",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2026/NITDecisionRfi202609.pdf"
+ },
+ {
+  "id": "RFI#202607",
+  "title": "Request to add PP Module for LiFi Access Systems v1.0 to NDcPPv4.0 and Firewall Allowed-With Lists",
+  "reference": "N/A",
+  "date": "2026-04-30",
+  "applies": [
+   "NDcPPv4.0",
+   "NDSDv4.0"
+  ],
+  "status": "Published",
+  "file": "TD/2026/NITDecisionRfI202607.pdf"
+ },
+ {
+  "id": "RFI#202605",
+  "title": "FCS_CKM_EXT.7 Application Note",
+  "reference": "FCS_CKM_EXT.7 App Note 14",
+  "date": "2026-03-17",
+  "applies": [
+   "NDcPPv4.0",
+   "NDSDv4.0"
+  ],
+  "status": "Published",
+  "file": "TD/2026/NITDecisionRfI202605.pdf"
+ },
+ {
+  "id": "RFI#202604",
+  "title": "Update Allowed With List to include MOD_WLAN_AS_V1.0",
+  "reference": "N/A",
+  "date": "2026-03-05",
+  "applies": [
+   "MOD_CPP_FW_v1.4e",
+   "MOD_FW_v1.4e-SD"
+  ],
+  "status": "Published",
+  "file": "TD/2026/NITDecisionRfI202604.pdf"
+ },
+ {
+  "id": "RFI#202601",
+  "title": "FIPS PUB 186-4 in NDcPPv4.0",
+  "reference": "FCS_CKM.1/AKG, FCS_COP.1/SigGen, FCS_COP.1/SigVer",
+  "date": "2026-02-26",
+  "applies": [
+   "NDcPPv4.0",
+   "NDSDv4.0"
+  ],
+  "status": "Published",
+  "file": "TD/2026/NITDecisionRfI202601.pdf"
+ },
+ {
+  "id": "RFI#202600",
+  "title": "NIAP TRRT process",
+  "reference": "N/A",
+  "date": "2026-02-04",
+  "applies": [
+   "NDcPPv4.0"
+  ],
+  "status": "Published",
+  "file": "TD/2026/NITDecisionRfI202600.pdf"
+ },
+ {
+  "id": "RFI#202511",
+  "title": "CTR_DRBG in FCS_RBG_EXT.1.2",
+  "reference": "FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2",
+  "date": "2026-02-09",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2025/NITDecisionRfI202511.pdf"
+ },
+ {
+  "id": "RFI#202509",
+  "title": "FCS_TLSS_EXT.1.3 Test 2 DHE Ciphersuite Conditionality",
+  "reference": "FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2",
+  "date": "2025-10-13",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2025/NITDecisionRfI202509.pdf"
+ },
+ {
+  "id": "RFI#202508",
+  "title": "Clarification on FIA_AFL.1 Application Note 118 regarding reboot-based lockout recovery",
+  "reference": "FIA_AFL.1",
+  "date": "2025-07-14",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2025/NITDecisionRfI202508.pdf"
+ },
+ {
+  "id": "RFI#202505",
+  "title": "FFW_RUL_EXT.1.2 Expected Rule Granularity Level",
+  "reference": "FFW_RUL_EXT.1.2",
+  "date": "2025-06-16",
+  "applies": [
+   "MOD_CPP_FW_v1.4e",
+   "MOD_FW_v1.4e-SD"
+  ],
+  "status": "Published",
+  "file": "TD/2025/NITDecisionRfI202505.pdf"
+ },
+ {
+  "id": "RFI#202504",
+  "title": "FAU_STG_EXT.1 Auditable Events",
+  "reference": "FAU_STG_EXT.1, NDcPP v3.0e sections 2.1.1.2 and 2.1.1.3",
+  "date": "2025-06-09",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2025/NITDecisionRfI202504.pdf"
+ },
+ {
+  "id": "RFI#202422",
+  "title": "Clarification for FIA_X509_EXT.1 and FIA_X509_EXT.2",
+  "reference": "cPP_ND_v3.0e Section B.4.1, cPP_ND_v3.0e-SD Section 4.3.1.3",
+  "date": "2025-03-03",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202422.pdf"
+ },
+ {
+  "id": "RFI#202421",
+  "title": "Other authentication mechanisms in FIA_UIA_EXT.1.3",
+  "reference": "FIA_UIA_EXT.1.3",
+  "date": "2025-02-07",
+  "applies": [
+   "NDcPPv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202421v3.pdf"
+ },
+ {
+  "id": "RFI#202420",
+  "title": "Local IP address for Administrative Access",
+  "reference": "FIA_AFL.1, FMT_SMF.1",
+  "date": "2025-02-07",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202420.pdf"
+ },
+ {
+  "id": "RFI#202418",
+  "title": "FAU_STG_EXT.1, Test 6 unclear requirements",
+  "reference": "FAU_STG_EXT.1, Test 6",
+  "date": "2024-09-27",
+  "applies": [
+   "NDcPPv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202418.pdf"
+ },
+ {
+  "id": "RFI#202417b",
+  "title": "Addition of FIPS PUB 186-5 for ECDSA",
+  "reference": "FCS_CKM.1, FCS_COP.1.1/SigGen",
+  "date": "2025-04-21",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202417b.pdf"
+ },
+ {
+  "id": "RFI#202417a",
+  "title": "Addition of FIPS PUB 186-5 for RSA",
+  "reference": "FCS_CKM.1, FCS_COP.1.1/SigGen",
+  "date": "2025-04-21",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202417a.pdf"
+ },
+ {
+  "id": "RFI#202415",
+  "title": "FCS_COP.1.1/SigGen Needs assignment added",
+  "reference": "FCS_COP.1.1/SigGen",
+  "date": "2024-10-01",
+  "applies": [
+   "NDcPPv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202415.pdf"
+ },
+ {
+  "id": "RFI#202414",
+  "title": "Definition of a Known-good Implementation for FCS_CKM.2 Tests",
+  "reference": "FCS_CKM.2",
+  "date": "2025-03-31",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202414.pdf"
+ },
+ {
+  "id": "RFI#202413",
+  "title": "Missing section header in NDcPP Appendix B",
+  "reference": "B.6",
+  "date": "2024-08-19",
+  "applies": [
+   "NDcPPv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202413.pdf"
+ },
+ {
+  "id": "RFI#202412",
+  "title": "Test definition for FCS_NTP_EXT.1.2",
+  "reference": "FCS_NTP_EXT.1.2, Tests",
+  "date": "2024-09-09",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202412.pdf"
+ },
+ {
+  "id": "RFI#202411",
+  "title": "Correction of FCS_IPSEC_EXT.1.4, Evaluation Activities/App Note",
+  "reference": "FCS_IPSEC_EXT.1.4",
+  "date": "2024-07-15",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202411.pdf"
+ },
+ {
+  "id": "RFI#202409",
+  "title": "Correction of FCS_TLSS_EXT.1.4, Test 4",
+  "reference": "FCS_TLSS_EXT.1.4, Test 4, FCS_DTLSS_EXT.1.7, Test 4",
+  "date": "2024-09-09",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202409.pdf"
+ },
+ {
+  "id": "RFI#202408",
+  "title": "FCS_CKM.2 - Key Establishment Assurance Activities",
+  "reference": "multiple",
+  "date": "2025-02-07",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202408.pdf"
+ },
+ {
+  "id": "RFI#202407",
+  "title": "Expansion of MOD_FW Scope",
+  "reference": "multiple",
+  "date": "2024-07-29",
+  "applies": [
+   "FWv1.4"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202407.pdf"
+ },
+ {
+  "id": "RFI#202406",
+  "title": "Applying TD0800 to NDcPPv3.0",
+  "reference": "FCS_IPSEC_EXT.1.7, FCS_IPSEC_EXT.1.8",
+  "date": "2024-07-10",
+  "applies": [
+   "NDcPPv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202406.pdf"
+ },
+ {
+  "id": "RFI#202405",
+  "title": "Clarification of audit selections in FMT_SMF.1.1",
+  "reference": "FMT_SMF.1.1",
+  "date": "2024-08-05",
+  "applies": [
+   "NDcPPv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202405.pdf"
+ },
+ {
+  "id": "RFI#202404",
+  "title": "FCS_IPSEC_EXT.1.10 test update",
+  "reference": "FCS_IPSEC_EXT.1.10",
+  "date": "2024-09-24",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202404.pdf"
+ },
+ {
+  "id": "RFI#202403",
+  "title": "Behavior for FFW_RUL_EXT.1.10 Test Update",
+  "reference": "FFW_RUL_EXT.1.10",
+  "date": "2024-05-17",
+  "applies": [
+   "FWv1.4"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202403.pdf"
+ },
+ {
+  "id": "RFI#202402b",
+  "title": "Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Server",
+  "reference": "FCS_TLSS_EXT.1.8, Test 4",
+  "date": "2024-08-05",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202402b.pdf"
+ },
+ {
+  "id": "RFI#202402a",
+  "title": "Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Client",
+  "reference": "FCS_TLSC_EXT.1.9, Test 4",
+  "date": "2024-08-05",
+  "applies": [
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202402a.pdf"
+ },
+ {
+  "id": "RFI#202401",
+  "title": "Redundant requirements in FPT_TST_EXT.1",
+  "reference": "FPT_TST_EXT.1",
+  "date": "2024-04-17",
+  "applies": [
+   "NDcPPv3.0e",
+   "NDSDv3.0e"
+  ],
+  "status": "Published",
+  "file": "TD/2024/NITDecisionRfI202401.pdf"
+ }
+]
