@@ -1,0 +1,33 @@
+﻿ID,Title,Reference,Published,Applies to,Status,URL
+RFI#202609,Separation of Test Definitions for DTLSv1.2 and v1.3 (renegotiation),"FCS_DTLSC_EXT.1.9, Test 4, FCS_DTLSS_EXT.1.11, Test 4",2026-07-09,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2026/NITDecisionRfi202609.pdf
+RFI#202607,Request to add PP Module for LiFi Access Systems v1.0 to NDcPPv4.0 and Firewall Allowed-With Lists,N/A,2026-04-30,NDcPP v4.0; ND SD v4.0,Published,https://nd-itc.github.io/Dev/TD/2026/NITDecisionRfI202607.pdf
+RFI#202605,FCS_CKM_EXT.7 Application Note,FCS_CKM_EXT.7 App Note 14,2026-03-17,NDcPP v4.0; ND SD v4.0,Published,https://nd-itc.github.io/Dev/TD/2026/NITDecisionRfI202605.pdf
+RFI#202604,Update Allowed With List to include MOD_WLAN_AS_V1.0,N/A,2026-03-05,FW Module v1.4e; FW SD v1.4e,Published,https://nd-itc.github.io/Dev/TD/2026/NITDecisionRfI202604.pdf
+RFI#202601,FIPS PUB 186-4 in NDcPPv4.0,"FCS_CKM.1/AKG, FCS_COP.1/SigGen, FCS_COP.1/SigVer",2026-02-26,NDcPP v4.0; ND SD v4.0,Published,https://nd-itc.github.io/Dev/TD/2026/NITDecisionRfI202601.pdf
+RFI#202511,CTR_DRBG in FCS_RBG_EXT.1.2,"FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2",2026-02-09,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2025/NITDecisionRfI202511.pdf
+RFI#202600,NIAP TRRT process,N/A,2026-02-04,NDcPP v4.0,Published,https://nd-itc.github.io/Dev/TD/2026/NITDecisionRfI202600.pdf
+RFI#202509,FCS_TLSS_EXT.1.3 Test 2 DHE Ciphersuite Conditionality,"FCS_TLSS_EXT.1.3 Test 2, FCS_DTLSS_EXT.1.3 Test 2",2025-10-13,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2025/NITDecisionRfI202509.pdf
+RFI#202508,Clarification on FIA_AFL.1 Application Note 118 regarding reboot-based lockout recovery,FIA_AFL.1,2025-07-14,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2025/NITDecisionRfI202508.pdf
+RFI#202505,FFW_RUL_EXT.1.2 Expected Rule Granularity Level,FFW_RUL_EXT.1.2,2025-06-16,FW Module v1.4e; FW SD v1.4e,Published,https://nd-itc.github.io/Dev/TD/2025/NITDecisionRfI202505.pdf
+RFI#202504,FAU_STG_EXT.1 Auditable Events,"FAU_STG_EXT.1, NDcPP v3.0e sections 2.1.1.2 and 2.1.1.3",2025-06-09,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2025/NITDecisionRfI202504.pdf
+RFI#202417b,Addition of FIPS PUB 186-5 for ECDSA,"FCS_CKM.1, FCS_COP.1.1/SigGen",2025-04-21,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202417b.pdf
+RFI#202417a,Addition of FIPS PUB 186-5 for RSA,"FCS_CKM.1, FCS_COP.1.1/SigGen",2025-04-21,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202417a.pdf
+RFI#202414,Definition of a Known-good Implementation for FCS_CKM.2 Tests,FCS_CKM.2,2025-03-31,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202414.pdf
+RFI#202422,Clarification for FIA_X509_EXT.1 and FIA_X509_EXT.2,"cPP_ND_v3.0e Section B.4.1, cPP_ND_v3.0e-SD Section 4.3.1.3",2025-03-03,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202422.pdf
+RFI#202421,Other authentication mechanisms in FIA_UIA_EXT.1.3,FIA_UIA_EXT.1.3,2025-02-07,NDcPP v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202421v3.pdf
+RFI#202420,Local IP address for Administrative Access,"FIA_AFL.1, FMT_SMF.1",2025-02-07,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202420.pdf
+RFI#202408,FCS_CKM.2 - Key Establishment Assurance Activities,multiple,2025-02-07,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202408.pdf
+RFI#202415,FCS_COP.1.1/SigGen Needs assignment added,FCS_COP.1.1/SigGen,2024-10-01,NDcPP v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202415.pdf
+RFI#202418,"FAU_STG_EXT.1, Test 6 unclear requirements","FAU_STG_EXT.1, Test 6",2024-09-27,NDcPP v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202418.pdf
+RFI#202404,FCS_IPSEC_EXT.1.10 test update,FCS_IPSEC_EXT.1.10,2024-09-24,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202404.pdf
+RFI#202412,Test definition for FCS_NTP_EXT.1.2,"FCS_NTP_EXT.1.2, Tests",2024-09-09,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202412.pdf
+RFI#202409,"Correction of FCS_TLSS_EXT.1.4, Test 4","FCS_TLSS_EXT.1.4, Test 4, FCS_DTLSS_EXT.1.7, Test 4",2024-09-09,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202409.pdf
+RFI#202413,Missing section header in NDcPP Appendix B,B.6,2024-08-19,NDcPP v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202413.pdf
+RFI#202405,Clarification of audit selections in FMT_SMF.1.1,FMT_SMF.1.1,2024-08-05,NDcPP v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202405.pdf
+RFI#202402b,Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Server,"FCS_TLSS_EXT.1.8, Test 4",2024-08-05,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202402b.pdf
+RFI#202402a,Separation of test definitions for TLSv1.2 v1.3 (renegotiation) Client,"FCS_TLSC_EXT.1.9, Test 4",2024-08-05,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202402a.pdf
+RFI#202407,Expansion of MOD_FW Scope,multiple,2024-07-29,FW Module v1.4e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202407.pdf
+RFI#202411,"Correction of FCS_IPSEC_EXT.1.4, Evaluation Activities/App Note",FCS_IPSEC_EXT.1.4,2024-07-15,ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202411.pdf
+RFI#202406,Applying TD0800 to NDcPPv3.0,"FCS_IPSEC_EXT.1.7, FCS_IPSEC_EXT.1.8",2024-07-10,NDcPP v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202406.pdf
+RFI#202403,Behavior for FFW_RUL_EXT.1.10 Test Update,FFW_RUL_EXT.1.10,2024-05-17,FW Module v1.4e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202403.pdf
+RFI#202401,Redundant requirements in FPT_TST_EXT.1,FPT_TST_EXT.1,2024-04-17,NDcPP v3.0e; ND SD v3.0e,Published,https://nd-itc.github.io/Dev/TD/2024/NITDecisionRfI202401.pdf

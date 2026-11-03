@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<title>Supporting Document - Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Supporting Document - Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Version: 2.0<br>
+Date: March-2026</p>
+</div>
+<div class="paragraph">
+<p>CCDB-2026-March-30</p>
+</div>
+<div class="paragraph">
+<p><strong>Acknowledgements:</strong></p>
+</div>
+<div class="paragraph">
+<p>This Supporting Document was developed by the Network international Technical Community with representatives from industry, Government agencies, Common Criteria Test Laboratories, and members of academia.</p>
+</div>
+<div class="paragraph">
+<p><strong>Preface</strong></p>
+</div>
+<div class="paragraph">
+<p>This is a supporting document intended to complement the Common Criteria for Information Technology Security Evaluation (CC:2022) and the associated Common Evaluation Methodology (CEM:2022).</p>
+</div>
+<div class="paragraph">
+<p>Supporting documents may be “Guidance Documents”, that highlight specific approaches and application of the standard to areas where no mutual recognition of its application is required, and as such are not normative in nature, or “Mandatory Technical Documents”, whose application is mandatory for evaluations whose scope is covered by that of the supporting document. The usage of the latter class is not only mandatory, but certificates issued as a result of their application are recognized under the CCRA.</p>
+</div>
+<div class="paragraph">
+<p>This supporting document has been developed by the Network Device International Technical Community (ND-iTC) and is designed to support evaluations of products against the cPPs identified in Section 1.1.</p>
+</div>
+<div class="paragraph">
+<p><strong>Technical Editor:</strong> Network International Technical Community (ND-iTC)</p>
+</div>
+<div class="paragraph">
+<p><strong>Revision History</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 17.1717%;">
+<col style="width: 19.1919%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Version</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Date</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30-March-2026</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version for NDcPP V4.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4e</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25-June-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Added link to allowed-with list for FW Module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6-April-2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version for NDcPP V2.2e</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27-September-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Release version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19-July-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integration of comments</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05-April-2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updated PP-Module version of FWcPP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26-November-2018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First PP-Module version of FWcPP</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>General Purpose:</strong> See Section 1.1.</p>
+</div>
+<div class="paragraph">
+<p><strong>Field of special use:</strong> This Supporting Document applies to the evaluation of TOEs claiming conformance with the PP-Module for Stateful Traffic Filter Firewalls [MOD-FW].</p>
+</div>
+<div class="paragraph">
+<p><strong>Table of Contents</strong></p>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title"></div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_technology_area_and_scope_of_supporting_document">1.1. Technology Area and Scope of Supporting Document</a></li>
+<li><a href="#_structure_of_the_document">1.2. Structure of the Document</a></li>
+<li><a href="#_application_of_this_supporting_document">1.3. Application of this Supporting Document</a></li>
+<li><a href="#_terminology">1.4. Terminology</a>
+<ul class="sectlevel3">
+<li><a href="#_glossary">1.4.1. Glossary</a></li>
+<li><a href="#_acronyms">1.4.2. Acronyms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_evaluation_activities_for_mandatory_sfrs_defined_in_the_pp_module">2. Evaluation Activities for Mandatory SFRs defined in the PP-Module</a>
+<ul class="sectlevel2">
+<li><a href="#_security_audit_fau">2.1. Security Audit (FAU)</a>
+<ul class="sectlevel3">
+<li><a href="#_fau_gen_1_audit_data_generation">2.1.1. FAU_GEN.1 Audit Data Generation</a></li>
+</ul>
+</li>
+<li><a href="#_user_data_protection_fdp">2.2. User Data Protection (FDP)</a>
+<ul class="sectlevel3">
+<li><a href="#_fdp_rip_2_full_residual_information_protection">2.2.1. FDP_RIP.2 Full Residual Information Protection</a></li>
+</ul>
+</li>
+<li><a href="#_firewall_ffw">2.3. Firewall (FFW)</a>
+<ul class="sectlevel3">
+<li><a href="#_ffw_rul_ext_1_stateful_traffic_filtering">2.3.1. FFW_RUL_EXT.1 Stateful Traffic Filtering</a></li>
+<li><a href="#_ffw_rul_ext_1_2ffw_rul_ext_1_3ffw_rul_ext_1_4">2.3.2. FFW_RUL_EXT.1.2/FFW_RUL_EXT.1.3/FFW_RUL_EXT.1.4</a></li>
+<li><a href="#_ffw_rul_ext_1_5">2.3.3. FFW_RUL_EXT.1.5</a></li>
+<li><a href="#_ffw_rul_ext_1_6">2.3.4. FFW_RUL_EXT.1.6</a></li>
+<li><a href="#_ffw_rul_ext_1_7">2.3.5. FFW_RUL_EXT.1.7</a></li>
+<li><a href="#_ffw_rul_ext_1_8">2.3.6. FFW_RUL_EXT.1.8</a></li>
+<li><a href="#_ffw_rul_ext_1_9">2.3.7. FFW_RUL_EXT.1.9</a></li>
+<li><a href="#_ffw_rul_ext_1_10">2.3.8. FFW_RUL_EXT.1.10</a></li>
+</ul>
+</li>
+<li><a href="#_security_management_fmt">2.4. Security management (FMT)</a>
+<ul class="sectlevel3">
+<li><a href="#_fmt_smf_1ffw_specification_of_management_functions">2.4.1. FMT_SMF.1/FFW Specification of Management Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_evaluation_activities_for_optional_requirements_defined_in_the_pp_module">3. Evaluation Activities for Optional Requirements defined in the PP-Module</a>
+<ul class="sectlevel2">
+<li><a href="#_firewall_ffw_2">3.1. Firewall (FFW)</a>
+<ul class="sectlevel3">
+<li><a href="#_ffw_rul_ext_2_stateful_filtering_for_dynamic_protocols">3.1.1. FFW_RUL_EXT.2 Stateful Filtering for Dynamic Protocols</a></li>
+<li><a href="#_ffw_rul_ext_2_1">3.1.2. FFW_RUL_EXT.2.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_evaluation_activities_for_selection_based_requirements_defined_in_the_pp_module">4. Evaluation Activities for Selection-Based Requirements defined in the PP-Module</a></li>
+<li><a href="#_evaluation_activities_for_sars">5. Evaluation Activities for SARs</a></li>
+<li><a href="#_required_supplementary_information">6. Required Supplementary Information</a></li>
+<li><a href="#_references">7. References</a></li>
+<li><a href="#_vulnerability_analysis">Annex A: Vulnerability Analysis</a>
+<ul class="sectlevel2">
+<li><a href="#_a_1_sources_of_vulnerability_information">A.1 Sources of vulnerability information</a>
+<ul class="sectlevel3">
+<li><a href="#_a_1_1_type_1_hypotheses_public_vulnerability_based">A.1.1 Type 1 Hypotheses – Public-Vulnerability-Based</a></li>
+<li><a href="#_a_1_2_type_2_hypotheses_itc_sourced">A.1.2 Type 2 Hypotheses – iTC-Sourced</a></li>
+<li><a href="#_a_1_3_type_3_hypotheses_evaluation_team_generated">A.1.3 Type 3 Hypotheses – Evaluation-Team-Generated</a></li>
+<li><a href="#_a_1_4_type_4_hypotheses_tool_generated">A.1.4 Type 4 Hypotheses – Tool-Generated</a></li>
+</ul>
+</li>
+<li><a href="#_a_2_process_for_evaluator_vulnerability_analysis">A.2 Process for Evaluator Vulnerability Analysis</a></li>
+<li><a href="#_a_3_reporting">A.3 Reporting</a></li>
+<li><a href="#_a_4_additional_public_vulnerability_sources">A.4 Additional Public Vulnerability Sources</a></li>
+<li><a href="#_a_5_additional_flaw_hypotheses">A.5 Additional Flaw Hypotheses</a></li>
+</ul>
+</li>
+<li><a href="#_firewall_equivalency_considerations">Annex B: Firewall Equivalency Considerations</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction">1. Introduction</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_technology_area_and_scope_of_supporting_document">1.1. Technology Area and Scope of Supporting Document</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>This Supporting Document defines the Evaluation Activities associated with the PP-Module for Stateful Traffic Filter Firewalls [MOD-FW]. Note that [MOD-FW] also requires the use of the Evaluation Activities for the PP-Module Base (Protection Profile for Network Devices (NDcPP) version 4.0), i.e. the Evaluation Activities for network devices described in [SD-ND].</p>
+</li>
+<li>
+<p>This Supporting Document is mandatory for evaluations of TOEs that claim conformance to the following PP-Configuration:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>PP-Configuration for Stateful Traffic Filter Firewalls, version 2.0 [CONF-FW].</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Although Evaluation Activities are defined mainly for the evaluators to follow, in general the definition of Evaluation Activities will also help Developers to prepare for evaluation by identifying specific requirements for their TOE. The specific requirements in Evaluation Activities may in some cases clarify the meaning of SFRs and may identify particular requirements for the content of Security Targets (especially the TOE Summary Specification), guidance documentation, and possibly supplementary information (e.g. for entropy analysis or cryptographic key management architecture).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_structure_of_the_document">1.2. Structure of the Document</h3>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Evaluation Activities can be defined for both Security Functional Requirements (SFRs) and Security Assurance Requirements (SARs). These are defined in separate sections of this Supporting Document.</p>
+</li>
+<li>
+<p>If any Evaluation Activity cannot be successfully completed in an evaluation, then the overall verdict for the evaluation is a ‘fail’. In rare cases there may be acceptable reasons why an Evaluation Activity may be modified or deemed not applicable for a particular TOE, but this must be agreed with the Certification Body for the evaluation.</p>
+</li>
+<li>
+<p>In general, if all Evaluation Activities (for both SFRs and SARs) are successfully completed in an evaluation then it would be expected that the overall verdict for the evaluation is a ‘pass’. To reach a ‘fail’ verdict when the Evaluation Activities have been successfully completed would require a specific justification from the evaluator as to why the Evaluation Activities were not sufficient for that TOE.</p>
+</li>
+<li>
+<p>Similarly, at the more granular level of Assurance Components, if the Evaluation Activities for an Assurance Component and all of its related SFR Evaluation Activities are successfully completed in an evaluation then it would be expected that the verdict for the Assurance Component is a ‘pass’. To reach a ‘fail’ verdict for the Assurance Component when these Evaluation Activities have been successfully completed would require a specific justification from the evaluator as to why the Evaluation Activities were not sufficient for that TOE.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_application_of_this_supporting_document">1.3. Application of this Supporting Document</h3>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>This Supporting Document (SD) defines three types of Evaluation Activities (EAs) – TOE Summary Specification (TSS), Guidance Documentation, and Tests and is designed to be used in conjunction with the PP-Module for Stateful Traffic Filter Firewalls. This PP-Module will explicitly identify it as a source for its EAs<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. Each security requirement (SFR or SAR) specified in the PP-Module could have multiple EAs associated with it. The security requirement naming convention is consistent between PP-Module and SD ensuring a clear one to one correspondence between security requirements and evaluation activities.</p>
+</li>
+<li>
+<p>The PP-Module and SD are designed to be used in conjunction with each other, where the PP-Module lists SFRs and SARs and the SD catalogues EAs associated with each SFR and SAR. Some of the SFRs included in the PP-Module are optional or selection-based. Therefore, an ST claiming conformance to a PP-Configuration claiming this PP-Module does not necessarily have to include all possible SFRs defined in the PP-Module.</p>
+</li>
+<li>
+<p>In an ST conformant to the PP-Configuration claiming the PP-Module, several operations need to be performed (mainly selections and assignments). Some EAs define separate actions for different selected or assigned values in SFRs. The evaluator shall neither carry out EAs related to SFRs that are not claimed in the ST nor EAs related to specific selected or assigned values that are not claimed in the ST.</p>
+</li>
+<li>
+<p>EAs do not necessarily have to be executed independently from each other. A description in a guidance documentation or one test case, for example, can cover multiple EAs at a time, no matter whether the EAs are related to the same or different SFRs.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_terminology">1.4. Terminology</h3>
+<div class="sect3">
+<h4 id="_glossary">1.4.1. Glossary</h4>
+<div class="olist arabic">
+<ol class="arabic" start="12">
+<li>
+<p>For definitions of standard CC terminology see [CC] part 1.</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 37%;">
+<col style="width: 63%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Term</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Assurance</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grounds for confidence that a TOE meets the SFRs [CC1].</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Supplementary Information</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Information that is not necessarily included in the Security Target or operational guidance, and that may not necessarily be public. Examples of such information could be entropy analysis, or description of a cryptographic key management architecture used in (or in support of) the TOE. The requirement for any such supplementary information will be identified in the relevant cPP or PP-Module.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Target of Evaluation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set of software, firmware and/or hardware possibly accompanied by guidance. [CC1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TOE Security Functionality (TSF)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A set consisting of all hardware, software, and firmware of the TOE that must be relied upon for the correct enforcement of the SFRs. [CC1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TSF Data</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data for the operation of the TSF upon which the enforcement of the requirements relies.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_acronyms">1.4.2. Acronyms</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 15%;">
+<col style="width: 85%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Acronym</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common Criteria</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CEM</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Common Evaluation Methodology</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cPP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">collaborative Protection Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evaluation Activity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ICMP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internet Control Message Protocol</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>IP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internet Protocol</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>iTC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">International Technical Community</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NDcPP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network Device collaborative Protection Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Protection Profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>RFC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request for Comments</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SAR</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security Assurance Requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SD</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supporting Document</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SFR</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security Functional Requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ST</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security Target</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TCP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transmission Control Protocol</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TOE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Target of Evaluation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TSF</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TOE Security Functionality</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TSS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TOE Summary Specification</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>UDP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User Datagram Protocol</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_evaluation_activities_for_mandatory_sfrs_defined_in_the_pp_module">2. Evaluation Activities for Mandatory SFRs defined in the PP-Module</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic" start="13">
+<li>
+<p>The EAs presented in this section capture the actions the evaluator performs to address technology specific aspects covering specific SARs (e.g., ASE_TSS.1, ADV_FSP.1, AGD_OPE.1, and ATE_IND.1) – this is in addition to the CEM work units that are performed in Section 5 (Evaluation Activities for SARs).</p>
+</li>
+<li>
+<p>Regarding design descriptions (designated by the subsections labelled TSS, as well as any required supplementary material that may be treated as proprietary), the evaluator must ensure there is specific information that satisfies the EA. For findings regarding the TSS section, the evaluator’s verdicts will be associated with the CEM work unit ASE_TSS.1-1. Evaluator verdicts associated with the supplementary evidence will also be associated with ASE_TSS.1-1, since the requirement to provide such evidence is specified in ASE in the PP-Module.</p>
+</li>
+<li>
+<p>For ensuring the guidance documentation provides sufficient information for the Security Administrators as it pertains to SFRs, the evaluator’s verdicts will be associated with CEM work units AGD_OPE.1-4, and AGD_OPE.1-5.</p>
+</li>
+<li>
+<p>Finally, the subsection labelled Tests is where the iTC has determined that testing of the product in the context of the associated SFR is necessary. While the evaluator is expected to develop tests, there may be instances where it is more practical for the developer to construct tests, or where the developer may have existing tests. Approval for using tests created by developers is up to the certification body. The CEM work units that are associated with the EAs specified in this section are: ATE_IND.1-3, ATE_IND.1-4, ATE_IND.1-5, ATE_IND.1-6, and ATE_IND.1-7.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>Additional Note for Distributed TOEs</em></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="17">
+<li>
+<p>For a distributed TOE, all examination of Operational Guidance information should be extended to include confirmation that it defines sufficient information to configure individual components such that the overall TOE is correctly established.</p>
+</li>
+<li>
+<p>Evaluation activities for SFRs must be carried out for all distributed TOE components that implement the SFR (as defined in the mapping of SFRs to components – cf. [ND-SD, 5.1.2]). This applies to optional and selection-based SFRs in Section 3 and 4 as well as to the core SFRs in this section.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_security_audit_fau">2.1. Security Audit (FAU)</h3>
+<div class="olist arabic">
+<ol class="arabic" start="19">
+<li>
+<p>In addition to the EAs required by the PP-Module Base, the evaluator shall perform the following additional EAs to ensure that the PP-Module Base’s security functionality is maintained by the addition of the PP-Module.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_fau_gen_1_audit_data_generation">2.1.1. FAU_GEN.1 Audit Data Generation</h4>
+<div class="sect4">
+<h5 id="_tss">2.1.1.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="20">
+<li>
+<p>No additional Evaluation Activities are specified.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation">2.1.1.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="21">
+<li>
+<p>In addition to the Evaluation Activities specified in the Supporting Document for the PP-Module Base, the evaluator shall check the guidance documentation to ensure that it describes all the audit records specified in Table 2 of the PP-Module in addition to those required by the PP-Module Base. If the optional SFR FFW_RUL_EXT.2 is claimed by the TOE, the evaluator shall also check the guidance documentation to ensure that it describes all the relevant audit record specified in Table 3 of the PP-Module.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests">2.1.1.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="22">
+<li>
+<p>In addition to the Evaluation Activities specified in the Supporting Document for the PP-Module Base, the evaluator shall perform tests to demonstrate that audit records are generated for all the auditable events as specified in Table 2 of the PP-Module and, if the optional SFR FFW_RUL_EXT.2 is claimed by the TOE, Table 3.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_data_protection_fdp">2.2. User Data Protection (FDP)</h3>
+<div class="sect3">
+<h4 id="_fdp_rip_2_full_residual_information_protection">2.2.1. FDP_RIP.2 Full Residual Information Protection</h4>
+<div class="sect4">
+<h5 id="_tss_2">2.2.1.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="23">
+<li>
+<p>“Resources” in the context of this requirement are network packets being sent through (as opposed to “to”, as is the case when a security administrator connects to the TOE) the TOE. The concern is that once a network packet is sent, the buffer or memory area used by the packet still contains data from that packet, and that if that buffer is re-used, those data might remain and make their way into a new packet. The evaluator shall check to ensure that the TSS describes packet processing to the extent that they can determine that no data will be reused when processing network packets. The evaluator shall ensure that this description at a minimum describes how the previous data are zeroized/overwritten, and at what point in the buffer processing this occurs. This does not necessarily require to zeroize/overwrite related buffer/memory after each sent network package. Depending on the implementation e.g. cyclic buffer overwrite may be sufficient.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_firewall_ffw">2.3. Firewall (FFW)</h3>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_stateful_traffic_filtering">2.3.1. FFW_RUL_EXT.1 Stateful Traffic Filtering</h4>
+<div class="olist arabic">
+<ol class="arabic" start="24">
+<li>
+<p>The following table provides an overview about execution of test cases regarding IPv4 and IPv6.</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42%;">
+<col style="width: 58%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>SFR Element/Test Case</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Test execution</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1, Tests 1-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both, IPv4 and IPv6.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.2/1.3/1.4, Tests 1-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As defined in the test description.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.5, Tests 1-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both, IPv4 and IPv6.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.6, Tests 1-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both IPv4 and IPv6 shall be tested for items a), b), d), and e) of the SFR element FFW_RUL_EXT.1.6. Both IPv4 and IPv6 shall be tested for item i) unless the rule definition is specific to IPv4 or IPv6. Note: c), f), g), and h) are specific to IPv4 or IPv6 and shall be tested accordingly.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.7, Tests 1-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both, IPv4 and IPv6.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.8, Tests 1-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both, IPv4 and IPv6.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.9, Test 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As defined in the test description.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFW_RUL_EXT.1.10, Tests 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Both, IPv4 and IPv6.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_tss_3">2.3.1.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="25">
+<li>
+<p>The evaluator shall verify that the TSS provides a description of the TOE’s initialization/startup process, which clearly indicates where processing of network packets begins to take place, and provides a discussion that supports the assertion that packets cannot flow during this process.</p>
+</li>
+<li>
+<p>The evaluator shall verify that the TSS also includes a narrative that identifies the hardware and/or software components involved in processing the network packets. Hardware components should identify at a minimum the processor (CPU) and network processor (NPU) used by the TOE. Software components may include applications, the operating system and other major components that are independently identifiable and reusable (outside the TOE). The evaluator shall verify that the TSS also describes the safeguards that would prevent packets flowing through the TOE without applying the ruleset in the event of a component failure. This could include the failure of a component, such as a process being terminated, or a failure within a component, such as memory buffers full and cannot process packets. The description shall also include a description of how the TOE behaves in the situation where the traffic exceeds the amount of traffic the TOE can handle and how it is ensured that also in this condition stateful traffic filtering rules are still applied so that traffic does not pass that shouldn&#8217;t pass according to the specified rules.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_2">2.3.1.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="27">
+<li>
+<p>The guidance documentation associated with this requirement is assessed in the subsequent test evaluation activities.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_2">2.3.1.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="28">
+<li>
+<p>Test 1: The evaluator shall attempt to get network traffic to flow through the TOE while the TOE is being initialized. A steady flow of network packets that would otherwise be denied by the ruleset should be sourced and be directed at a host. The evaluator shall verify using a packet sniffer that none of the generated network traffic is permitted through the firewall during initialization.</p>
+</li>
+<li>
+<p>Test 2: The evaluator shall attempt to get network traffic to flow through the TOE while the TOE is being initialized. A steady flow of network packets that would be permitted by the ruleset should be sourced and be directed at a host. The evaluator shall verify using a packet sniffer that none of the generated network traffic is permitted through the firewall during initialization and is only permitted once initialization is complete.</p>
+</li>
+<li>
+<p>Note: The remaining testing associated with application of the ruleset is addressed in the subsequent test evaluation activities.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_2ffw_rul_ext_1_3ffw_rul_ext_1_4">2.3.2. FFW_RUL_EXT.1.2/FFW_RUL_EXT.1.3/FFW_RUL_EXT.1.4</h4>
+<div class="sect4">
+<h5 id="_tss_4">2.3.2.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="31">
+<li>
+<p>The evaluator shall verify that the TSS describes a stateful packet filtering policy and the following attributes are identified as being configurable within stateful traffic filtering rules for the associated protocols:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ICMPv4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ICMPv6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IPv4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source address</p>
+</li>
+<li>
+<p>Destination Address</p>
+</li>
+<li>
+<p>Transport Layer Protocol</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IPv6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source address</p>
+</li>
+<li>
+<p>Destination Address</p>
+</li>
+<li>
+<p>Transport Layer Protocol and where defined by the ST author, Extension Header Type, Extension Header Fields</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>TCP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source Port</p>
+</li>
+<li>
+<p>Destination Port</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>UDP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source Port</p>
+</li>
+<li>
+<p>Destination Port</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="32">
+<li>
+<p>If the TOE does not support the configuration of all possible values in the specified network protocol fields, the evaluator shall verify the TSS: identifies which fields cannot filter all values; and specifies, for those fields, which values cannot be filtered (implicitly or explicitly) by rules. For any field and value combinations that are not supported, the evaluator shall confirm that any values described as unsupported or unfilterable are clearly identified in the TSS and do not undermine the TOE’s ability to enforce its security policy. If the TOE supports the implicit configuration of any values, the evaluator shall ensure the TSS identifies the specific configurations that result in the implicit configuration of a value (e.g., configuring ICMP type 8 implicitly configures ICMP code 0).</p>
+</li>
+<li>
+<p>The evaluator shall verify that each rule can identify the following actions: permit or drop with the option to log the operation. The evaluator shall verify that the TSS identifies all interface types subject to the stateful packet filtering policy and explains how rules are associated with distinct network interfaces.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_3">2.3.2.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="34">
+<li>
+<p>The evaluators shall verify that the guidance documentation identifies the following attributes as being configurable within stateful traffic filtering rules for the associated protocols:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ICMPv4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ICMPv6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IPv4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source address</p>
+</li>
+<li>
+<p>Destination Address</p>
+</li>
+<li>
+<p>Transport Layer Protocol</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IPv6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source address</p>
+</li>
+<li>
+<p>Destination Address</p>
+</li>
+<li>
+<p>Transport Layer Protocol and where defined by the ST author, Extension Header Type, Extension Header Fields</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>TCP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source Port</p>
+</li>
+<li>
+<p>Destination Port</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>UDP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source Port</p>
+</li>
+<li>
+<p>Destination Port</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="35">
+<li>
+<p>If the TOE does not support the configuration of rules to filter all possible values in the fields identified in FFW_RUL_EXT.1.2, the evaluator shall verify the Guidance describes which field and value combinations are not filterable. If the TOE supports the implicit configuration of any values, the evaluator shall ensure the Guidance identifies the specific configurations that result in the implicit configuration of a value (e.g., configuring ICMP type 8 implicitly configures ICMP code 0).</p>
+</li>
+<li>
+<p>The evaluator shall verify that the guidance documentation indicates that each rule can identify the following actions: permit, drop, and log.</p>
+</li>
+<li>
+<p>The evaluator shall verify that the guidance documentation explains how rules are associated with distinct network interfaces.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_3">2.3.2.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="38">
+<li>
+<p>Test 1: The evaluator shall use the instructions in the guidance documentation to test that stateful packet filter firewall rules can be created that permit, drop, and log packets for each of the following attributes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ICMPv4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ICMPv6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Type</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IPv4</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source address</p>
+</li>
+<li>
+<p>Destination Address</p>
+</li>
+<li>
+<p>Transport Layer Protocol</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>IPv6</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source address</p>
+</li>
+<li>
+<p>Destination Address</p>
+</li>
+<li>
+<p>Transport Layer Protocol and where defined by the ST author, Extension Header Type, Extension Header Fields</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>TCP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source Port</p>
+</li>
+<li>
+<p>Destination Port</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>UDP</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Source Port</p>
+</li>
+<li>
+<p>Destination Port</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="39">
+<li>
+<p>Test 2: Repeat the test evaluation activity above to ensure that stateful traffic filtering rules can be defined for each distinct network interface type supported by the TOE.</p>
+</li>
+<li>
+<p>Note that these test activities should be performed in conjunction with those of FFW_RUL_EXT.1.9 where the effectiveness of the rules is tested. The test activities for FFW_RUL_EXT.1.9 define the protocol/attribute combinations required to be tested.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_5">2.3.3. FFW_RUL_EXT.1.5</h4>
+<div class="sect4">
+<h5 id="_tss_5">2.3.3.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="41">
+<li>
+<p>The evaluator shall verify that the TSS identifies the protocols that support stateful session handling. The TSS shall identify TCP, UDP, and, if selected by the ST author, also ICMP.</p>
+</li>
+<li>
+<p>The evaluator shall verify that the TSS describes how stateful sessions are established (including handshake processing) and maintained.</p>
+</li>
+<li>
+<p>The evaluator shall verify that for TCP, the TSS identifies and describes the use of the following attributes in session determination: source and destination addresses, source and destination ports, sequence number, and individual flags.</p>
+</li>
+<li>
+<p>The evaluator shall verify that for UDP, the TSS identifies and describes the following attributes in session determination: source and destination addresses, source and destination ports.</p>
+</li>
+<li>
+<p>The evaluator shall verify that for ICMP (if selected), the TSS identifies and describes the following attributes in session determination: source and destination addresses, other attributes chosen in FFW_RUL_EXT.1.5.</p>
+</li>
+<li>
+<p>The evaluator shall verify that the TSS describes how established stateful sessions are removed. The TSS shall describe how connections are removed for each protocol based on normal completion and/or timeout conditions. The TSS shall also indicate when session removal becomes effective (e.g., before the next packet that might match the session is processed).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_4">2.3.3.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="47">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes stateful session behaviors. For example, a TOE might not log packets that are permitted as part of an existing session.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_4">2.3.3.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="48">
+<li>
+<p>The following tests shall be run using IPv4 and IPv6.</p>
+</li>
+<li>
+<p>Test 1: The evaluator shall configure the TOE to permit and log TCP traffic. The evaluator shall initiate a TCP session. While the TCP session is being established, the evaluator shall introduce session establishment packets with incorrect flags to determine that the altered traffic is not accepted as part of the session (i.e., a log event is generated to show the ruleset was applied). After a TCP session is successfully established, the evaluator shall alter each of the session determining attributes (source and destination addresses, source and destination ports, sequence number, flags) one at a time in order to verify that the altered packets are not accepted as part of the established session.</p>
+</li>
+<li>
+<p>Test 2: The evaluator shall terminate the TCP session established per Test 1 as described in the TSS. The evaluator shall then send a packet within one second matching the former session definition in order to ensure it is not forwarded through the TOE without being subject to the ruleset.</p>
+</li>
+<li>
+<p>Test 3: The evaluator shall expire (i.e., reach timeout) the TCP session established per Test 1 as described in the TSS. The evaluator shall then send a packet matching the former session in order to ensure it is not forwarded through the TOE without being subject to the ruleset.</p>
+</li>
+<li>
+<p>Test 4: The evaluator shall configure the TOE to permit and log UDP traffic. The evaluator shall establish a UDP session. Once a UDP session is established, the evaluator shall alter each of the session determining attributes (source and destination addresses, source and destination ports) one at a time in order to verify that the altered packets are not accepted as part of the established session.</p>
+</li>
+<li>
+<p>Test 5: The evaluator shall expire (i.e., reach timeout) the UDP session established per Test 4 as described in the TSS. The evaluator shall then send a packet matching the former session in order to ensure it is not forwarded through the TOE without being subject to the ruleset.</p>
+</li>
+<li>
+<p>Test 6 [Conditional]: If ICMP is selected, the evaluator shall configure the TOE to permit and log ICMP traffic. The evaluator shall establish a session for ICMP as defined in the TSS. Once an ICMP session is established, the evaluator shall alter each of the session determining attributes (source and destination addresses, other attributes chosen in FFW_RUL_EXT.1.5) one at a time in order to verify that the altered packets are not accepted as part of the established session.</p>
+</li>
+<li>
+<p>Test 7 [Conditional]: If applicable, the evaluator shall terminate the ICMP session established per Test 6 as described in the TSS. The evaluator shall then immediately send a packet matching the former session definition in order to ensure it is not forwarded through the TOE without being subject to the ruleset.</p>
+</li>
+<li>
+<p>Test 8 [Conditional]: The evaluator shall expire (i.e., reach timeout) the ICMP session established per Test 6 as described in the TSS. The evaluator shall then send a packet matching the former session in order to ensure it is not forwarded through the TOE without being subject to the ruleset.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_6">2.3.4. FFW_RUL_EXT.1.6</h4>
+<div class="sect4">
+<h5 id="_tss_6">2.3.4.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="57">
+<li>
+<p>The evaluator shall verify that the TSS identifies the following as packets that will be automatically dropped and are counted or logged:</p>
+</li>
+</ol>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Packets which are invalid fragments, including a description of what constitutes an invalid fragment</p>
+</li>
+<li>
+<p>Fragments that cannot be completely re-assembled</p>
+</li>
+<li>
+<p>Packets where the source address is defined as being on a broadcast network for IPv4</p>
+</li>
+<li>
+<p>Packets where the source address is defined as being on a multicast network</p>
+</li>
+<li>
+<p>Packets where the source address is defined as being a loopback address</p>
+</li>
+<li>
+<p>The TSF shall reject and be capable of logging network packets where the source or destination address of the network packet is defined as being unspecified (i.e. 0.0.0.0) or an address “reserved for future use” (i.e. 240.0.0.0/4) as specified in RFC 5735 for IPv4;</p>
+</li>
+<li>
+<p>The TSF shall reject and be capable of logging network packets where the source or destination address of the network packet is defined as an “unspecified address” or an address “reserved for future definition and use” (i.e. unicast addresses not in this address range: 2000::/3) as specified in RFC 3513 for IPv6;</p>
+</li>
+<li>
+<p>Packets with the IP options: Loose Source Routing, Strict Source Routing, or Record Route specified</p>
+</li>
+<li>
+<p>Other packets defined in FFW_RUL_EXT.1.6 (if any)</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_5">2.3.4.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="58">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes packets that are discarded and potentially logged by default. If applicable protocols are identified, their descriptions need to be consistent with the TSS. If logging is configurable, the evaluator shall verify that applicable instructions are provided to configure auditing of automatically rejected packets.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_5">2.3.4.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="59">
+<li>
+<p>Both IPv4 and IPv6 shall be tested for items a), b), d), and e) of the SFR element. Only IPv4 shall be tested for item c). Both IPv4 and IPv6 shall be tested for item i) unless the rule definition is specific to IPv4 or IPv6. Note: f), g), and h) are specific to IPv4 or IPv6 and shall be tested accordingly.</p>
+</li>
+<li>
+<p>Test 1: The evaluator shall test each of the conditions a.) through i.) for automatic packet rejection in turn. In each case, the TOE should be configured to allow all network traffic and the evaluator shall generate a packet or packet fragment that is to be rejected. The evaluator shall use packet captures to ensure that the unallowable packet or packet fragment is not passed through the TOE.</p>
+</li>
+<li>
+<p>Test 2: For each of the cases above, the evaluator shall use any applicable guidance to enable dropped packet logging or counting. In each case above, the evaluator shall ensure that the rejected packet or packet fragment was recorded (either logged or an appropriate counter incremented).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_7">2.3.5. FFW_RUL_EXT.1.7</h4>
+<div class="sect4">
+<h5 id="_tss_7">2.3.5.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="62">
+<li>
+<p>The evaluator shall verify that the TSS explains how the following traffic can be dropped and counted or logged:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Packets where the source address is equal to the address of the network interface where the network packet was received</p>
+</li>
+<li>
+<p>Packets where the source or destination address of the network packet is a link-local address</p>
+</li>
+<li>
+<p>Packets where the source address does not belong to the networks associated with the network interface where the network packet was received, including a description of how the TOE determines whether a source address belongs to a network associated with a given network interface</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_6">2.3.5.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="63">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes how the TOE can be configured to implement the required rules. If logging is configurable, the evaluator shall verify that applicable instructions are provided to configure auditing of automatically rejected packets.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_6">2.3.5.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="64">
+<li>
+<p>The following tests shall be run using IPv4 and IPv6.</p>
+</li>
+<li>
+<p>Test 1: The evaluator shall configure the TOE to drop and log network traffic where the source address of the packet matches that of the TOE network interface upon which the traffic was received. The evaluator shall generate suitable network traffic to match the configured rule and verify that the traffic is dropped and a log message generated.</p>
+</li>
+<li>
+<p>Test 2: The evaluator shall configure the TOE to drop and log network traffic where the source IP address of the packet fails to match the network reachability information of the interface to which it is targeted, e.g. if the TOE believes that network 192.168.1.0/24 is reachable through interface 2, network traffic with a source address from the 192.168.1.0/24 network should be generated and sent to an interface other than interface 2. The evaluator shall verify that the network traffic is dropped, and a log message generated.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_8">2.3.6. FFW_RUL_EXT.1.8</h4>
+<div class="sect4">
+<h5 id="_tss_8">2.3.6.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="67">
+<li>
+<p>The evaluator shall verify that the TSS describes the algorithm applied to incoming packets, including the processing of default rules, determination of whether a packet is part of an established session, and application of administrator defined and ordered ruleset. If the TOE implements a mechanism that ensures that no conflicting rules can be configured, the TSS shall describe the underlying mechanism.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_7">2.3.6.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="68">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes how the order of stateful traffic filtering rules is determined and provides the necessary instructions so that an administrator can configure the order of rule processing.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_7">2.3.6.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="69">
+<li>
+<p>Test 1: If the TOE implements a mechanism that ensures that no conflicting rules can be configured, the evaluator shall try to configure two conflicting rules and verify that the TOE rejects the conflicting rule(s). It is important to verify that the mechanism is implemented in the TOE but not in the non-TOE environment. If the TOE does not implement a mechanism that ensures that no conflicting rules can be configured, the evaluator shall devise two equal stateful traffic filtering rules with alternate operations – permit and drop. The rules should then be deployed in two distinct orders and in each case the evaluator shall ensure that the first rule is enforced in both cases by generating applicable packets and using packet capture and logs for confirmation.</p>
+</li>
+<li>
+<p>Test 2: The evaluator shall repeat the procedure above, except that the two rules should be devised where one is a subset of the other (e.g., a specific address vs. a network segment). Again, the evaluator should test both orders to ensure that the first is enforced regardless of the specificity of the rule.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_9">2.3.7. FFW_RUL_EXT.1.9</h4>
+<div class="sect4">
+<h5 id="_tss_9">2.3.7.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="71">
+<li>
+<p>The evaluator shall verify that the TSS describes the process for applying stateful traffic filtering rules and also that the behavior (either by default, or as configured by the administrator) is to deny packets when there is no rule match unless another required condition allows the network traffic (i.e., FFW_RUL_EXT.1.5 or FFW_RUL_EXT.2.1).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_8">2.3.7.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="72">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes the behavior if no rules or special conditions apply to the network traffic. If the behavior is configurable, the evaluator shall verify that the guidance documentation provides the appropriate instructions to configure the behavior to deny packets with no matching rules.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_8">2.3.7.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="73">
+<li>
+<p>For each attribute in FFW_RUL_EXT.1.2, the evaluator shall construct a test to demonstrate that the TOE can correctly compare the attribute from the packet header to the ruleset and shall demonstrate both the permit and deny for each case. It shall also be verified that a packet is dropped if no matching rule can be identified for the packet. The evaluator shall check the log in each case to confirm that the relevant rule was applied. The evaluator shall record a packet capture for each test to demonstrate the correct TOE behaviour.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_1_10">2.3.8. FFW_RUL_EXT.1.10</h4>
+<div class="sect4">
+<h5 id="_tss_10">2.3.8.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="74">
+<li>
+<p>The evaluator shall verify that the TSS describes how the TOE tracks and maintains information relating to the number of half-open TCP connections. The TSS should identify how the TOE behaves when the administratively defined limit is reached and should describe under what circumstances stale half-open connections are removed (e.g. after a timer expires).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_9">2.3.8.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="75">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes the behaviour of imposing TCP half-open connection limits and its default state if unconfigured. The evaluator shall verify that the guidance clearly indicates the conditions under which new connections will be dropped e.g. per-destination or per-client.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_9">2.3.8.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="76">
+<li>
+<p>The following tests shall be run using IPv4 and IPv6.</p>
+</li>
+<li>
+<p>Test 1: The evaluator shall define a TCP half-open connection limit on the TOE. The evaluator shall generate TCP SYN requests to pass through the TOE to the target system using a randomized source IP address and common destination IP address. The number of SYN requests should exceed the TCP half-open threshold defined on the TOE. TCP SYN-ACK messages should not be acknowledged. The evaluator shall verify through packet capture that once the defined TCP half-open threshold has been reached, subsequent TCP SYN packets are not transmitted to the target system. The evaluator shall verify that when the configured threshold is reached that, depending upon the selection, either a log entry is generated or a counter is incremented.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_management_fmt">2.4. Security management (FMT)</h3>
+<div class="sect3">
+<h4 id="_fmt_smf_1ffw_specification_of_management_functions">2.4.1. FMT_SMF.1/FFW Specification of Management Functions</h4>
+<div class="olist arabic">
+<ol class="arabic" start="78">
+<li>
+<p>The evaluation activities specified for FMT_SMF.1 in the Supporting Document for the PP-Module Base shall be applied in the same way to the newly added management functions defined in FMT_SMF.1/FFW in the FW Module.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_evaluation_activities_for_optional_requirements_defined_in_the_pp_module">3. Evaluation Activities for Optional Requirements defined in the PP-Module</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_firewall_ffw_2">3.1. Firewall (FFW)</h3>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_2_stateful_filtering_for_dynamic_protocols">3.1.1. FFW_RUL_EXT.2 Stateful Filtering for Dynamic Protocols</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_ffw_rul_ext_2_1">3.1.2. FFW_RUL_EXT.2.1</h4>
+<div class="sect4">
+<h5 id="_tss_11">3.1.2.1. TSS</h5>
+<div class="olist arabic">
+<ol class="arabic" start="79">
+<li>
+<p>The evaluator shall verify that the TSS identifies the protocols that can cause the automatic creation of dynamic packet filtering rules. In some cases rather than creating dynamic rules, the TOE might establish stateful sessions to support some identified protocol behaviors.</p>
+</li>
+<li>
+<p>The evaluator shall verify that the TSS explains the dynamic nature of session establishment and removal. The TSS also shall explain any logging ramifications.</p>
+</li>
+<li>
+<p>The evaluator shall verify that for each of the protocols selected, the TSS explains the dynamic nature of session establishment and removal specific to the protocol.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guidance_documentation_10">3.1.2.2. Guidance Documentation</h5>
+<div class="olist arabic">
+<ol class="arabic" start="82">
+<li>
+<p>The evaluator shall verify that the guidance documentation describes dynamic session establishment capabilities.</p>
+</li>
+<li>
+<p>The evaluator shall verify that the guidance documentation describes the logging of dynamic sessions consistent with the TSS.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tests_10">3.1.2.3. Tests</h5>
+<div class="olist arabic">
+<ol class="arabic" start="84">
+<li>
+<p>Test 1: The evaluator shall define stateful traffic filtering rules to permit and log traffic for each of the supported protocols and drop and log TCP and UDP ports above 1024. Subsequently, the evaluator shall establish a connection for each of the selected protocols in order to ensure that it succeeds. The evaluator shall examine the generated logs to verify they are consistent with the guidance documentation.</p>
+</li>
+<li>
+<p>Test 2: Continuing from Test 1, the evaluator shall determine (e.g., using a packet sniffer) which port above 1024 opened by the control protocol, terminate the connection session, and then verify that TCP or UDP (depending on the protocol selection) packets cannot be sent through the TOE using the same source and destination addresses and ports.</p>
+</li>
+<li>
+<p>Test 3: For each additionally supported protocol, the evaluator shall repeat the procedure above for the protocol. In each case the evaluator must use the applicable RFC or standard in order to determine what range of ports to block in order to ensure the dynamic rules are created and effective.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_evaluation_activities_for_selection_based_requirements_defined_in_the_pp_module">4. Evaluation Activities for Selection-Based Requirements defined in the PP-Module</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic" start="87">
+<li>
+<p>No additional selection-based requirements are defined in [MOD-FW] over and above those defined in [PP-ND].</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_evaluation_activities_for_sars">5. Evaluation Activities for SARs</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic" start="88">
+<li>
+<p>No additional Evaluation Activities for SARs (over and above those in [SD-ND]) are defined here. The evaluator shall perform the SAR Evaluation Activities defined in the NDcPP Supporting Document against the entire TOE (i.e. both the network device portion and the stateful firewall portion).</p>
+</li>
+<li>
+<p>The evaluator shall also supplement the AVA_VAN.1 Evaluation Activities with the materials provided in Annex A of the current document.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_required_supplementary_information">6. Required Supplementary Information</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic" start="90">
+<li>
+<p>No additional Required Supplementary Information (over and above that in [SD-ND]) is defined here.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_references">7. References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[CC1] Common Criteria for Information Technology Security Evaluation, Part 1: Introduction and General Model, CCMB-2022-11-001, CC:2022 Revision 1, November 2022.</p>
+</div>
+<div class="paragraph">
+<p>[CC2] Common Criteria for Information Technology Security Evaluation, Part 2: Security Functional Components, CCMB-2022-11-002, CC:2022 Revision 1, November 2022.</p>
+</div>
+<div class="paragraph">
+<p>[CC3] Common Criteria for Information Technology Security Evaluation, Part 3: Security Assurance Components, CCMB-2022-11-003, CC:2022 Revision 1, November 2022.</p>
+</div>
+<div class="paragraph">
+<p>[CC4] Common Criteria for Information Technology Security Evaluation, Part 4: Framework for the specification of evaluation methods and activities, CCMB-2022-11-004, CC:2022 Revision 1, November 2022.</p>
+</div>
+<div class="paragraph">
+<p>[CC5] Common Criteria for Information Technology Security Evaluation, Part 5: Pre-defined packages of security requirements, CCMB-2022-11-005, CC:2022 Revision 1, November 2022.</p>
+</div>
+<div class="paragraph">
+<p>[CEM] Common Methodology for Information Technology Security Evaluation, CCMB-2022-11-006, CC:2022 Revision 1, November 2022.</p>
+</div>
+<div class="paragraph">
+<p>[CC-E&amp;I] Errata and Interpretation for CC:2022 (Release 1) and CEM:2022 (Release 1), 002, Version 1.1, July 22, 2024</p>
+</div>
+<div class="paragraph">
+<p>[MOD-FW] PP-Module for Stateful Traffic Filter Firewalls,<br>
+Version 2.0, 30 March 2026</p>
+</div>
+<div class="paragraph">
+<p>[CONF-FW] PP-Configuration for Network Device and Stateful Traffic Filter Firewalls,<br>
+Version 2.0, 30 March 2026</p>
+</div>
+<div class="paragraph">
+<p>[PP-ND] collaborative Protection Profile for Network Devices,<br>
+Version 4.0, 25 November 2025</p>
+</div>
+<div class="paragraph">
+<p>[SD-ND] Evaluation Activities for Network Device cPP, 4.0, 25 November 2025</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vulnerability_analysis">Annex A: Vulnerability Analysis</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic" start="91">
+<li>
+<p>[SD-ND] contains the details of the vulnerability analysis process to be followed; that information is not repeated here. The additional information that is needed for vulnerability analysis for TOEs conforming to [CONF-FW] is contained in the following sections.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_a_1_sources_of_vulnerability_information">A.1 Sources of vulnerability information</h3>
+<div class="olist arabic">
+<ol class="arabic" start="92">
+<li>
+<p>[SD-ND] identifies the 4 types of flaws to be considered by the evaluation team. For each type, the following additional information is provided for TOEs conforming to [CONF-FW].</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_a_1_1_type_1_hypotheses_public_vulnerability_based">A.1.1 Type 1 Hypotheses – Public-Vulnerability-Based</h4>
+<div class="olist arabic">
+<ol class="arabic" start="93">
+<li>
+<p>The list of public sources of vulnerability information selected by the iTC is given in Section A.4 of [SD-ND]. Any additional sources specifically for firewalls will be specified in chapter A.4 of this document.</p>
+</li>
+<li>
+<p>The evaluators shall perform a search on the sources listed in Section A.4 of [SD-ND] to determine a list of potential flaw hypotheses that are more recent than the publication date of the PP-Module, and those that are specific to the TOE and its components as specified by the additional documentation mentioned above. Any duplicates – either in a specific entry, or in the flaw hypothesis that is generated from an entry from the same or a different source – can be noted and removed from consideration by the evaluation team.</p>
+</li>
+<li>
+<p>The search criteria to be used when searching the sources published after the publication date of the cPP shall include:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The term “firewall”</p>
+</li>
+<li>
+<p>The following protocols: TCP, UDP, IPv4, IPv6</p>
+</li>
+<li>
+<p>Any protocols not listed above supported (through an SFR) by the TOE.</p>
+</li>
+<li>
+<p>The TOE name (including appropriate model information as appropriate)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="96">
+<li>
+<p>As part of type 1 flaw hypothesis generation for the specific components of the TOE, the evaluator shall also search the component manufacturer’s websites to determine if flaw hypotheses can be generated on this basis (for instance, if security patches have been released for the version of the component being evaluated, the subject of those patches may form the basis for a flaw hypothesis).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_a_1_2_type_2_hypotheses_itc_sourced">A.1.2 Type 2 Hypotheses – iTC-Sourced</h4>
+<div class="olist arabic">
+<ol class="arabic" start="97">
+<li>
+<p>Section A.5 of [SD-ND] contains the list of flaw hypothesis generated by the iTC for this technology that must be considered by the evaluation team as flaw hypotheses in performing the vulnerability assessment. Section A.5 of this document contains additional flaw hypothesis generated by the iTC specifically for firewalls.</p>
+</li>
+<li>
+<p>If the evaluators discover a Type 3 or Type 4 flaw that they believe should be considered as a Type 2 flaw in future versions of this PP-Module, they should work with their Certification Body to determine the appropriate means of submitting the flaw for consideration by the iTC.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_a_1_3_type_3_hypotheses_evaluation_team_generated">A.1.3 Type 3 Hypotheses – Evaluation-Team-Generated</h4>
+<div class="olist arabic">
+<ol class="arabic" start="99">
+<li>
+<p>Type 3 flaws are formulated by the evaluator based on information presented by the product (through on-line help, product documentation and guidance documentation, etc.) and product behaviour during the (functional) testing activities. The evaluator is also free to formulate flaws that are based on material that is not part of the baseline evidence (e.g., information gleaned from an Internet mailing list, or reading interface documentation on interfaces not included in the set provided by the developer), although such activities have the potential to vary significantly based upon the product and evaluation facility performing the analysis.</p>
+</li>
+<li>
+<p>If the evaluators discover a Type 3 flaw that they believe should be considered as a Type 2 flaw in future versions of this PP-Module, they should work with their Certification Body to determine the appropriate means of submitting the flaw for consideration by the iTC.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_a_1_4_type_4_hypotheses_tool_generated">A.1.4 Type 4 Hypotheses – Tool-Generated</h4>
+<div class="olist arabic">
+<ol class="arabic" start="101">
+<li>
+<p>There are no Type 4 hypotheses that apply to the TOE beyond those defined by [SD-ND].</p>
+</li>
+<li>
+<p>If the evaluators discover a Type 4 flaw that they believe should be considered as a Type 2 flaw in future versions of this PP-Module, they should work with their Certification Body to determine the appropriate means of submitting the flaw for consideration by the iTC.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_2_process_for_evaluator_vulnerability_analysis">A.2 Process for Evaluator Vulnerability Analysis</h3>
+<div class="olist arabic">
+<ol class="arabic" start="103">
+<li>
+<p>The process to be followed is described in [SD-ND].</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_3_reporting">A.3 Reporting</h3>
+<div class="olist arabic">
+<ol class="arabic" start="104">
+<li>
+<p>Reporting activities are described in [SD-ND].</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_4_additional_public_vulnerability_sources">A.4 Additional Public Vulnerability Sources</h3>
+<div class="olist arabic">
+<ol class="arabic" start="105">
+<li>
+<p>[SD-ND] identifies the relevant public vulnerability sources to be consulted. There are no additional public vulnerability sources identified specifically for firewalls.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_5_additional_flaw_hypotheses">A.5 Additional Flaw Hypotheses</h3>
+<div class="olist arabic">
+<ol class="arabic" start="106">
+<li>
+<p>No entries are currently defined for this list.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_firewall_equivalency_considerations">Annex B: Firewall Equivalency Considerations</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic" start="107">
+<li>
+<p>No additional Equivalency Considerations (over and above those in [SD-ND]) are defined here.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. In general, a PP-Module may reference one or more SDs as sources for the Evaluation Activities for different sets of SFRs.
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-03-29 14:51:34 -0400
+</div>
+</div>
+</body>
+</html>

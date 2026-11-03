@@ -1,0 +1,1701 @@
+{
+ "document": "NDcPP v4.0",
+ "source": "cPP/NDcPP_v4_0.html, Annex E.1",
+ "sfrs": [
+  {
+   "id": "FAU_GEN.1",
+   "title": "Audit data generation (Refinement)",
+   "type": "mandatory",
+   "family": "FAU_GEN",
+   "anchor": "_fau_gen_1_audit_data_generation_refinement",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FPT_STM.1",
+     "any_of": [
+      "FPT_STM.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "Satisfied by FPT_STM_EXT.1 which includes the requirement for reliable timestamps"
+   ],
+   "sd_anchor": "_fau_gen_1_audit_data_generation",
+   "used_by": [
+    "FAU_GEN.2",
+    "FAU_SAR.1",
+    "FAU_STG.2",
+    "FAU_STG_EXT.1",
+    "FAU_STG_EXT.2",
+    "FAU_STG_EXT.3"
+   ]
+  },
+  {
+   "id": "FAU_GEN.2",
+   "title": "User identity association",
+   "type": "mandatory",
+   "family": "FAU_GEN",
+   "anchor": "_fau_gen_2_user_identity_association",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FAU_GEN.1",
+     "any_of": [
+      "FAU_GEN.1"
+     ]
+    },
+    {
+     "text": "FIA_UID.1",
+     "any_of": [
+      "FIA_UID.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN.1 included",
+    "Satisfied by FIA_UIA_EXT.1, which specifies the relevant Administrator identification timing"
+   ],
+   "sd_anchor": "_fau_gen_2_user_identity_association",
+   "used_by": []
+  },
+  {
+   "id": "FAU_GEN_EXT.1",
+   "title": "Security audit generation for distributed TOE component",
+   "type": "selection-based",
+   "family": "FAU_GEN",
+   "anchor": "_fau_gen_ext_1_security_audit_generation_for_distributed_toe_component",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fau_gen_ext_1_security_audit_data_generation_for_distributed_toe_components",
+   "used_by": [
+    "FAU_STG_EXT.4",
+    "FAU_STG_EXT.5"
+   ]
+  },
+  {
+   "id": "FAU_SAR.1",
+   "title": "Audit Review",
+   "type": "selection-based",
+   "family": "FAU_SAR",
+   "anchor": "_fau_sar_1_audit_review",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FAU_GEN.1",
+     "any_of": [
+      "FAU_GEN.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN.1 include"
+   ],
+   "sd_anchor": "_fau_sar_1_audit_review",
+   "used_by": []
+  },
+  {
+   "id": "FAU_STG.2",
+   "title": "Protected audit data storage",
+   "type": "optional",
+   "family": "FAU_STG",
+   "anchor": "_fau_stg_2_protected_audit_data_storage",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FAU_GEN.1",
+     "any_of": [
+      "FAU_GEN.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN.1 included"
+   ],
+   "sd_anchor": "_fau_stg_2_protected_audit_data_storage",
+   "used_by": []
+  },
+  {
+   "id": "FAU_STG_EXT.1",
+   "title": "Protected Audit Event Storage",
+   "type": "mandatory",
+   "family": "FAU_STG",
+   "anchor": "_fau_stg_ext_1_protected_audit_event_storage",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FAU_GEN.1",
+     "any_of": [
+      "FAU_GEN.1"
+     ]
+    },
+    {
+     "text": "FTP_ITC.1",
+     "any_of": [
+      "FTP_ITC.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN.1 included",
+    "FTP_ITC.1 included"
+   ],
+   "sd_anchor": "_fau_stg_ext_1_protected_audit_event_storage",
+   "used_by": [
+    "FAU_STG_EXT.2",
+    "FAU_STG_EXT.3"
+   ]
+  },
+  {
+   "id": "FAU_STG_EXT.2",
+   "title": "Counting Lost Audit Data",
+   "type": "optional",
+   "family": "FAU_STG",
+   "anchor": "_fau_stg_ext_2_counting_lost_audit_data",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FAU_GEN.1",
+     "any_of": [
+      "FAU_GEN.1"
+     ]
+    },
+    {
+     "text": "FAU_STG_EXT.1",
+     "any_of": [
+      "FAU_STG_EXT.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN.1 and FAU_STG_EXT.1 included"
+   ],
+   "sd_anchor": "_fau_stg_ext_2_counting_lost_audit_data",
+   "used_by": []
+  },
+  {
+   "id": "FAU_STG_EXT.3",
+   "title": "Action in Case of Possible Audit Data Loss",
+   "type": "optional",
+   "family": "FAU_STG",
+   "anchor": "_fau_stg_ext_3_action_in_case_of_possible_audit_data_loss",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FAU_GEN.1",
+     "any_of": [
+      "FAU_GEN.1"
+     ]
+    },
+    {
+     "text": "FAU_STG_EXT.1",
+     "any_of": [
+      "FAU_STG_EXT.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN.1 and FAU_STG_EXT.1 included"
+   ],
+   "sd_anchor": "_fau_stg_ext_3_action_in_case_of_possible_audit_data_loss",
+   "used_by": []
+  },
+  {
+   "id": "FAU_STG_EXT.4",
+   "title": "Protected Local Audit Event Storage for Distributed TOEs",
+   "type": "selection-based",
+   "family": "FAU_STG",
+   "anchor": "_fau_stg_ext_4_protected_local_audit_event_storage_for_distributed_toes",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FAU_GEN_EXT.1",
+     "any_of": [
+      "FAU_GEN_EXT.1"
+     ]
+    },
+    {
+     "text": "FPT_ITT.1 or FTP_ITC.1",
+     "any_of": [
+      "FPT_ITT.1",
+      "FTP_ITC.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN_EXT.1 included",
+    "FPT_ITT.1 (optional SFR) and FTP_ITC.1 (mandatory SFR) included."
+   ],
+   "sd_anchor": "_fau_stg_ext_4_protected_local_audit_event_storage_for_distributed_toes_and_fau_stg_ext_5_protected_remote_audit_event_storage_for_distributed_toes",
+   "used_by": []
+  },
+  {
+   "id": "FAU_STG_EXT.5",
+   "title": "Protected Remote Audit Event Storage for Distributed TOEs",
+   "type": "selection-based",
+   "family": "FAU_STG",
+   "anchor": "_fau_stg_ext_5_protected_remote_audit_event_storage_for_distributed_toes",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FAU_GEN_EXT.1",
+     "any_of": [
+      "FAU_GEN_EXT.1"
+     ]
+    },
+    {
+     "text": "FPT_ITT.1 or FTP_ITC.1",
+     "any_of": [
+      "FPT_ITT.1",
+      "FTP_ITC.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FAU_GEN_EXT.1 included",
+    "FPT_ITT.1 (optional SFR) and FTP_ITC.1 (mandatory SFR) included."
+   ],
+   "sd_anchor": null,
+   "used_by": []
+  },
+  {
+   "id": "FCO_CPC_EXT.1",
+   "title": "Component registration channel definition",
+   "type": "optional",
+   "family": "FCO_CPC",
+   "anchor": "_fco_cpc_ext_1_component_registration_channel_definition",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fco_cpc_ext_1_component_registration_channel_definition",
+   "used_by": []
+  },
+  {
+   "id": "FCS_CKM.1/AKG",
+   "title": "Cryptographic Key Generation – Asymmetric Key",
+   "type": "mandatory",
+   "family": "FCS_CKM",
+   "anchor": "_fcs_ckm_1akg_cryptographic_key_generation_asymmetric_key",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FCS_CKM.2 or FCS_CKM.5 or FCS_COP.1",
+     "any_of": [
+      "FCS_CKM.2",
+      "FCS_CKM.5",
+      "FCS_COP.1"
+     ]
+    },
+    {
+     "text": "FCS_RBG.1 or FCS_RNG.1",
+     "any_of": [
+      "FCS_RBG.1",
+      "FCS_RNG.1"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.2 included",
+    "FCS_COP.1 included",
+    "FCS_RBG.1 included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_ckm_1akg_cryptographic_key_generation_asymmetric_key",
+   "used_by": [
+    "FCS_CKM.2",
+    "FCS_CKM.6",
+    "FCS_CKM_EXT.7",
+    "FCS_COP.1/AEAD",
+    "FCS_COP.1/CMAC",
+    "FCS_COP.1/DataEncryption",
+    "FCS_COP.1/KeyEncap",
+    "FCS_COP.1/KeyWrap",
+    "FCS_COP.1/KeyedHash",
+    "FCS_COP.1/SKC",
+    "FCS_COP.1/SigGen",
+    "FCS_COP.1/SigVer",
+    "FCS_COP.1/XOF",
+    "FCS_IPSEC_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_CKM.2",
+   "title": "Cryptographic Key Distribution",
+   "type": "optional",
+   "family": "FCS_CKM",
+   "anchor": "_fcs_ckm_2_cryptographic_key_distribution",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.8 or FCS_CKM_EXT.3",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.8",
+      "FCS_CKM_EXT.3"
+     ]
+    },
+    {
+     "text": "FCS_CKM.3",
+     "any_of": [
+      "FCS_CKM.3"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/KeyEncap or FCS_COP.1/KeyWrap",
+     "any_of": [
+      "FCS_COP.1/KeyEncap",
+      "FCS_COP.1/KeyWrap"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included FCS_CKM.6 included FCS_COP.1/KeyEncap included"
+   ],
+   "sd_anchor": "_fcs_ckm_2_cryptographic_key_distribution",
+   "used_by": [
+    "FCS_CKM.1/AKG",
+    "FCS_CKM_EXT.7",
+    "FCS_IPSEC_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_CKM.6",
+   "title": "Timing and Event of Cryptographic Key Destruction",
+   "type": "mandatory",
+   "family": "FCS_CKM",
+   "anchor": "_fcs_ckm_6_timing_and_event_of_cryptographic_key_destruction",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM_EXT.3 or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM_EXT.3",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included"
+   ],
+   "sd_anchor": "_fcs_ckm_6_timing_and_event_of_cryptographic_key_destruction",
+   "used_by": [
+    "FCS_CKM.1/AKG",
+    "FCS_CKM.2",
+    "FCS_CKM_EXT.7",
+    "FCS_COP.1/AEAD",
+    "FCS_COP.1/CMAC",
+    "FCS_COP.1/DataEncryption",
+    "FCS_COP.1/KeyEncap",
+    "FCS_COP.1/KeyWrap",
+    "FCS_COP.1/KeyedHash",
+    "FCS_COP.1/SKC",
+    "FCS_COP.1/SigGen",
+    "FCS_COP.1/SigVer"
+   ]
+  },
+  {
+   "id": "FCS_CKM_EXT.7",
+   "title": "Cryptographic Key Agreement",
+   "type": "mandatory",
+   "family": "FCS_CKM",
+   "anchor": "_fcs_ckm_ext_7_cryptographic_key_agreement",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.2 or FCS_COP.1",
+     "any_of": [
+      "FCS_CKM.2",
+      "FCS_COP.1"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/AEAD or FCS_COP.1/CMAC or FCS_COP.1/Hash or FCS_COP.1/KeyedHash or FCS_COP.1/SKC",
+     "any_of": [
+      "FCS_COP.1/AEAD",
+      "FCS_COP.1/CMAC",
+      "FCS_COP.1/Hash",
+      "FCS_COP.1/KeyedHash",
+      "FCS_COP.1/SKC"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM.2 included",
+    "FCS_COP.1 included",
+    "FCS_CKM.6 included",
+    "FCS_COP.1/AEAD included",
+    "FCS_COP.1/Hash included",
+    "FCS_COP.1/KeyedHash included",
+    "FCS_COP.1/SKC included"
+   ],
+   "sd_anchor": "_fcs_ckm_ext_7_cryptographic_key_agreement",
+   "used_by": [
+    "FCS_CKM.6",
+    "FCS_COP.1/AEAD",
+    "FCS_COP.1/CMAC",
+    "FCS_COP.1/DataEncryption",
+    "FCS_COP.1/KeyEncap",
+    "FCS_COP.1/KeyWrap",
+    "FCS_COP.1/KeyedHash",
+    "FCS_COP.1/SKC"
+   ]
+  },
+  {
+   "id": "FCS_COP.1",
+   "title": "Cryptographic Operation",
+   "type": "mandatory",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1_cryptographic_operation",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "members": [
+    "FCS_COP.1/AEAD",
+    "FCS_COP.1/CMAC",
+    "FCS_COP.1/DataEncryption",
+    "FCS_COP.1/Hash",
+    "FCS_COP.1/KeyEncap",
+    "FCS_COP.1/KeyWrap",
+    "FCS_COP.1/KeyedHash",
+    "FCS_COP.1/SKC",
+    "FCS_COP.1/SigGen",
+    "FCS_COP.1/SigVer",
+    "FCS_COP.1/XOF"
+   ],
+   "note": "Parent heading for the iterations below. A dependency on FCS_COP.1 refers to the iterations.",
+   "sd_anchor": null,
+   "used_by": [
+    "FCS_CKM.1/AKG",
+    "FCS_CKM_EXT.7",
+    "FCS_NTP_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/AEAD",
+   "title": "Cryptographic Operation – Authenticated Encryption with Associated Data",
+   "type": "selection-based",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1aead_cryptographic_operation_authenticated_encryption_with_associated_data",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_cop_1aead_cryptographic_operation_authenticated_encryption_with_associated_data",
+   "used_by": [
+    "FCS_CKM_EXT.7"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/CMAC",
+   "title": "Cryptographic Operation - CMAC",
+   "type": "selection-based",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1cmac_cryptographic_operation_cmac",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    },
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included"
+   ],
+   "note": "Annex E lists this requirement more than once with different dependencies; all of them are shown.",
+   "sd_anchor": "_fcs_cop_1cmac_cryptographic_operation_cmac",
+   "used_by": [
+    "FCS_CKM_EXT.7"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/DataEncryption",
+   "title": "Cryptographic Operation",
+   "type": "mandatory",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1_cryptographic_operation",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_cop_1dataencryption_cryptographic_operation_aes_data_encryptiondecryption",
+   "used_by": [
+    "FCS_IPSEC_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/Hash",
+   "title": "Cryptographic Operation",
+   "type": "mandatory",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1_cryptographic_operation",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fcs_cop_1hash_cryptographic_operation_hashing",
+   "used_by": [
+    "FCS_CKM_EXT.7",
+    "FCS_COP.1/KeyedHash",
+    "FCS_COP.1/SigGen",
+    "FCS_COP.1/SigVer",
+    "FCS_IPSEC_EXT.1",
+    "FCS_RBG.1",
+    "FPT_TUD_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/KeyEncap",
+   "title": "Cryptographic Operation - Key Encapsulation",
+   "type": "selection-based",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1keyencap_cryptographic_operation_key_encapsulation",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_cop_1keyencap_cryptographic_operation_key_encapsulation",
+   "used_by": [
+    "FCS_CKM.2"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/KeyWrap",
+   "title": "Cryptographic Operation - Key Wrapping",
+   "type": "selection-based",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1keywrap_cryptographic_operation_key_wrapping",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/SKC",
+     "any_of": [
+      "FCS_COP.1/SKC"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included",
+    "FCS_COP.1/SKC included"
+   ],
+   "sd_anchor": "_fcs_cop_1keywrap_cryptographic_operation_key_wrapping",
+   "used_by": [
+    "FCS_CKM.2"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/KeyedHash",
+   "title": "Cryptographic Operation",
+   "type": "mandatory",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1_cryptographic_operation",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/Hash or FCS_COP.1/XOF",
+     "any_of": [
+      "FCS_COP.1/Hash",
+      "FCS_COP.1/XOF"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included",
+    "FCS_COP.1/Hash included",
+    "FCS_COP.1/XOF included"
+   ],
+   "sd_anchor": "_fcs_cop_1keyedhash_cryptographic_operation_keyed_hash",
+   "used_by": [
+    "FCS_CKM_EXT.7",
+    "FCS_IPSEC_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/SKC",
+   "title": "Cryptographic Operation - Symmetric Key Cryptography",
+   "type": "selection-based",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1skc_cryptographic_operation_symmetric_key_cryptography",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5 or FCS_CKM_EXT.7 or FCS_CKM_EXT.8",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5",
+      "FCS_CKM_EXT.7",
+      "FCS_CKM_EXT.8"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM_EXT.7 included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_cop_1skc_cryptographic_operation_symmetric_key_cryptography",
+   "used_by": [
+    "FCS_CKM_EXT.7",
+    "FCS_COP.1/KeyWrap",
+    "FCS_RBG.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/SigGen",
+   "title": "Cryptographic Operation",
+   "type": "mandatory",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1_cryptographic_operation",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/Hash or FCS_COP.1/XOF",
+     "any_of": [
+      "FCS_COP.1/Hash",
+      "FCS_COP.1/XOF"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_COP.1/Hash included",
+    "FCS_COP.1/XOF included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_cop_1siggen_cryptographic_operation_signature_generation",
+   "used_by": [
+    "FCS_IPSEC_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/SigVer",
+   "title": "Cryptographic Operation",
+   "type": "mandatory",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1_cryptographic_operation",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/Hash or FCS_COP.1/XOF",
+     "any_of": [
+      "FCS_COP.1/Hash",
+      "FCS_COP.1/XOF"
+     ]
+    },
+    {
+     "text": "FCS_CKM.6",
+     "any_of": [
+      "FCS_CKM.6"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_COP.1/Hash included",
+    "FCS_COP.1/XOF included",
+    "FCS_CKM.6 included"
+   ],
+   "sd_anchor": "_fcs_cop_1sigver_cryptographic_operation_signature_verification",
+   "used_by": [
+    "FCS_IPSEC_EXT.1",
+    "FPT_TUD_EXT.1"
+   ]
+  },
+  {
+   "id": "FCS_COP.1/XOF",
+   "title": "Cryptographic Operation - Extendable-Output Function",
+   "type": "selection-based",
+   "family": "FCS_COP",
+   "anchor": "_fcs_cop_1xof_cryptographic_operation_extendable_output_function",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FDP_ITC.1 or FDP_ITC.2 or FCS_CKM.1/AKG or FCS_CKM.5",
+     "any_of": [
+      "FDP_ITC.1",
+      "FDP_ITC.2",
+      "FCS_CKM.1/AKG",
+      "FCS_CKM.5"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included"
+   ],
+   "sd_anchor": "_fcs_cop_1xof_extendable_output_function",
+   "used_by": [
+    "FCS_COP.1/KeyedHash",
+    "FCS_COP.1/SigGen",
+    "FCS_COP.1/SigVer"
+   ]
+  },
+  {
+   "id": "FCS_IPSEC_EXT.1",
+   "title": "IPsec Protocol",
+   "type": "selection-based",
+   "family": "FCS_IPSEC",
+   "anchor": "_fcs_ipsec_ext_1_ipsec_protocol",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FCS_CKM.1/AKG",
+     "any_of": [
+      "FCS_CKM.1/AKG"
+     ]
+    },
+    {
+     "text": "FCS_CKM.2",
+     "any_of": [
+      "FCS_CKM.2"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/DataEncryption",
+     "any_of": [
+      "FCS_COP.1/DataEncryption"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/SigGen",
+     "any_of": [
+      "FCS_COP.1/SigGen"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/SigVer",
+     "any_of": [
+      "FCS_COP.1/SigVer"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/Hash",
+     "any_of": [
+      "FCS_COP.1/Hash"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/KeyedHash",
+     "any_of": [
+      "FCS_COP.1/KeyedHash"
+     ]
+    },
+    {
+     "text": "FCS_RBG.1",
+     "any_of": [
+      "FCS_RBG.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_CKM.1/AKG included",
+    "FCS_CKM.2 included",
+    "FCS_COP.1/DataEncryption",
+    "FCS_COP.1/SigGen",
+    "FCS_COP.1/SigVer",
+    "FCS_COP.1/Hash",
+    "FCS_COP.1/KeyedHash included",
+    "FCS_RBG.1 included"
+   ],
+   "sd_anchor": null,
+   "used_by": []
+  },
+  {
+   "id": "FCS_NTP_EXT.1",
+   "title": "FCS_NTP_EXT NTP Protocol",
+   "type": "selection-based",
+   "family": "FCS_NTP",
+   "anchor": "_fcs_ntp_ext_ntp_protocol",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FCS_COP.1",
+     "any_of": [
+      "FCS_COP.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_COP.1 included"
+   ],
+   "sd_anchor": "_fcs_ntp_ext_1_ntp_protocol",
+   "used_by": []
+  },
+  {
+   "id": "FCS_RBG.1",
+   "title": "Random Bit Generation",
+   "type": "mandatory",
+   "family": "FCS_RBG",
+   "anchor": "_fcs_rbg_1_random_bit_generation",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FCS_RBG.2 or FCS_RBG.3",
+     "any_of": [
+      "FCS_RBG.2",
+      "FCS_RBG.3"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/Hash",
+     "any_of": [
+      "FCS_COP.1/Hash"
+     ]
+    },
+    {
+     "text": "FCS_COP.1/SKC",
+     "any_of": [
+      "FCS_COP.1/SKC"
+     ]
+    },
+    {
+     "text": "FPT_TST.1",
+     "any_of": [
+      "FPT_TST.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_RBG.2 included",
+    "FCS_RBG.3 included",
+    "FCS_COP.1/Hash included",
+    "FCS_COP.1/SKC included",
+    "FPT_TST_EXT.1 included, which extends FPT_TST.1 with additional requirements for cryptographic self-tests and failure response."
+   ],
+   "sd_anchor": "_fcs_rbg_1_random_bit_generation_rbg",
+   "used_by": [
+    "FCS_CKM.1/AKG",
+    "FCS_IPSEC_EXT.1",
+    "FCS_RBG.2",
+    "FCS_RBG.3",
+    "FCS_RBG.4",
+    "FCS_RBG.5"
+   ]
+  },
+  {
+   "id": "FCS_RBG.2",
+   "title": "Random Bit Generation (External Seeding - VS platform)",
+   "type": "selection-based",
+   "family": "FCS_RBG",
+   "anchor": "_fcs_rbg_2_random_bit_generation_external_seeding_vs_platform",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FCS_RBG.1",
+     "any_of": [
+      "FCS_RBG.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_RBG.1 included"
+   ],
+   "sd_anchor": "_fcs_rbg_2_random_bit_generation_external_seeding_vs_platform",
+   "used_by": [
+    "FCS_RBG.1",
+    "FCS_RBG.5"
+   ]
+  },
+  {
+   "id": "FCS_RBG.3",
+   "title": "Random Bit Generation (Internal Seeding - Single Source)",
+   "type": "selection-based",
+   "family": "FCS_RBG",
+   "anchor": "_fcs_rbg_3_random_bit_generation_internal_seeding_single_source",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FCS_RBG.1",
+     "any_of": [
+      "FCS_RBG.1"
+     ]
+    },
+    {
+     "text": "FCS_RBG.5",
+     "any_of": [
+      "FCS_RBG.5"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_RBG.1 included",
+    "FCS_RBG.5 included"
+   ],
+   "sd_anchor": "_fcs_rbg_3_random_bit_generation_internal_seeding_single_source",
+   "used_by": [
+    "FCS_RBG.1",
+    "FCS_RBG.5"
+   ]
+  },
+  {
+   "id": "FCS_RBG.4",
+   "title": "Random Bit Generation (Internal Seeding - Multiple Sources)",
+   "type": "selection-based",
+   "family": "FCS_RBG",
+   "anchor": "_fcs_rbg_4_random_bit_generation_internal_seeding_multiple_sources",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FCS_RBG.1",
+     "any_of": [
+      "FCS_RBG.1"
+     ]
+    },
+    {
+     "text": "FCS_RBG.5",
+     "any_of": [
+      "FCS_RBG.5"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_RBG.1 included",
+    "FCS_RBG.5 included"
+   ],
+   "sd_anchor": "_fcs_rbg_4_random_bit_generation_internal_seeding_multiple_sources",
+   "used_by": [
+    "FCS_RBG.5"
+   ]
+  },
+  {
+   "id": "FCS_RBG.5",
+   "title": "Random Bit Generation (Combining Entropy Sources)",
+   "type": "selection-based",
+   "family": "FCS_RBG",
+   "anchor": "_fcs_rbg_5_random_bit_generation_combining_entropy_sources",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FCS_RBG.1",
+     "any_of": [
+      "FCS_RBG.1"
+     ]
+    },
+    {
+     "text": "FCS_RBG.2 or FCS_RBG.3 or FCS_RBG.4",
+     "any_of": [
+      "FCS_RBG.2",
+      "FCS_RBG.3",
+      "FCS_RBG.4"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_RBG.1 included",
+    "FCS_RBG.2 included",
+    "FCS_RBG.3 included",
+    "FCS_RBG.4 included"
+   ],
+   "sd_anchor": "_fcs_rbg_5_random_bit_generation_combining_entropy_sources",
+   "used_by": [
+    "FCS_RBG.3",
+    "FCS_RBG.4"
+   ]
+  },
+  {
+   "id": "FIA_AFL.1",
+   "title": "Authentication failure handling (Refinement)",
+   "type": "selection-based",
+   "family": "FIA_AFL",
+   "anchor": "_fia_afl_1_authentication_failure_handling_refinement",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FIA_UAU.1",
+     "any_of": [
+      "FIA_UAU.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "Satisfied by FIA_UIA_EXT.1, which specifies the relevant Administrator authentication"
+   ],
+   "sd_anchor": "_fia_afl_1_authentication_failure_management",
+   "used_by": []
+  },
+  {
+   "id": "FIA_PMG_EXT.1",
+   "title": "Password management",
+   "type": "selection-based",
+   "family": "FIA_PMG",
+   "anchor": "_fia_pmg_ext_1_password_management",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fia_pmg_ext_1_password_management",
+   "used_by": []
+  },
+  {
+   "id": "FIA_PSK_EXT.1",
+   "title": "Pre-Shared Key Composition",
+   "type": "selection-based",
+   "family": "FIA_PSK",
+   "anchor": "_pre_shared_key_composition_extended_fia_psk_ext",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fia_psk_ext_1_pre_shared_key_composition",
+   "used_by": []
+  },
+  {
+   "id": "FIA_UAU.7",
+   "title": "Protected authentication feedback",
+   "type": "selection-based",
+   "family": "FIA_UAU",
+   "anchor": "_fia_uau_7_protected_authentication_feedback",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FIA_UAU.1",
+     "any_of": [
+      "FIA_UAU.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "Satisfied by FIA_UIA_EXT.1, which specifies the relevant Administrator authentication"
+   ],
+   "sd_anchor": "_fia_uau_7_protected_authentication_feedback",
+   "used_by": []
+  },
+  {
+   "id": "FIA_UIA_EXT.1",
+   "title": "User identification and authentication",
+   "type": "mandatory",
+   "family": "FIA_UIA",
+   "anchor": "_fia_uia_ext_1_user_identification_and_authentication",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FTA_TAB.1",
+     "any_of": [
+      "FTA_TAB.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FTA_TAB.1 included"
+   ],
+   "sd_anchor": "_fia_uia_ext_1_user_identification_and_authentication",
+   "used_by": []
+  },
+  {
+   "id": "FMT_MOF.1/AutoUpdate",
+   "title": "Management of security functions behaviour",
+   "type": "selection-based",
+   "family": "FMT_MOF",
+   "anchor": "_fmt_mof_1autoupdate_management_of_security_functions_behaviour",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FMT_SMR.1",
+     "any_of": [
+      "FMT_SMR.1"
+     ]
+    },
+    {
+     "text": "FMT_SMF.1",
+     "any_of": [
+      "FMT_SMF.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FMT_SMR.2 included",
+    "FMT_SMF.1 included"
+   ],
+   "sd_anchor": "_fmt_mof_1autoupdate_management_of_security_functions_behaviour",
+   "used_by": []
+  },
+  {
+   "id": "FMT_MOF.1/Functions",
+   "title": "Management of security functions behaviour",
+   "type": "selection-based",
+   "family": "FMT_MOF",
+   "anchor": "_fmt_mof_1functions_management_of_security_functions_behaviour",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FMT_SMR.1",
+     "any_of": [
+      "FMT_SMR.1"
+     ]
+    },
+    {
+     "text": "FMT_SMF.1",
+     "any_of": [
+      "FMT_SMF.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FMT_SMR.2 included",
+    "FMT_SMF.1 included"
+   ],
+   "sd_anchor": "_fmt_mof_1functions_management_of_security_functions_behaviour",
+   "used_by": []
+  },
+  {
+   "id": "FMT_MOF.1/ManualUpdate",
+   "title": "Management of security functions behaviour",
+   "type": "mandatory",
+   "family": "FMT_MOF",
+   "anchor": "_fmt_mof_1manualupdate_management_of_security_functions_behaviour",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FMT_SMR.1",
+     "any_of": [
+      "FMT_SMR.1"
+     ]
+    },
+    {
+     "text": "FMT_SMF.1",
+     "any_of": [
+      "FMT_SMF.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FMT_SMR.2 included",
+    "FMT_SMF.1 included"
+   ],
+   "sd_anchor": "_fmt_mof_1manualupdate_management_of_security_functions_behaviour",
+   "used_by": []
+  },
+  {
+   "id": "FMT_MOF.1/Services",
+   "title": "Management of security functions behaviour",
+   "type": "selection-based",
+   "family": "FMT_MOF",
+   "anchor": "_fmt_mof_1services_management_of_security_functions_behaviour",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FMT_SMR.1",
+     "any_of": [
+      "FMT_SMR.1"
+     ]
+    },
+    {
+     "text": "FMT_SMF.1",
+     "any_of": [
+      "FMT_SMF.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FMT_SMR.2 included",
+    "FMT_SMF.1 included"
+   ],
+   "sd_anchor": "_fmt_mof_1services_management_of_security_functions_behaviour",
+   "used_by": []
+  },
+  {
+   "id": "FMT_MTD.1/CoreData",
+   "title": "Management of TSF data",
+   "type": "mandatory",
+   "family": "FMT_MTD",
+   "anchor": "_fmt_mtd_1coredata_management_of_tsf_data",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FMT_SMR.1",
+     "any_of": [
+      "FMT_SMR.1"
+     ]
+    },
+    {
+     "text": "FMT_SMF.1",
+     "any_of": [
+      "FMT_SMF.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FMT_SMR.2 included",
+    "FMT_SMF.1 included"
+   ],
+   "sd_anchor": "_fmt_mtd_1coredata_management_of_tsf_data",
+   "used_by": []
+  },
+  {
+   "id": "FMT_MTD.1/CryptoKeys",
+   "title": "Management of TSF data",
+   "type": "selection-based",
+   "family": "FMT_MTD",
+   "anchor": "_fmt_mtd_1cryptokeys_management_of_tsf_data",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FMT_SMR.1",
+     "any_of": [
+      "FMT_SMR.1"
+     ]
+    },
+    {
+     "text": "FMT_SMF.1",
+     "any_of": [
+      "FMT_SMF.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FMT_SMR.2 included",
+    "FMT_SMF.1 included"
+   ],
+   "sd_anchor": "_fmt_mtd_1cryptokeys_management_of_tsf_data",
+   "used_by": []
+  },
+  {
+   "id": "FMT_SMF.1",
+   "title": "Specification of management functions",
+   "type": "mandatory",
+   "family": "FMT_SMF",
+   "anchor": "_fmt_smf_1_specification_of_management_functions",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fmt_smf_1_specification_of_management_functions",
+   "used_by": [
+    "FMT_MOF.1/AutoUpdate",
+    "FMT_MOF.1/Functions",
+    "FMT_MOF.1/ManualUpdate",
+    "FMT_MOF.1/Services",
+    "FMT_MTD.1/CoreData",
+    "FMT_MTD.1/CryptoKeys"
+   ]
+  },
+  {
+   "id": "FMT_SMR.2",
+   "title": "Restrictions on security roles",
+   "type": "mandatory",
+   "family": "FMT_SMR",
+   "anchor": "_fmt_smr_2_restrictions_on_security_roles",
+   "ext": false,
+   "deps": [
+    {
+     "text": "FIA_UID.1",
+     "any_of": [
+      "FIA_UID.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "Satisfied by FIA_UIA_EXT.1, which specifies the relevant Administrator identification"
+   ],
+   "sd_anchor": "_fmt_smr_2_restrictions_on_security_roles",
+   "used_by": []
+  },
+  {
+   "id": "FPT_APW_EXT.1",
+   "title": "Protection of administrator passwords",
+   "type": "selection-based",
+   "family": "FPT_APW",
+   "anchor": "_fpt_apw_ext_1_protection_of_administrator_passwords",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fpt_apw_ext_1_protection_of_administrator_passwords",
+   "used_by": []
+  },
+  {
+   "id": "FPT_ITT.1",
+   "title": "Basic internal TSF data transfer protection (Refinement)",
+   "type": "optional",
+   "family": "FPT_ITT",
+   "anchor": "_fpt_itt_1_basic_internal_tsf_data_transfer_protection_refinement",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fpt_itt_1_basic_internal_tsf_data_transfer_protection",
+   "used_by": [
+    "FAU_STG_EXT.4",
+    "FAU_STG_EXT.5"
+   ]
+  },
+  {
+   "id": "FPT_SKP_EXT.1",
+   "title": "Protection of TSF data (for reading of all symmetric keys)",
+   "type": "mandatory",
+   "family": "FPT_SKP",
+   "anchor": "_fpt_skp_ext_1_protection_of_tsf_data_for_reading_of_all_symmetric_keys",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fpt_skp_ext_1_protection_of_tsf_data_for_reading_of_all_symmetric_keys",
+   "used_by": []
+  },
+  {
+   "id": "FPT_STM_EXT.1",
+   "title": "Reliable time stamps",
+   "type": "mandatory",
+   "family": "FPT_STM",
+   "anchor": "_fpt_stm_ext_1_reliable_time_stamps",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fpt_stm_ext_1_reliable_time_stamps",
+   "used_by": []
+  },
+  {
+   "id": "FPT_TST_EXT.1",
+   "title": "TSF testing (Extended)",
+   "type": "mandatory",
+   "family": "FPT_TST",
+   "anchor": "_fpt_tst_ext_1_tsf_testing_extended",
+   "ext": true,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fpt_tst_ext_1_tsf_testing",
+   "used_by": []
+  },
+  {
+   "id": "FPT_TUD_EXT.1",
+   "title": "Trusted update",
+   "type": "mandatory",
+   "family": "FPT_TUD",
+   "anchor": "_fpt_tud_ext_1_trusted_update",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FCS_COP.1/SigVer or FCS_COP.1/Hash",
+     "any_of": [
+      "FCS_COP.1/SigVer",
+      "FCS_COP.1/Hash"
+     ]
+    }
+   ],
+   "rationale": [
+    "FCS_COP.1/SigVer and FCS_COP.1/Hash included"
+   ],
+   "sd_anchor": "_fpt_tud_ext_1_trusted_update",
+   "used_by": [
+    "FPT_TUD_EXT.2"
+   ]
+  },
+  {
+   "id": "FPT_TUD_EXT.2",
+   "title": "Trusted update based on certificates",
+   "type": "selection-based",
+   "family": "FPT_TUD",
+   "anchor": "_fpt_tud_ext_2_trusted_update_based_on_certificates",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FPT_TUD_EXT.1",
+     "any_of": [
+      "FPT_TUD_EXT.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "FPT_TUD_EXT.1 included"
+   ],
+   "sd_anchor": "_fpt_tud_ext_2_trusted_update_based_on_certificates",
+   "used_by": []
+  },
+  {
+   "id": "FTA_SSL.3",
+   "title": "TSF-initiated termination (Refinement)",
+   "type": "mandatory",
+   "family": "FTA_SSL",
+   "anchor": "_fta_ssl_3_tsf_initiated_termination_refinement",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fta_ssl_3_tsf_initiated_termination",
+   "used_by": []
+  },
+  {
+   "id": "FTA_SSL.4",
+   "title": "User-initiated Termination",
+   "type": "mandatory",
+   "family": "FTA_SSL",
+   "anchor": "_fta_ssl_4_user_initiated_termination",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fta_ssl_4_user_initiated_termination",
+   "used_by": []
+  },
+  {
+   "id": "FTA_SSL_EXT.1",
+   "title": "TSF-initiated Session Locking",
+   "type": "selection-based",
+   "family": "FTA_SSL",
+   "anchor": "_fta_ssl_ext_1_tsf_initiated_session_locking",
+   "ext": true,
+   "deps": [
+    {
+     "text": "FIA_UAU.1",
+     "any_of": [
+      "FIA_UAU.1"
+     ]
+    }
+   ],
+   "rationale": [
+    "Satisfied by FIA_UIA_EXT.1, which specifies the relevant Administrator authentication"
+   ],
+   "sd_anchor": "_fta_ssl_ext_1_tsf_initiated_session_locking",
+   "used_by": []
+  },
+  {
+   "id": "FTA_TAB.1",
+   "title": "Default TOE access banners (Refinement)",
+   "type": "mandatory",
+   "family": "FTA_TAB",
+   "anchor": "_fta_tab_1_default_toe_access_banners_refinement",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_fta_tab_1_default_toe_access_banners",
+   "used_by": [
+    "FIA_UIA_EXT.1"
+   ]
+  },
+  {
+   "id": "FTP_ITC.1",
+   "title": "Inter-TSF trusted channel (Refinement)",
+   "type": "mandatory",
+   "family": "FTP_ITC",
+   "anchor": "_ftp_itc_1_inter_tsf_trusted_channel_refinement",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_ftp_itc_1_inter_tsf_trusted_channel",
+   "used_by": [
+    "FAU_STG_EXT.1",
+    "FAU_STG_EXT.4",
+    "FAU_STG_EXT.5"
+   ]
+  },
+  {
+   "id": "FTP_TRP.1/Admin",
+   "title": "Trusted path (Refinement)",
+   "type": "mandatory",
+   "family": "FTP_TRP",
+   "anchor": "_ftp_trp_1admin_trusted_path_refinement",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_ftp_trp_1admin_trusted_path",
+   "used_by": []
+  },
+  {
+   "id": "FTP_TRP.1/Join",
+   "title": "Trusted path (Refinement)",
+   "type": "optional",
+   "family": "FTP_TRP",
+   "anchor": "_ftp_trp_1join_trusted_path_refinement",
+   "ext": false,
+   "deps": [],
+   "rationale": [],
+   "sd_anchor": "_ftp_trp_1join_trusted_path",
+   "used_by": []
+  }
+ ],
+ "external_components": [
+  "FCS_CKM.3",
+  "FCS_CKM.5",
+  "FCS_CKM_EXT.3",
+  "FCS_CKM_EXT.8",
+  "FCS_RNG.1",
+  "FDP_ITC.1",
+  "FDP_ITC.2",
+  "FIA_UAU.1",
+  "FIA_UID.1",
+  "FMT_SMR.1",
+  "FPT_STM.1",
+  "FPT_TST.1"
+ ]
+}
