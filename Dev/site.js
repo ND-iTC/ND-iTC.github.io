@@ -14,6 +14,7 @@
   /* ---- theme ---- */
   var root = document.documentElement;
   var saved = store.get('nd-theme');
+  if (!saved) { var wm = /(?:^|;)nd-theme=(light|dark)/.exec(window.name); saved = wm && wm[1]; }
   if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
   var themeBtn = $('#theme-toggle');
   if (themeBtn) themeBtn.addEventListener('click', function () {
@@ -22,6 +23,7 @@
     var next = cur === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     store.set('nd-theme', next);
+    window.name = window.name.replace(/(?:^|;)nd-theme=(light|dark)/, '') + ';nd-theme=' + next; /* carries across pages when file:// storage is per-page */
   });
 
   /* ---- mobile nav ---- */

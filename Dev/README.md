@@ -18,7 +18,7 @@ The build uses the Python standard library; the allowed-with list and training p
 
 `index.adoc`, `TD/tech_dec.adoc` and `TD/tech_dec_arch.adoc` are the previous AsciiDoc sources and are no longer used to build these pages.
 
-The cPP, Supporting Document and PP-Module HTML files are the documents themselves and keep their own look. PDFs are the authoritative editions.
+The cPP, Supporting Document and PP-Module HTML files are the documents themselves and keep their own look. PDFs are the authoritative editions. `scripts/build.py` adds a light/dark toggle to those HTML files (`doc-theme.css`, `doc-theme.js`, injected before `</head>`; safe to rerun). If the documents are regenerated, run the build again to restore it.
 
 `training/index.html` is kept but not linked from the site. `NDcPPv4.0_draft_comment_matrix.docx` is stored at the repository root for reference and is also not linked.
 
