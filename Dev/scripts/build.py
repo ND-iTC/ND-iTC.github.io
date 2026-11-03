@@ -594,6 +594,29 @@ def write_feeds(tds):
             w.writerow([t['id'], t['title'], t['reference'], t['date'], '; '.join(t['labels']), t['status'], t['url']])
 
 
+DOC_PAGES = ['cPP/NDcPP_v3_0e.html', 'cPP/NDcPP_v4_0.html', 'SD/ND_Supporting_Document_3_0e.html',
+             'SD/ND_Supporting_Document_4_0.html', 'PP-Module-FW/MOD_CPP_FW_v2.0.html', 'PP-Module-FW/SD_MOD_FW_v2.0.html']
+
+
+def theme_docs():
+    """Add the light/dark theme to the published document pages (idempotent; the documents' text is untouched)."""
+    n = 0
+    for f in DOC_PAGES:
+        if not os.path.exists(f):
+            continue
+        h = open(f, encoding='utf-8').read()
+        pre = '../' * f.count('/')
+        block = ('<!-- nd-itc-theme --><link rel="stylesheet" href="%sdoc-theme.css">'
+                 '<script src="%sdoc-theme.js"></script><!-- /nd-itc-theme -->') % (pre, pre)
+        h2 = re.sub(r'<!-- nd-itc-theme -->.*?<!-- /nd-itc-theme -->', lambda m: block, h, flags=re.S)
+        if h2 == h:
+            h2 = h.replace('</head>', block + '</head>', 1)
+        if h2 != h:
+            open(f, 'w', encoding='utf-8').write(h2)
+            n += 1
+    return n
+
+
 if __name__ == '__main__':
     prepped = [prep_td(t, 0) for t in TDS]
     missing = [t['file'] for t in TDS + ARCH if not os.path.exists(t['file'])]
@@ -608,4 +631,5 @@ if __name__ == '__main__':
     mapped = build_map()
     for args in PROSE_PAGES:
         build_prose(*args)
+    theme_docs()
     print('Built: index.html, TD/tech_dec.html, TD/tech_dec_arch.html,%s feed.xml, sitemap.xml, data/tds.csv' % (' map/ndcpp-4.0.html,' if mapped else ''))
