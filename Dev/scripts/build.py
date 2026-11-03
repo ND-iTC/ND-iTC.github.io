@@ -156,10 +156,6 @@ def prep_td(t, depth):
     return t
 
 
-def doc_cite(rel, d):
-    return 'ND-iTC. %s, Version %s. %s. %s' % (d['title'], d['version'], fmt_date(rel['date']), abs_url(d['pdf']))
-
-
 def action(label, ic, href_=None, copy=None, ok=None, primary=False, new=False, title=None):
     cls = 'act primary' if primary else 'act'
     if copy is not None:
@@ -176,7 +172,6 @@ def doc_row(rel, d, depth=0):
     if d.get('source'):
         acts.append(action('Source', 'source', href(d['source'], depth), new=True))
     acts.append(action('Copy link', 'link', copy=abs_url(d['pdf']), ok='Link copied'))
-    acts.append(action('Cite', 'cite', copy=doc_cite(rel, d), ok='Citation copied', title='Copy a formatted citation'))
     return ('<div class="docrow"><div class="meta"><span class="doctype">%s</span><span class="ver">v%s</span></div>'
             '<h4>%s</h4><div class="actions">%s</div></div>' % (e(d['kind']), e(d['version']), e(d['title']), ''.join(acts)))
 
