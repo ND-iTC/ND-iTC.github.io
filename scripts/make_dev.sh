@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Create (or refresh) the dev copy of the site as its own git repo, ready to push.
 #   scripts/make_dev.sh [target-dir]      default: ../ND-iTC-site-dev
+#   ND_DEV_REPO=Dev ND_NO_GIT=1 scripts/make_dev.sh /path/to/Dev   a Dev/ folder for ND-iTC.github.io/Dev/ (no git repo)
 set -euo pipefail
 SRC="$(cd "$(dirname "$0")/.." && pwd)"
 DEST="${1:-$SRC/../ND-iTC-site-dev}"
@@ -24,8 +25,10 @@ for f in ['index.html', 'TD/tech_dec.html', 'TD/tech_dec_arch.html', 'map/ndcpp-
         open(f, 'w', encoding='utf-8').write(h)
 PY
 printf 'User-agent: *\nDisallow: /\n' > robots.txt
-[ -d .git ] || { git init -q -b main; }
-git add -A && git commit -q -m "Dev copy of the redesigned ND-iTC site" || true
+if [ -z "${ND_NO_GIT:-}" ]; then
+  [ -d .git ] || { git init -q -b main; }
+  git add -A && git commit -q -m "Dev copy of the redesigned ND-iTC site" || true
+fi
 echo
 echo "Dev copy ready in: $DEST"
 echo "Will publish at:   $URL"
