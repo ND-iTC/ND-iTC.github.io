@@ -1,0 +1,16 @@
+extends: default
+footer:
+  recto:
+    right:
+      content: '{page-number}'
+    center:
+      content: ~
+    left:
+      content: ~
+  verso:
+    right:
+      content: '{page-number}'
+    center:
+      content: ~
+    left:
+      content: ~
