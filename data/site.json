@@ -1,0 +1,202 @@
+{
+  "base_url": "https://nd-itc.github.io/",
+  "contact_email": "NetworkDeviceiTC@gmail.com",
+  "links": {
+    "cc_portal": "https://www.commoncriteriaportal.org/communities/fw-nd.cfm",
+    "cc_pps": "https://commoncriteriaportal.org/pps/index.cfm",
+    "github_org": "https://github.com/ND-iTC/",
+    "documents_repo": "https://github.com/ND-iTC/Documents",
+    "site_repo": "https://github.com/ND-iTC/ND-iTC.github.io",
+    "rfi_form": "https://github.com/ND-iTC/Documents/issues/new?assignees=&labels=Interpretation&projects=&template=request-for-interpretation.md&title=%5BNIT+Request%5D",
+    "issues": "https://github.com/ND-iTC/Documents/issues/new/choose"
+  },
+  "releases": [
+    {
+      "id": "ndcpp-4.0",
+      "name": "NDcPP v4.0",
+      "group": "Network Device cPP",
+      "status": "current",
+      "date": "2025-11-25",
+      "docs": [
+        {
+          "kind": "cPP",
+          "title": "collaborative Protection Profile for Network Devices",
+          "short": "cPP for Network Devices",
+          "version": "4.0",
+          "pdf": "cPP/NDcPP_v4_0.pdf",
+          "html": "cPP/NDcPP_v4_0.html",
+          "source": "https://github.com/ND-iTC/Documents/blob/main/NDcPP_v4_0.adoc"
+        },
+        {
+          "kind": "SD",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices",
+          "short": "Supporting Document (Evaluation Activities)",
+          "version": "4.0",
+          "pdf": "SD/ND_Supporting_Document_4_0.pdf",
+          "html": "SD/ND_Supporting_Document_4_0.html",
+          "source": "https://github.com/ND-iTC/Documents/blob/main/ND_Supporting_Document_4_0.adoc"
+        }
+      ]
+    },
+    {
+      "id": "fw-2.0",
+      "name": "FW Module v2.0",
+      "group": "Stateful Traffic Filter Firewall PP-Module",
+      "status": "current",
+      "date": "2026-03-30",
+      "docs": [
+        {
+          "kind": "PP-Module",
+          "title": "PP-Module for Stateful Traffic Filter Firewalls",
+          "short": "PP-Module for Stateful Traffic Filter Firewalls",
+          "version": "2.0",
+          "pdf": "PP-Module-FW/MOD_CPP_FW_v2.0.pdf",
+          "html": "PP-Module-FW/MOD_CPP_FW_v2.0.html",
+          "source": "https://github.com/ND-iTC/PP-Module-FW/blob/main/MOD_CPP_FW_v2.0.adoc"
+        },
+        {
+          "kind": "SD",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module",
+          "short": "Supporting Document (Evaluation Activities)",
+          "version": "2.0",
+          "pdf": "PP-Module-FW/SD_MOD_FW_v2.0.pdf",
+          "html": "PP-Module-FW/SD_MOD_FW_v2.0.html",
+          "source": "https://github.com/ND-iTC/PP-Module-FW/blob/main/SD_MOD_FW_v2.0.adoc"
+        },
+        {
+          "kind": "PP-Config",
+          "title": "PP-Configuration for Network Device and Stateful Traffic Filter Firewalls",
+          "short": "PP-Configuration: Network Device + Firewall",
+          "version": "2.0",
+          "pdf": "PP-Module-FW/CONF_CPP_FW_v2_0.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ndcpp-3.0e",
+      "name": "NDcPP v3.0e",
+      "group": "Network Device cPP",
+      "status": "previous",
+      "date": "2023-12-06",
+      "docs": [
+        {
+          "kind": "cPP",
+          "title": "collaborative Protection Profile for Network Devices",
+          "short": "cPP for Network Devices",
+          "version": "3.0e",
+          "pdf": "cPP/NDcPP_v3_0e.pdf",
+          "html": "cPP/NDcPP_v3_0e.html",
+          "source": "https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/NDcPP_v3_0e.adoc"
+        },
+        {
+          "kind": "SD",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices",
+          "short": "Supporting Document (Evaluation Activities)",
+          "version": "3.0e",
+          "pdf": "SD/ND_Supporting_Document_3_0e.pdf",
+          "html": "SD/ND_Supporting_Document_3_0e.html",
+          "source": "https://github.com/ND-iTC/Documents/blob/main/Previous_Versions/3.0e/ND_Supporting_Document_3_0e.adoc"
+        }
+      ]
+    },
+    {
+      "id": "fw-1.4e",
+      "name": "FW Module v1.4e",
+      "group": "Stateful Traffic Filter Firewall PP-Module",
+      "status": "previous",
+      "date": "2020-06-25",
+      "docs": [
+        {
+          "kind": "PP-Module",
+          "title": "PP-Module for Stateful Traffic Filter Firewalls",
+          "short": "PP-Module for Stateful Traffic Filter Firewalls",
+          "version": "1.4e",
+          "pdf": "https://github.com/ND-iTC/PP-Module-FW/raw/Development/Previous_Versions/MOD_CPP_FW_v1.4e.pdf"
+        },
+        {
+          "kind": "SD",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for Stateful Traffic Filter Firewalls PP-Module",
+          "short": "Supporting Document (Evaluation Activities)",
+          "version": "1.4e",
+          "pdf": "https://github.com/ND-iTC/PP-Module-FW/raw/Development/Previous_Versions/MOD_FW_v1.4e-SD.pdf"
+        },
+        {
+          "kind": "PP-Config",
+          "title": "PP-Configuration for Network Device and Stateful Traffic Filter Firewalls",
+          "short": "PP-Configuration: Network Device + Firewall",
+          "version": "1.4e",
+          "pdf": "https://github.com/ND-iTC/PP-Module-FW/blob/main/Previous_Versions/CFG_NDcPP-FW_v1.4e.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ndcpp-2.2e",
+      "name": "NDcPP v2.2e",
+      "group": "Network Device cPP",
+      "status": "sunset",
+      "date": "2020-03-23",
+      "docs": [
+        {
+          "kind": "cPP",
+          "title": "collaborative Protection Profile for Network Devices",
+          "short": "cPP for Network Devices",
+          "version": "2.2e",
+          "pdf": "cPP/CPP_ND_V2.2E.pdf"
+        },
+        {
+          "kind": "SD",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices",
+          "short": "Supporting Document (Evaluation Activities)",
+          "version": "2.2e",
+          "pdf": "SD/CPP_ND_V2.2E_supporting_doc.pdf"
+        }
+      ]
+    }
+  ],
+  "awl": [
+    {
+      "title": "Allowed-with list for the Network Device cPP",
+      "applies_to": "NDcPP v4.0",
+      "version": "4.0r1",
+      "date": "2026-03-30",
+      "html": "AWL/NDcPP_allowed_with_list.html",
+      "pdf": "AWL/NDcPP_allowed_with_list.pdf",
+      "source": "AWL/NDcPP_allowed_with_list.adoc"
+    },
+    {
+      "title": "Allowed-with list for the Stateful Traffic Filter Firewall PP-Module",
+      "applies_to": "FW Module v2.0",
+      "version": "2.0",
+      "date": "2026-03-30",
+      "html": "AWL/FW_allowed_with_list.html",
+      "pdf": "AWL/FW_allowed_with_list.pdf",
+      "source": "AWL/FW_allowed_with_list.adoc"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Request an interpretation",
+      "text": "Submit a Request for Interpretation (RFI) for the NIT to consider.",
+      "href": "https://github.com/ND-iTC/Documents/issues/new?assignees=&labels=Interpretation&projects=&template=request-for-interpretation.md&title=%5BNIT+Request%5D",
+      "icon": "chat"
+    },
+    {
+      "title": "Comment on a document",
+      "text": "Report typos, corrections or enhancements with the issue templates.",
+      "href": "https://github.com/ND-iTC/Documents/issues/new/choose",
+      "icon": "pencil"
+    },
+    {
+      "title": "Common Criteria Portal",
+      "text": "The ND-iTC community page and the official list of certified protection profiles.",
+      "href": "https://www.commoncriteriaportal.org/communities/fw-nd.cfm",
+      "icon": "globe"
+    },
+    {
+      "title": "ND-iTC on GitHub",
+      "text": "Source for every document, issue tracking, and this website.",
+      "href": "https://github.com/ND-iTC/",
+      "icon": "code"
+    }
+  ]
+}
