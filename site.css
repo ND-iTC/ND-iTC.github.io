@@ -147,7 +147,7 @@ code, .mono { font-family: var(--mono); font-size: .92em; }
   font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--signal);
 }
 .eyebrow::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 4px rgba(126, 240, 196, .2), 0 0 18px var(--signal); }
-.hero h1 { font-size: clamp(1.6rem, 3.6vw, 2.4rem); font-weight: 800; letter-spacing: -.035em; color: #fff; }
+.hero h1 { font-size: clamp(1.85rem, 4.4vw, 3rem); line-height: 1.15; font-weight: 800; letter-spacing: -.03em; max-width: 22ch; color: #fff; }
 .hero h1 em { font-style: normal; background: linear-gradient(90deg, #7ef0c4, #7ef0c4); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .lede { margin-top: 1.25rem; max-width: 36rem; font-size: clamp(1.05rem, 2vw, 1.22rem); color: #c3cce6; }
 .cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
