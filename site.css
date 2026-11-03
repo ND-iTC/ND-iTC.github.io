@@ -14,7 +14,7 @@
   --brand: #3944d8;
   --brand-ink: #2a33b8;
   --brand-soft: #e8eaff;
-  --signal: #c6f432;
+  --signal: #7ef0c4;
   --current: #0b7a4b;
   --current-soft: #dcf7e9;
   --previous: #475569;
@@ -146,9 +146,9 @@ code, .mono { font-family: var(--mono); font-size: .92em; }
   display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.1rem;
   font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--signal);
 }
-.eyebrow::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 4px rgba(198, 244, 50, .2), 0 0 18px var(--signal); }
-.hero h1 { font-size: clamp(2.25rem, 5.6vw, 4rem); font-weight: 800; letter-spacing: -.035em; color: #fff; }
-.hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--signal), #7ef0c4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.eyebrow::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 4px rgba(126, 240, 196, .2), 0 0 18px var(--signal); }
+.hero h1 { font-size: clamp(1.6rem, 3.6vw, 2.4rem); font-weight: 800; letter-spacing: -.035em; color: #fff; }
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, #7ef0c4, #7ef0c4); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .lede { margin-top: 1.25rem; max-width: 36rem; font-size: clamp(1.05rem, 2vw, 1.22rem); color: #c3cce6; }
 .cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
 .btn {
@@ -157,7 +157,7 @@ code, .mono { font-family: var(--mono); font-size: .92em; }
 }
 .btn svg { width: 1.05rem; height: 1.05rem; }
 .btn-primary { background: var(--signal); color: #0d1526; }
-.btn-primary:hover { background: #d7ff55; }
+.btn-primary:hover { background: #a4f5d9; }
 .btn-line { color: #eef1fb; border-color: #3a4a7c; background: rgba(255, 255, 255, .04); }
 .btn-line:hover { border-color: #8d98ff; background: rgba(141, 152, 255, .12); }
 
