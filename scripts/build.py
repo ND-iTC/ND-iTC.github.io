@@ -274,7 +274,7 @@ def footer(depth):
 <li><a href="%(pre)sindex.html#allowed-with">Allowed-with lists</a></li>
 <li><a href="%(pre)smap/ndcpp-4.0.html">NDcPP v4.0 dependency map</a></li></ul></div>
 <div><h2>Take it with you</h2><ul>
-<li><a href="%(pre)sfeed.xml">Technical Decisions feed (Atom)</a></li>
+<li><a href="%(pre)sfeed.xml">Technical Decisions feed (XML)</a></li>
 <li><a href="%(pre)sdata/tds.csv" download>All decisions as CSV</a></li>
 <li><a href="%(pre)sdata/tds.json" download>All decisions as JSON</a></li>
 <li><a href="%(cc)s">Common Criteria Portal</a></li>
