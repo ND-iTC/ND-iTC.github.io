@@ -3,7 +3,8 @@
   'use strict';
   var root = document.documentElement;
   function get() { try { return localStorage.getItem('nd-theme'); } catch (e) { return null; } }
-  var saved = get();
+  var qm = /[?&]nd-theme=(light|dark)/.exec(location.search);
+  var saved = qm ? qm[1] : get();
   if (!saved) { var m = /(?:^|;)nd-theme=(light|dark)/.exec(window.name); saved = m && m[1]; }
   var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
   root.setAttribute('data-theme', dark ? 'dark' : 'light');
@@ -16,6 +17,7 @@
       var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('nd-theme', next); } catch (e) { /* storage unavailable */ }
+      if (/[?&]nd-theme=/.test(location.search)) { try { history.replaceState(null, '', location.search.replace(/nd-theme=(light|dark)/, 'nd-theme=' + next) + location.hash); } catch (e) { /* ignore */ } }
       window.name = window.name.replace(/(?:^|;)nd-theme=(light|dark)/, '') + ';nd-theme=' + next;
       label();
     });
