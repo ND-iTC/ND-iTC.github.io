@@ -16,7 +16,7 @@ ND_BASE_URL="$URL" python3 scripts/build.py
 # Show a banner on every page of the dev copy so nobody mistakes it for production.
 python3 - <<'PY'
 import glob, re
-banner = '<div style="background:#c6f432;color:#0d1526;text-align:center;padding:.4rem;font:600 14px system-ui">DEVELOPMENT PREVIEW &middot; not the published ND-iTC site</div>'
+banner = '<div style="background:#7ef0c4;color:#0d1526;text-align:center;padding:.4rem;font:600 14px system-ui">DEVELOPMENT PREVIEW &middot; not the published ND-iTC site</div>'
 for f in ['index.html', 'TD/tech_dec.html', 'TD/tech_dec_arch.html', 'map/ndcpp-4.0.html', 'AWL/NDcPP_allowed_with_list.html', 'AWL/FW_allowed_with_list.html', 'training/index.html']:
     h = open(f, encoding='utf-8').read()
     if 'DEVELOPMENT PREVIEW' not in h:
