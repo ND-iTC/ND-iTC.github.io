@@ -13,7 +13,8 @@
 
   /* ---- theme ---- */
   var root = document.documentElement;
-  var saved = store.get('nd-theme');
+  var qm = /[?&]nd-theme=(light|dark)/.exec(location.search);
+  var saved = qm ? qm[1] : store.get('nd-theme');
   if (!saved) { var wm = /(?:^|;)nd-theme=(light|dark)/.exec(window.name); saved = wm && wm[1]; }
   if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
   var themeBtn = $('#theme-toggle');
@@ -23,6 +24,7 @@
     var next = cur === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     store.set('nd-theme', next);
+    if (/[?&]nd-theme=/.test(location.search)) { try { history.replaceState(null, '', location.search.replace(/nd-theme=(light|dark)/, 'nd-theme=' + next) + location.hash); } catch (e) { /* ignore */ } }
     window.name = window.name.replace(/(?:^|;)nd-theme=(light|dark)/, '') + ';nd-theme=' + next; /* carries across pages when file:// storage is per-page */
   });
 
@@ -212,4 +214,23 @@
     sortBy('date', -1); apply();
     if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t) { t.hidden = false; t.scrollIntoView({ block: 'center' }); } }
   }
+})();
+
+/* Opened from disk (file://), browsers don't share storage between pages: carry the theme in internal links instead. */
+(function () {
+  'use strict';
+  if (location.protocol !== 'file:') return;
+  function stamp(e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (!h || h.charAt(0) === '#' || /^[a-z][a-z0-9+.-]*:/i.test(h)) return;
+    var t = document.documentElement.getAttribute('data-theme');
+    if (t !== 'light' && t !== 'dark') return;
+    var i = h.indexOf('#'), hash = i < 0 ? '' : h.slice(i), path = i < 0 ? h : h.slice(0, i);
+    path = path.replace(/([?&])nd-theme=(light|dark)&?/, '$1').replace(/[?&]$/, '');
+    a.setAttribute('href', path + (path.indexOf('?') < 0 ? '?' : '&') + 'nd-theme=' + t + hash);
+  }
+  document.addEventListener('click', stamp, true);
+  document.addEventListener('auxclick', stamp, true);
 })();

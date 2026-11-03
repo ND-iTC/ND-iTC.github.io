@@ -18,7 +18,7 @@
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="alternate" type="application/atom+xml" title="ND-iTC Technical Decisions" href="feed.xml">
 <link rel="stylesheet" href="site.css">
-<script>try{var t=null;try{t=localStorage.getItem('nd-theme')}catch(e){}if(!t){var m=/(?:^|;)nd-theme=(light|dark)/.exec(window.name);t=m&&m[1]}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>try{var t=null,q=/[?&]nd-theme=(light|dark)/.exec(location.search);if(q)t=q[1];try{if(!t)t=localStorage.getItem('nd-theme')}catch(e){}if(!t){var m=/(?:^|;)nd-theme=(light|dark)/.exec(window.name);t=m&&m[1]}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
 <div style="background:#7ef0c4;color:#0d1526;text-align:center;padding:.4rem;font:600 14px system-ui">DEVELOPMENT PREVIEW &middot; not the published ND-iTC site</div>
