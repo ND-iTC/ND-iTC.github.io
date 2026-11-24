@@ -65,15 +65,6 @@
     }
   });
 
-  /* ---- "which documents do I need?" chooser ---- */
-  var chips = $$('[data-choice]');
-  chips.forEach(function (c) {
-    c.addEventListener('click', function () {
-      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
-      $$('[data-panel]').forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== c.getAttribute('data-choice'); });
-    });
-  });
-
   /* ---- library status filter ---- */
   var pills = $$('[data-status-filter]');
   pills.forEach(function (p) {
@@ -117,7 +108,7 @@
       var k = document.createElement('span'); k.className = 'k'; k.textContent = it.k;
       var t = document.createElement('span'); t.textContent = it.t;
       var s = document.createElement('span'); s.className = 's'; s.textContent = it.s || '';
-      a.appendChild(k); a.appendChild(t); a.appendChild(s); li.appendChild(a); plist.appendChild(li);
+      a.appendChild(s); a.appendChild(t); a.appendChild(k); li.appendChild(a); plist.appendChild(li);
     });
   }
   function move(d) {
@@ -128,6 +119,8 @@
   }
   function openPal() { if (!pal) return; lastFocus = document.activeElement; pal.hidden = false; pin.value = ''; renderPalette(''); pin.focus(); }
   function closePal() { if (!pal || pal.hidden) return; pal.hidden = true; if (lastFocus) lastFocus.focus(); }
+  var kbd = $('.kbd');
+  if (kbd && !/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) kbd.textContent = 'Ctrl K';
   if (pal) {
     if (opener) opener.addEventListener('click', openPal);
     pin.addEventListener('input', function () { renderPalette(pin.value); });
@@ -144,12 +137,12 @@
     });
   }
 
-  /* ---- Technical Decision explorer ---- */
+  /* ---- Interpretation explorer ---- */
   var table = $('#td-table');
   if (table) {
     var tbody = $('tbody', table), rows = $$('tr', tbody);
     var q = $('#td-q'), doc = $('#td-doc'), yr = $('#td-year'), cnt = $('#td-count'), none = $('#td-none');
-    var sortKey = 'date', sortDir = -1;
+    var sortKey = 'id', sortDir = -1;
     var params = new URLSearchParams(location.search);
     if (q && params.get('q')) q.value = params.get('q');
     if (doc && params.get('doc')) doc.value = params.get('doc');
@@ -165,7 +158,7 @@
         r.hidden = !ok;
       });
       var n = visibleRows().length;
-      cnt.innerHTML = '<b>' + n + '</b> of ' + rows.length + ' decisions';
+      cnt.innerHTML = '<b>' + n + '</b> of ' + rows.length + ' interpretations';
       none.hidden = n !== 0; table.hidden = n === 0;
       var p = new URLSearchParams();
       if (q.value) p.set('q', q.value); if (d) p.set('doc', d); if (y) p.set('year', y);
@@ -204,9 +197,9 @@
       });
       var blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });
       var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-      a.download = 'nd-itc-technical-decisions.csv'; document.body.appendChild(a); a.click();
+      a.download = 'nd-itc-interpretations.csv'; document.body.appendChild(a); a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
-      say('Exported ' + (lines.length - 1) + ' decisions');
+      say('Exported ' + (lines.length - 1) + ' interpretations');
     });
     var shareView = $('#td-share');
     if (shareView) shareView.addEventListener('click', function () { copy(location.href, 'Link to this filtered view copied'); });
