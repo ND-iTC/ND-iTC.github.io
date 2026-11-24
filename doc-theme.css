@@ -1,0 +1,31 @@
+/* Light/dark theme for the published document pages (cPP, SD, PP-Module). Loaded by scripts/build.py. */
+#nd-theme-btn { position: fixed; right: 1rem; bottom: 1rem; z-index: 9999; font: 600 13px/1 system-ui, sans-serif; cursor: pointer;
+  color: #0d1526; background: #fff; border: 1px solid #b9c0d4; border-radius: 999px; padding: .55rem .9rem; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+#nd-theme-btn:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+@media print { #nd-theme-btn { display: none; } }
+html[data-theme="dark"] { color-scheme: dark; }
+html[data-theme="dark"] #nd-theme-btn { color: #e8ecf7; background: #17213b; border-color: #34457a; }
+html[data-theme="dark"] body, html[data-theme="dark"] #header, html[data-theme="dark"] #content, html[data-theme="dark"] #footer { background: #0f1626; color: #d6dcec; }
+html[data-theme="dark"] #footer { color: #a3afcb; }
+html[data-theme="dark"] body :is(p, li, dd, dt, td, th, div, span, blockquote, .paragraph, .ulist, .olist, .dlist) { color: inherit; }
+html[data-theme="dark"] :is(h1, h2, h3, h4, h5, h6, #toctitle, .title, #header h1) { color: #f0a090; }
+html[data-theme="dark"] :is(h1, h2, h3, h4, h5, h6) a, html[data-theme="dark"] :is(h1, h2, h3, h4, h5, h6) a:visited { color: inherit; }
+html[data-theme="dark"] a { color: #8d98ff; }
+html[data-theme="dark"] a:visited { color: #b9a6ff; }
+html[data-theme="dark"] a:hover { color: #aab3ff; }
+html[data-theme="dark"] #toc.toc2, html[data-theme="dark"] #toc, html[data-theme="dark"] .toc2 #toc { background: #111a30 !important; border-color: #243153; }
+html[data-theme="dark"] table.tableblock, html[data-theme="dark"] table { background: #0f1626 !important; }
+html[data-theme="dark"] #toc a { color: #aab3ff; }
+html[data-theme="dark"] :is(table.tableblock, table.tableblock > * > tr > *, table.frame-all, th, td) { border-color: #34457a; }
+html[data-theme="dark"] table.tableblock thead, html[data-theme="dark"] table.tableblock tfoot, html[data-theme="dark"] table.tableblock > thead > tr > *,
+html[data-theme="dark"] table.tableblock > tfoot > tr > * { background: #17213b !important; color: #e8ecf7; }
+html[data-theme="dark"] table.tableblock > tbody > tr > * { background: transparent !important; }
+html[data-theme="dark"] table.stripes-even > * > tr:nth-child(even), html[data-theme="dark"] table.stripes-odd > * > tr:nth-child(odd), html[data-theme="dark"] table.stripes-all > * > tr { background: #121b32; }
+html[data-theme="dark"] :is(pre, .listingblock pre:not(.highlight), .literalblock pre, .sidebarblock, .exampleblock > .content, .admonitionblock td.content, .quoteblock, .verseblock) { background: #17213b; color: #d6dcec; border-color: #34457a; }
+html[data-theme="dark"] :not(pre) > code, html[data-theme="dark"] code { background: #17213b; color: #e8ecf7; }
+html[data-theme="dark"] pre code { background: transparent; }
+html[data-theme="dark"] :is(.admonitionblock td.icon, .admonitionblock td.icon .title) { color: #f0a090; }
+html[data-theme="dark"] .admonitionblock > table td.content { border-left-color: #34457a; }
+html[data-theme="dark"] :is(hr, .sect1 + .sect1, #content h1 > a.anchor) { border-color: #243153; }
+html[data-theme="dark"] blockquote, html[data-theme="dark"] .quoteblock blockquote { border-left-color: #34457a; color: #c3cce6; }
+html[data-theme="dark"] .imageblock img, html[data-theme="dark"] img { background: #fff; }
