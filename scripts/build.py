@@ -5,13 +5,13 @@
     ND_BASE_URL=https://nd-itc.github.io/ND-iTC-site-dev/ python3 scripts/build.py   # dev build
 
 Reads   data/site.json   (releases, allowed-with lists, resources)
-        data/tds.json    (active Technical Decisions)
-        data/tds_archived.json (archived Technical Decisions)
+        data/tds.json    (active Interpretations)
+        data/tds_archived.json (archived Interpretations)
 Reads   data/ndcpp_v4_sfr.json (made by scripts/extract_sfr_map.py; optional)
 Writes  index.html, TD/tech_dec.html, TD/tech_dec_arch.html, map/ndcpp-4.0.html,
         feed.xml, sitemap.xml, data/tds.csv
 
-Add a Technical Decision: append it to data/tds.json, run the script, commit.
+Add an Interpretation: append it to data/tds.json, run the script, commit.
 Python standard library only; the AWL and training pages are rendered from .adoc with asciidoctor
 (if it is not installed, those pages are left as they are).
 """
@@ -20,7 +20,6 @@ import datetime
 import html
 import json
 import os
-import random
 import re
 import sys
 
@@ -99,36 +98,6 @@ LOGO = ('<svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40
         '<circle cx="32" cy="10" r="3.6" fill="#c6f432"/></svg>')
 
 
-def mesh(seed=7, w=1200, h=600, n=30):
-    """Deterministic network mesh: nodes, links and travelling pulses."""
-    rnd = random.Random(seed)
-    cols, rows = 8, 4
-    pts = []
-    for i in range(n):
-        gx, gy = i % cols, (i // cols) % rows
-        pts.append((int((gx + .5) * w / cols + rnd.uniform(-60, 60)), int((gy + .5) * h / rows + rnd.uniform(-55, 55))))
-    pts = pts[:n]
-    links = set()
-    for i, p in enumerate(pts):
-        d = sorted(((p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2, j) for j, q in enumerate(pts) if j != i)
-        for _, j in d[:2]:
-            links.add(tuple(sorted((i, j))))
-    out = ['<svg class="hero-mesh" viewBox="0 0 %d %d" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">' % (w, h)]
-    for a, b in sorted(links):
-        (x1, y1), (x2, y2) = pts[a], pts[b]
-        out.append('<line class="mesh-link" x1="%d" y1="%d" x2="%d" y2="%d"/>' % (x1, y1, x2, y2))
-    for k, (a, b) in enumerate(sorted(links)):
-        if k % 3 == 0:
-            (x1, y1), (x2, y2) = pts[a], pts[b]
-            out.append('<line class="mesh-pulse" pathLength="246" x1="%d" y1="%d" x2="%d" y2="%d" style="animation-delay:-%.1fs;animation-duration:%.1fs"/>'
-                       % (x1, y1, x2, y2, rnd.uniform(0, 6), rnd.uniform(4.5, 8)))
-    hubs = set(rnd.sample(range(len(pts)), 5))
-    for i, (x, y) in enumerate(pts):
-        out.append('<circle class="mesh-node%s" cx="%d" cy="%d" r="%d"/>' % (' hub' if i in hubs else '', x, y, 5 if i in hubs else 3.5))
-    out.append('</svg>')
-    return ''.join(out)
-
-
 # ---------------------------------------------------------------- data prep
 REL = {r['id']: r for r in SITE['releases']}
 for r in SITE['releases']:
@@ -151,9 +120,17 @@ def prep_td(t, depth):
     t['url'] = abs_url(t['file'])
     t['labels'] = [APPLIES.get(a, (a, ''))[0] for a in t['applies']]
     t['fams'] = sorted({APPLIES.get(a, ('', ''))[1] for a in t['applies']} - {''})
+    cur_ids = {r['id'] for r in SITE['releases'] if r['status'] == 'current'}
+    t['tags'] = [(APPLIES.get(a, (a, ''))[0], APPLIES.get(a, ('', ''))[1] not in cur_ids and APPLIES.get(a, ('', ''))[1] != '') for a in t['applies']]
     t['permalink'] = BASE + 'TD/tech_dec.html#' + t['anchor']
-    t['cite'] = 'ND-iTC Technical Decision %s: %s (%s). %s' % (t['id'], t['title'], fmt_date(t['date']), t['url'])
+    t['cite'] = 'ND-iTC Interpretation %s: %s (%s). %s' % (t['id'], t['title'], fmt_date(t['date']), t['url'])
     return t
+
+
+def tag_html(t):
+    """Applies-to tags; a tag for a document that is no longer current says so."""
+    return ''.join('<span class="tag old" title="Applies to a document that is no longer current">%s (previous)</span>' % e(l) if old
+                   else '<span class="tag">%s</span>' % e(l) for l, old in t['tags'])
 
 
 def action(label, ic, href_=None, copy=None, ok=None, primary=False, new=False, title=None):
@@ -212,7 +189,7 @@ def head(title, desc, path, depth, extra=''):
 <meta property="og:image" content="%(base)simages/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="%(pre)simages/favicon.svg" type="image/svg+xml">
-<link rel="alternate" type="application/atom+xml" title="ND-iTC Technical Decisions" href="%(pre)sfeed.xml">
+<link rel="alternate" type="application/atom+xml" title="ND-iTC Interpretations" href="%(pre)sfeed.xml">
 <link rel="stylesheet" href="%(pre)ssite.css">
 <script>try{var t=null,q=/[?&]nd-theme=(light|dark)/.exec(location.search);if(q)t=q[1];try{if(!t)t=localStorage.getItem('nd-theme')}catch(e){}if(!t){var m=/(?:^|;)nd-theme=(light|dark)/.exec(window.name);t=m&&m[1]}if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 %(extra)s</head>
@@ -224,7 +201,7 @@ def head(title, desc, path, depth, extra=''):
 NAV = [  # (group heading, [(label, target, key)])
     (None, [('Home', 'index.html', 'home')]),
     ('Documents', [('Current documents', 'index.html#current', 'docs'), ('Earlier versions', 'index.html#library', 'earlier')]),
-    ('Technical Decisions', [('Active decisions', 'TD/tech_dec.html', 'td'), ('Archived decisions', 'TD/tech_dec_arch.html', 'tdarch')]),
+    ('Interpretations', [('Active interpretations', 'TD/tech_dec.html', 'td'), ('Archived interpretations', 'TD/tech_dec_arch.html', 'tdarch')]),
     ('Allowed-with lists', [('NDcPP', 'AWL/NDcPP_allowed_with_list.html', 'awl-nd'), ('Firewall PP-Module', 'AWL/FW_allowed_with_list.html', 'awl-fw')]),
     ('Explore', [('NDcPP v4.0 dependency map', 'map/ndcpp-4.0.html', 'map')]),
     ('About', [('Resources', 'index.html#resources', 'res'), ('Join the ND-iTC', 'index.html#join', 'join')]),
@@ -244,7 +221,7 @@ def topbar(depth, current):
     return '''<header class="topbar"><div class="wrap">
 <a class="brand" href="%(pre)sindex.html" aria-label="ND-iTC home">%(logo)s<span>ND-iTC<small>Network Device iTC</small></span></a>
 <div class="tools">
-<button type="button" class="btn-ghost" id="open-search" aria-label="Search documents and decisions">%(s)s<span class="label">Search</span><span class="kbd">⌘K</span></button>
+<button type="button" class="btn-ghost" id="open-search" aria-label="Search documents and interpretations">%(s)s<span class="label">Search</span><span class="kbd">⌘K</span></button>
 <button type="button" class="btn-ghost" id="theme-toggle" aria-label="Toggle light and dark theme">%(sun)s</button>
 <button type="button" class="btn-ghost menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav">%(menu)s</button>
 </div>
@@ -269,17 +246,17 @@ def footer(depth):
 <div><h2>ND-iTC</h2><p>The Network Device international Technical Community: certification bodies, labs and vendors working together on security requirements for network devices.</p></div>
 <div><h2>Explore</h2><ul>
 <li><a href="%(pre)sindex.html#current">Current documents</a></li>
-<li><a href="%(pre)sTD/tech_dec.html">Technical Decisions</a></li>
-<li><a href="%(pre)sTD/tech_dec_arch.html">Archived Technical Decisions</a></li>
+<li><a href="%(pre)sTD/tech_dec.html">Interpretations</a></li>
+<li><a href="%(pre)sTD/tech_dec_arch.html">Archived interpretations</a></li>
 <li><a href="%(pre)sindex.html#allowed-with">Allowed-with lists</a></li>
 <li><a href="%(pre)smap/ndcpp-4.0.html">NDcPP v4.0 dependency map</a></li></ul></div>
 <div><h2>Take it with you</h2><ul>
-<li><a href="%(pre)sfeed.xml">Technical Decisions feed (XML)</a></li>
-<li><a href="%(pre)sdata/tds.csv" download>All decisions as CSV</a></li>
-<li><a href="%(pre)sdata/tds.json" download>All decisions as JSON</a></li>
+<li><a href="%(pre)sfeed.xml">Interpretations feed (XML)</a></li>
+<li><a href="%(pre)sdata/tds.csv" download>All interpretations as CSV</a></li>
+<li><a href="%(pre)sdata/tds.json" download>All interpretations as JSON</a></li>
 <li><a href="%(cc)s">Common Criteria Portal</a></li>
 <li><a href="%(repo)s">Website source on GitHub</a></li></ul></div>
-<div class="legal">PDF editions are the authoritative versions of each document; HTML editions are provided for navigation. Site last built <time datetime="%(iso)s">%(today)s</time>. Released under the repository's <a href="%(repo)s/blob/main/LICENSE">licence</a>.</div>
+<div class="legal">PDF editions are the authoritative versions of each document; HTML editions are provided for navigation. Site last built <time datetime="%(iso)s">%(today)s</time>. Released under the repository's <a href="%(repo)s/blob/main/LICENSE">license</a>.</div>
 </div></footer>
 ''' % dict(pre=pre, cc=L['cc_portal'], repo=L['site_repo'], iso=TODAY.isoformat(), today=fmt_date(TODAY.isoformat()))
 
@@ -300,14 +277,14 @@ def search_index(depth, tds):
                 items.append(dict(k=d['kind'] + ' HTML', t='%s v%s' % (d['short'], d['version']), s=r['name'], u=href(d['html'], depth), x='html'))
     for a in SITE['awl']:
         items.append(dict(k='AWL', t=a['title'], s='v' + a['version'], u=href(a['html'], depth), x='allowed with list'))
-    for t in tds:
-        items.append(dict(k='TD', t='%s  %s' % (t['id'], t['title']), s=t['date'], u=pre + 'TD/tech_dec.html#' + t['anchor'],
-                          x=t['reference'] + ' ' + ' '.join(t['labels'])))
+    for t in sorted(tds, key=lambda t: t['num'], reverse=True):
+        items.append(dict(k='RFI', t=t['title'], s=t['id'], u=pre + 'TD/tech_dec.html#' + t['anchor'],
+                          x=t['date'] + ' ' + t['reference'] + ' ' + ' '.join(t['labels'])))
     for r in SITE['resources']:
         items.append(dict(k='Resource', t=r['title'], s='', u=href(r['href'], depth), x=r['text']))
     items += [dict(k='Page', t='NDcPP v4.0 dependency map', s='', u=pre + 'map/ndcpp-4.0.html', x='sfr dependencies')]
-    items += [dict(k='Page', t='Technical Decisions', s='', u=pre + 'TD/tech_dec.html', x='tds rfi'),
-              dict(k='Page', t='Archived Technical Decisions', s='', u=pre + 'TD/tech_dec_arch.html', x='tds archive')]
+    items += [dict(k='Page', t='Interpretations', s='', u=pre + 'TD/tech_dec.html', x='technical decisions rfi'),
+              dict(k='Page', t='Archived interpretations', s='', u=pre + 'TD/tech_dec_arch.html', x='technical decisions archive')]
     return {'search': items}
 
 
@@ -318,44 +295,10 @@ def build_home(tds):
     ndcpp = REL['ndcpp-4.0']
     fw = REL['fw-2.0']
     latest = sorted(tds, key=lambda t: t['date'], reverse=True)[:5]
-    newest = latest[0]['date']
-
-    def link_row(title, sub, target, cta='Open', new=False):
-        return ('<a href="%s"%s><div><strong>%s</strong><span>%s</span></div><span class="go">%s →</span></a>'
-                % (esc(target), ' target="_blank" rel="noopener"' if new else '', e(title), e(sub), e(cta)))
-
-    d_cpp, d_sd = ndcpp['docs']
-    fw_mod, fw_sd, fw_cfg = fw['docs']
-    panels = {
-        'ndcpp': [link_row('NDcPP v4.0', 'Requirements for the device', d_cpp['pdf'], 'PDF'),
-                  link_row('Supporting Document v4.0', 'How each requirement is evaluated', d_sd['pdf'], 'PDF'),
-                  link_row('Earlier NDcPP versions', 'v3.0e and v2.2e, kept for reference', '#library', 'View')],
-        'fw': [link_row('FW Module v2.0', 'Stateful traffic filter firewall requirements', fw_mod['pdf'], 'PDF'),
-               link_row('FW Module Supporting Document v2.0', 'How each requirement is evaluated', fw_sd['pdf'], 'PDF'),
-               link_row('PP-Configuration v2.0', 'The valid Network Device + Firewall claim', fw_cfg['pdf'], 'PDF')],
-        'td': [link_row('Active Technical Decisions', '%d decisions in force' % len(tds), 'TD/tech_dec.html', 'Open'),
-               link_row('Archived Technical Decisions', 'No longer current, kept for traceability', 'TD/tech_dec_arch.html', 'Open'),
-               link_row('Request an interpretation', 'Submit a request for the NIT to consider', SITE['links']['rfi_form'], 'Open', new=True)],
-        'awl': [link_row('NDcPP allowed-with list', 'PP-Modules and packages allowed with NDcPP v4.0', SITE['awl'][0]['html'], 'Open'),
-                link_row('Firewall allowed-with list', 'What may be claimed with the FW Module v2.0', SITE['awl'][1]['html'], 'Open')],
-    }
-    choices = [('ndcpp', 'NDcPP'), ('fw', 'FW PP-Module'), ('td', 'Technical Decisions'), ('awl', 'Allowed-with lists')]
-    chip_html = ''.join('<button type="button" class="chip-btn" data-choice="%s" aria-pressed="%s">%s</button>' % (k, 'true' if i == 0 else 'false', e(v))
-                        for i, (k, v) in enumerate(choices))
-    panel_html = ''.join('<div class="chooser-out" data-panel="%s"%s>%s</div>' % (k, '' if i == 0 else ' hidden', ''.join(panel_html_))
-                         for i, ((k, _), panel_html_) in enumerate(zip(choices, [panels[c[0]] for c in choices])))
-
-    stats = [
-        (ndcpp['name'].replace('NDcPP ', ''), 'Current Network Device cPP, published ' + fmt_date(ndcpp['date'], True)),
-        (fw['name'].replace('FW Module ', ''), 'Current Firewall PP-Module, published ' + fmt_date(fw['date'], True)),
-        (str(len(tds)), 'Technical Decisions on record'),
-        (fmt_date(newest, True), 'Most recent Technical Decision'),
-    ]
-    stats_html = ''.join('<div class="stat"><b>%s</b><span>%s</span></div>' % (e(a), e(b)) for a, b in stats)
 
     td_items = ''.join(
         '<div class="td-item"><span class="id">%s</span><div><a class="t" href="TD/tech_dec.html#%s">%s</a><div class="sub">%s</div></div><time datetime="%s">%s</time></div>'
-        % (e(t['id']), t['anchor'], e(t['title']), ''.join('<span class="tag">%s</span>' % e(l) for l in t['labels']), t['date'], fmt_date(t['date'], True))
+        % (e(t['id']), t['anchor'], e(t['title']), tag_html(t), t['date'], fmt_date(t['date'], True))
         for t in latest)
 
     awl_cards = ''.join(
@@ -377,18 +320,16 @@ def build_home(tds):
              % (len(old), counts['previous'], counts['sunset']))
 
     desc = ('The Network Device iTC publishes the collaborative Protection Profile for Network Devices (NDcPP), '
-            'the Firewall PP-Module, their Supporting Documents, allowed-with lists and Technical Decisions.')
+            'the Firewall PP-Module, their Supporting Documents, allowed-with lists and Interpretations.')
     out = head('ND-iTC | Network Device international Technical Community', desc, '', 0)
     out += topbar(0, 'home')
     out += '''<main id="main">
-<section class="hero"><div class="wrap">%(mesh)s
+<section class="hero"><div class="wrap">
 <div class="hero-copy"><span class="eyebrow">Network Device international Technical Community</span>
 <h1>Security requirements for the devices that <em>run the network</em>.</h1>
-<p class="lede">The ND-iTC brings together certification bodies, evaluation labs and vendors to write the requirements, and the tests, that network device security evaluations are built on.</p>
+<p class="lede">The ND-iTC brings together certification bodies, evaluation labs and vendors to write the requirements, and the tests, that Common Criteria security evaluations of network devices are built on.</p>
 </div>
-<div class="hero-panel"><h2>Which documents do I need?</h2><div class="chooser" role="group" aria-label="Choose what you are evaluating">%(chips)s</div>%(panels)s</div>
 </div></section>
-<div class="stats"><div class="wrap">%(stats)s</div></div>
 
 <section class="block" id="current"><div class="wrap">
 <div class="sec-head"><div><span class="kicker">Authoritative</span><h2>Current documents</h2><p>These are the releases to evaluate against today. Download, link, or copy a ready-made citation for each document.</p></div>
@@ -396,8 +337,8 @@ def build_home(tds):
 <div class="release-grid">%(cur)s</div></div></section>
 
 <section class="block" id="decisions"><div class="wrap">
-<div class="sec-head"><div><span class="kicker">Between releases</span><h2>Latest Technical Decisions</h2><p>Technical Decisions clarify and update the cPP and related documents between release cycles.</p></div>
-<div class="actions"><a class="act primary" href="TD/tech_dec.html">%(ar)s<span>All %(ntd)d decisions</span></a><a class="act" href="feed.xml">%(rss)s<span>Subscribe</span></a><a class="act" href="%(rfi)s" target="_blank" rel="noopener">%(chat)s<span>Request an interpretation</span></a></div></div>
+<div class="sec-head"><div><span class="kicker">Between releases</span><h2>Latest Interpretations</h2><p>Interpretations clarify and update the cPP and related documents between release cycles.</p></div>
+<div class="actions"><a class="act primary" href="TD/tech_dec.html">%(ar)s<span>All %(ntd)d interpretations</span></a><a class="act" href="feed.xml">%(rss)s<span>Subscribe</span></a><a class="act" href="%(rfi)s" target="_blank" rel="noopener">%(chat)s<span>Request an interpretation</span></a></div></div>
 <div class="td-list">%(tds)s</div></div></section>
 
 <section class="block" id="allowed-with"><div class="wrap">
@@ -423,7 +364,7 @@ def build_home(tds):
 <p class="join-note">Working versions are drafts. The published documents on this page are the ones to evaluate against.</p>
 </div></div></section>
 </main>
-''' % dict(mesh=mesh(), cpp=d_cpp['pdf'], dl=icon('download'), ar=icon('arrow'), chips=chip_html, panels=panel_html, stats=stats_html,
+''' % dict(ar=icon('arrow'),
            cur=''.join(release_card(r) for r in cur), ntd=len(tds), rss=icon('rss'), rfi=esc(SITE['links']['rfi_form']), issues=esc(SITE['links']['issues']), docs=esc(SITE['links']['documents_repo']), chat=icon('chat'),
            tds=td_items, awl=awl_cards, pills=pills, old=''.join(timeline_item(r) for r in old),
            res=''.join(res_card(r) for r in SITE['resources']), mail=SITE['contact_email'], gh=SITE['links']['github_org'])
@@ -434,7 +375,7 @@ def build_home(tds):
 # ---------------------------------------------------------------- TD pages
 def build_td(rows, path, title, h1, intro, archive):
     depth = 1
-    tds = [prep_td(t, depth) for t in rows]
+    tds = sorted((prep_td(t, depth) for t in rows), key=lambda t: t['num'], reverse=True)
     all_tds = [prep_td(t, depth) for t in TDS + ARCH]
     years = sorted({t['year'] for t in tds}, reverse=True)
     fam_opts = []
@@ -445,25 +386,25 @@ def build_td(rows, path, title, h1, intro, archive):
     def row(t):
         data = json.dumps(dict(id=t['id'], title=t['title'], reference=t['reference'], date=t['date'], applies=t['labels'], status=t['status'], url=t['url']), ensure_ascii=False)
         text = ' '.join([t['id'], t['title'], t['reference'], t['date'], ' '.join(t['labels']), t['status']]).lower()
-        acts = (action('PDF', 'pdf', '../' + t['file'], primary=True) + action('Link', 'link', copy=t['permalink'], ok='Permalink copied', title='Copy a permanent link to this decision') +
+        acts = (action('PDF', 'pdf', '../' + t['file'], primary=True) + action('Link', 'link', copy=t['permalink'], ok='Permalink copied', title='Copy a permanent link to this interpretation') +
                 action('Cite', 'cite', copy=t['cite'], ok='Citation copied', title='Copy a formatted citation'))
         return ('<tr id="%s" data-num="%s" data-id="%s" data-date="%s" data-year="%s" data-docs="%s" data-text="%s" data-json="%s">'
                 '<td class="id" data-label="ID"><a href="#%s">%s</a></td>'
-                '<td class="ttl" data-label="Decision"><a href="../%s">%s</a><div class="ref">%s</div></td>'
+                '<td class="ttl" data-label="Interpretation"><a href="../%s">%s</a><div class="ref">%s</div></td>'
                 '<td data-label="Published"><time datetime="%s">%s</time></td>'
                 '<td data-label="Applies to">%s</td>'
                 '<td data-label="Actions"><div class="actions">%s</div></td></tr>'
                 % (t['anchor'], t['num'], esc(t['id']), t['date'], t['year'], ' '.join(t['fams']), esc(text), esc(data),
                    t['anchor'], e(t['id']), esc(t['file']), e(t['title']), e(t['reference']) if t['reference'] != 'N/A' else '',
-                   t['date'], fmt_date(t['date'], True), ''.join('<span class="tag">%s</span>' % e(l) for l in t['labels']), acts))
+                   t['date'], fmt_date(t['date'], True), tag_html(t), acts))
 
     desc = intro
     out = head(title + ' | ND-iTC', desc, path, depth)
     out += topbar(depth, 'tdarch' if archive else 'td')
-    out += '<main id="main"><section class="page-head">%s<div class="wrap"><div class="crumbs"><a href="../index.html">ND-iTC</a> / %s</div><h1>%s</h1><p>%s</p></div></section>\n' % (mesh(seed=3, n=24), e(h1), e(h1), e(intro))
+    out += '<main id="main"><section class="page-head"><div class="wrap"><div class="crumbs"><a href="../index.html">ND-iTC</a> / %s</div><h1>%s</h1><p>%s</p></div></section>\n' % (e(h1), e(h1), e(intro))
     if rows:
         out += '''<div class="toolbar"><div class="wrap">
-<div class="row"><label class="search"><span class="sr-only">Search decisions</span>%(s)s<input id="td-q" type="search" placeholder="Search RFI, title or requirement…" autocomplete="off"></label>
+<div class="row"><label class="search"><span class="sr-only">Search interpretations</span>%(s)s<input id="td-q" type="search" placeholder="Search RFI, title or requirement…" autocomplete="off"></label>
 <label><span class="sr-only">Applies to</span><select class="field" id="td-doc"><option value="">All documents</option>%(docs)s</select></label>
 <label><span class="sr-only">Year</span><select class="field" id="td-year"><option value="">All years</option>%(years)s</select></label>
 <span class="count" id="td-count" aria-live="polite"></span></div>
@@ -472,19 +413,19 @@ def build_td(rows, path, title, h1, intro, archive):
 </div></div>
 <div class="wrap" style="padding-block:0 3rem">
 <table class="tdtable" id="td-table"><thead><tr>
-<th data-sort="id" aria-sort="none"><button type="button">ID</button></th><th>Decision</th><th data-sort="date" aria-sort="descending"><button type="button">Published</button></th><th>Applies to</th><th>Get it</th></tr></thead>
+<th data-sort="id" aria-sort="descending"><button type="button">RFI</button></th><th>Interpretation</th><th data-sort="date" aria-sort="none"><button type="button">Published</button></th><th>Applies to</th><th>Get it</th></tr></thead>
 <tbody>%(rows)s</tbody></table>
-<div class="empty" id="td-none" hidden><h2>No decisions match</h2><p>Try fewer words, or reset the filters.</p></div>
-<p class="note">Each decision has a permanent link and its own PDF. Use <strong>Cite</strong> to copy a formatted reference. The full set is also available as <a href="../data/tds.csv" download>CSV</a> and <a href="../data/tds.json" download>JSON</a>. <a href="%(other)s">%(otherl)s</a></p></div>
+<div class="empty" id="td-none" hidden><h2>No interpretations match</h2><p>Try fewer words, or reset the filters.</p></div>
+<p class="note">Each interpretation has a permanent link and its own PDF. Use <strong>Cite</strong> to copy a formatted reference. The full set is also available as <a href="../data/tds.csv" download>CSV</a> and <a href="../data/tds.json" download>JSON</a>. <a href="%(other)s">%(otherl)s</a></p></div>
 ''' % dict(s=icon('search'), docs=''.join('<option value="%s">%s</option>' % (k, e(v)) for k, v in fam_opts),
            years=''.join('<option>%s</option>' % y for y in years), csv=icon('csv'), share=icon('share'), rss=icon('rss'), chat=icon('chat'),
            rfi=esc(SITE['links']['rfi_form']), rows=''.join(row(t) for t in tds),
            other='tech_dec_arch.html' if not archive else 'tech_dec.html',
-           otherl='Archived Technical Decisions →' if not archive else '← Active Technical Decisions')
+           otherl='Archived interpretations →' if not archive else '← Active interpretations')
     else:
         out += '''<div class="wrap" style="padding-block:2rem 3rem"><div class="empty"><h2>Nothing has been archived yet</h2>
-<p>Technical Decisions move here when the version they apply to is no longer current, or when a later decision supersedes them. All current decisions are on the <a href="tech_dec.html">active list</a>.</p></div>
-<p class="note">Archived decisions stay available for traceability only. The <a href="tech_dec.html">active Technical Decisions</a> page lists everything in force.</p></div>
+<p>Interpretations move here when the version they apply to is no longer current, or when a later interpretation supersedes them. All current interpretations are on the <a href="tech_dec.html">active list</a>.</p></div>
+<p class="note">Archived interpretations stay available for traceability only. The <a href="tech_dec.html">active interpretations</a> page lists everything in force.</p></div>
 '''
     out += '</main>' + footer(depth)
     out += page_end(depth, search_index(depth, all_tds))
@@ -505,7 +446,7 @@ def build_map():
     intro = 'Pick a security functional requirement to see what it depends on, what depends on it, and where it is specified and evaluated.'
     out = head(title + ' | ND-iTC', intro, path, depth)
     out += topbar(depth, 'map')
-    out += '<main id="main"><section class="page-head">%s<div class="wrap"><div class="crumbs"><a href="../index.html">ND-iTC</a> / Dependency map</div><h1>%s</h1><p>%s</p></div></section>\n' % (mesh(seed=5, n=24), e(title), e(intro))
+    out += '<main id="main"><section class="page-head"><div class="wrap"><div class="crumbs"><a href="../index.html">ND-iTC</a> / Dependency map</div><h1>%s</h1><p>%s</p><p class="map-warn"><strong>Experimental.</strong> This map has not yet been checked against the NDcPP v4.0 PDF, which is the authoritative document. If you spot a difference, please <a href="%s" target="_blank" rel="noopener">open an issue</a>.</p></div></section>\n' % (e(title), e(intro), esc(SITE['links']['issues']))
     out += '''<div class="wrap rm">
 <div class="rm-list-col">
 <div class="rm-tools"><label class="search"><span class="sr-only">Search requirements</span>%(s)s<input id="rm-q" type="search" placeholder="Search, e.g. FCS_CKM or key generation" autocomplete="off"></label>
@@ -556,8 +497,8 @@ def build_prose(src, path, key, crumb, intro):
     toc_html = ''.join('<li class="l%s"><a href="#%s">%s</a></li>' % (l, i, re.sub(r'<[^>]+>', '', t)) for l, i, t in toc)
     out = head(title + ' | ND-iTC', intro, path, depth)
     out += topbar(depth, key)
-    out += '<main id="main"><section class="page-head">%s<div class="wrap"><div class="crumbs"><a href="%sindex.html">ND-iTC</a> / %s</div><h1>%s</h1><p>%s</p></div></section>\n' % (
-        mesh(seed=4, n=24), '../' * depth, e(crumb), e(title), e(intro))
+    out += '<main id="main"><section class="page-head"><div class="wrap"><div class="crumbs"><a href="%sindex.html">ND-iTC</a> / %s</div><h1>%s</h1><p>%s</p></div></section>\n' % (
+        '../' * depth, e(crumb), e(title), e(intro))
     out += '<div class="wrap prose-wrap">%s<article class="prose">%s</article></div>' % (
         ('<nav class="prose-toc" aria-label="On this page"><h2>On this page</h2><ul>%s</ul></nav>' % toc_html) if toc_html else '', body)
     out += '</main>' + footer(depth) + page_end(depth, search_index(depth, [prep_td(t, depth) for t in TDS + ARCH]))
@@ -568,7 +509,7 @@ def write_feeds(tds):
     items = sorted(tds, key=lambda t: t['date'], reverse=True)
     upd = items[0]['date'] + 'T00:00:00Z'
     x = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom">',
-         '<title>ND-iTC Technical Decisions</title>', '<subtitle>Technical Decisions issued by the Network Device iTC</subtitle>',
+         '<title>ND-iTC Interpretations</title>', '<subtitle>Interpretations issued by the Network Device iTC</subtitle>',
          '<link href="%sfeed.xml" rel="self"/>' % BASE, '<link href="%sTD/tech_dec.html"/>' % BASE,
          '<id>%sTD/tech_dec.html</id>' % BASE, '<updated>%s</updated>' % upd, '<author><name>ND-iTC</name></author>']
     for t in items:
@@ -599,15 +540,20 @@ def theme_docs():
     for f in DOC_PAGES:
         if not os.path.exists(f):
             continue
-        h = open(f, encoding='utf-8').read()
+        with open(f, encoding='utf-8') as src:
+            h = src.read()
+        if '</head>' not in h:
+            continue
         pre = '../' * f.count('/')
         block = ('<!-- nd-itc-theme --><link rel="stylesheet" href="%sdoc-theme.css">'
                  '<script src="%sdoc-theme.js"></script><!-- /nd-itc-theme -->') % (pre, pre)
-        h2 = re.sub(r'<!-- nd-itc-theme -->.*?<!-- /nd-itc-theme -->', lambda m: block, h, flags=re.S)
-        if h2 == h:
-            h2 = h.replace('</head>', block + '</head>', 1)
+        # Remove every old copy before inserting one canonical block. An
+        # unchanged replacement does not mean that the block was absent.
+        h2 = re.sub(r'<!-- nd-itc-theme -->.*?<!-- /nd-itc-theme -->', '', h, flags=re.S)
+        h2 = h2.replace('</head>', block + '</head>', 1)
         if h2 != h:
-            open(f, 'w', encoding='utf-8').write(h2)
+            with open(f, 'w', encoding='utf-8') as dst:
+                dst.write(h2)
             n += 1
     return n
 
@@ -618,10 +564,10 @@ if __name__ == '__main__':
     if missing:
         sys.exit('Missing TD files: %s' % missing)
     build_home(prepped)
-    build_td(TDS, 'TD/tech_dec.html', 'Technical Decisions', 'Technical Decisions',
-             'The iTC issues Technical Decisions in response to requests for interpretation, clarifying and updating the cPP and related documents between release cycles.', False)
-    build_td(ARCH, 'TD/tech_dec_arch.html', 'Archived Technical Decisions', 'Archived Technical Decisions',
-             'A historical record of Technical Decisions that are no longer current.', True)
+    build_td(TDS, 'TD/tech_dec.html', 'Interpretations', 'Interpretations',
+             'The iTC issues Interpretations in response to requests for interpretation (RFIs), clarifying and updating the cPP and related documents between release cycles.', False)
+    build_td(ARCH, 'TD/tech_dec_arch.html', 'Archived Interpretations', 'Archived Interpretations',
+             'A historical record of Interpretations that are no longer current.', True)
     write_feeds(prepped)
     mapped = build_map()
     for args in PROSE_PAGES:

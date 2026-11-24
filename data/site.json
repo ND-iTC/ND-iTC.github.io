@@ -29,7 +29,7 @@
         },
         {
           "kind": "SD",
-          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative Protection Profile for Network Devices",
           "short": "Supporting Document (Evaluation Activities)",
           "version": "4.0",
           "pdf": "SD/ND_Supporting_Document_4_0.pdf",
@@ -90,7 +90,7 @@
         },
         {
           "kind": "SD",
-          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative Protection Profile for Network Devices",
           "short": "Supporting Document (Evaluation Activities)",
           "version": "3.0e",
           "pdf": "SD/ND_Supporting_Document_3_0e.pdf",
@@ -145,7 +145,7 @@
         },
         {
           "kind": "SD",
-          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative PP-Module for Network Devices",
+          "title": "Supporting Document Mandatory Technical Document: Evaluation Activities for collaborative Protection Profile for Network Devices",
           "short": "Supporting Document (Evaluation Activities)",
           "version": "2.2e",
           "pdf": "SD/CPP_ND_V2.2E_supporting_doc.pdf"
@@ -176,7 +176,7 @@
   "resources": [
     {
       "title": "Request an interpretation",
-      "text": "Submit a Request for Interpretation (RFI) for the NIT to consider.",
+      "text": "Submit a Request for Interpretation (RFI) for the Network iTC Interpretations Team (NIT) to consider.",
       "href": "https://github.com/ND-iTC/Documents/issues/new?assignees=&labels=Interpretation&projects=&template=request-for-interpretation.md&title=%5BNIT+Request%5D",
       "icon": "chat"
     },
