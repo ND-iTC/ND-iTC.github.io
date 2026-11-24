@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-<title>ND-iTC Technical Decisions</title>
-<subtitle>Technical Decisions issued by the Network Device iTC</subtitle>
+<title>ND-iTC Interpretations</title>
+<subtitle>Interpretations issued by the Network Device iTC</subtitle>
 <link href="https://nd-itc.github.io/Dev/feed.xml" rel="self"/>
 <link href="https://nd-itc.github.io/Dev/TD/tech_dec.html"/>
 <id>https://nd-itc.github.io/Dev/TD/tech_dec.html</id>
